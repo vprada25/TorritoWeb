@@ -1,0 +1,101 @@
+:root {
+    --Style-font-famili: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+
+* {
+    padding: 0px;
+    margin : 0px;
+}
+
+body {
+    background: url(../assets/imgs/carnes5.jpg);
+    background-size      : cover;
+    background-attachment: fixed;
+}
+
+.raiz {
+    height: 718px;
+    display        : grid;
+    justify-content: center;
+    align-content  : center;
+
+}
+
+
+.raizh1 {
+    font: oblique bold 80px cursive;
+}
+
+h2 {
+    padding-top: 15px;
+    font-family: var(--Style-font-famili);
+    text-align : center;
+}
+
+.raizimg {
+
+    margin: 10px;
+}
+
+.raizform {
+
+    display    : block;
+    width      : 280px;
+    margin-left: 35px;
+}
+
+.raizinput {
+    border-radius: 15px;
+    width        : 120px;
+    text-align   : center;
+    height       : 27px;
+    font-size: 18px;
+    margin-top: 15px;
+    margin-right: 6px;
+}
+
+.raizcard {
+    display        : grid;
+    justify-content: center;
+    border         : 1px solid black;
+    height         : 320px;
+    width          : 300px;
+    border-radius  : 15px;
+    margin-top     : 15px;
+    background     : rgba(255, 255, 255, 0.2);
+}
+
+.raizbtn {
+    border-radius   : 15px;
+    width           : 90px;
+    height          : 28px;
+    background-color: bisque;
+}
+
+.raizdivbtn {
+    height         : 28px;
+    width          : 300px;
+    display        : flex;
+    align-content  : center;
+    justify-content: center;
+
+
+}
+
+.raizfooter {
+    padding    : 15px 10px;
+    display: grid;
+    justify-content: center;
+}
+
+p {
+
+
+    font-size: 18px;
+    color    : black;
+
+    font-weight: bold;
+    font-family: "Homer Simpson UI";
+}

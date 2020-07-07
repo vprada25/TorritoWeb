@@ -33,6 +33,7 @@ body {
   border-radius: 5px;
 
   padding: 40px;
+
 }
 
 .contenedor-form .toggle {
@@ -78,6 +79,7 @@ body {
   padding: 10px 15px;
   color: rgb(85, 75, 75);
   border: none;
+  margin-top: 20px
 }
 
 .padre {
