@@ -1,0 +1,20 @@
+* {
+    padding: 0px;
+    margin : 0px;
+}
+
+.raizfooter {
+    padding        : 15px 10px;
+    display        : grid;
+    justify-content: center;
+}
+
+.containerp {
+    float      : left;
+    width      : max-content;
+    font-size  : 18px;
+    color      : black;
+    text-align : center;
+    font-weight: bold;
+    font-family: "Homer Simpson UI";
+}

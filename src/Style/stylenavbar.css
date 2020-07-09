@@ -1,0 +1,38 @@
+* {
+    padding: 0;
+    margin : 0;
+}
+
+.Header {
+    display              : grid;
+    grid-template-columns: 50% 50%;
+}
+
+.Headertitlebos {
+    padding    : 20px;
+    display    : grid;
+    align-items: center;
+    font-size  : 30px;
+    color      : white;
+}
+
+.HeaderNavList {
+    padding: 20px;
+
+    display              : grid;
+    justify-content      : center;
+    align-content        : center;
+    justify-items        : center;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.styleohome {
+    text-decoration: none;
+    color          : white;
+}
+
+.p2 {
+    margin-left: 80px;
+    color      : white;
+    font-size  : 30px;
+}
