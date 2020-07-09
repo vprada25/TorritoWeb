@@ -1,13 +1,11 @@
-* {
-    padding: 0;
-    margin : 0;
-}
+
+
 
 .Bodycont {
     padding           : 40px;
     display           : grid;
     grid-template-rows: repeat(3, 1fr);
-
+    
 }
 
 .Bodycontitle {
@@ -57,15 +55,95 @@
 
 .image {
     text-align: center;
-    width: auto;
-   
+    width     : auto;
+
     overflow: hidden;
 }
-img{
-    border: 1px solid black;
-    text-align: center;
 
-    max-width: 60%;
 
-    
+.containerh1 {
+    padding-top   : 20px;
+    padding-bottom: 20px;
+    text-align    : center;
+    font-family   : "Homer Simpson UI";
+    font-size     : 22px;
+    font-weight   : bold;
+}
+
+.containeretiqueteP {
+    display: flex;
+
+    justify-content: center;
+
+}
+
+.containeretiquetePp {
+    padding    : 20px;
+    width      : 750px;
+    text-align : center;
+    font       : condensed 120% sans-serif;
+    line-height: 1.5em;
+    font-family: "Homer Simpson UI";
+}
+
+.containerimagesCarnes {
+    max-height: 600px;
+
+    display              : grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items        : center;
+    align-items          : center;
+}
+
+.containerimagesCarnesip {
+    display: inline-grid;
+}
+
+.containerimagesCarnesipimg {
+    border      : 2px solid black;
+    margin-left : auto;
+    margin-right: auto;
+    height      : 270px;
+    width       : 280px;
+
+}
+
+.containerimagesCarnesipEp {
+    padding-top: 20px;
+    text-align : center;
+    font       : condensed 120% sans-serif;
+    line-height: 1.5em;
+    font-family: "Homer Simpson UI";
+    font-weight: bold;
+}
+
+
+
+.containerconctato {
+    height               : 200px;
+    padding-top          : 20px;
+    display              : grid;
+    grid-template-columns: 35% 35% 35%;
+    justify-items        : center;
+    align-items          : center;
+}
+
+.containerconctatologo {
+    display: inline-grid;
+
+}
+
+.containerconctatologoLp {
+    display       : list-item;
+    padding-top   : 20px;
+    padding-bottom: 20px;
+    text-align    : center;
+    font          : condensed 120% sans-serif;
+    line-height   : 1.5em;
+    font-family   : "Homer Simpson UI";
+    font-weight   : bold;
+}
+
+.containerconctatologolog {
+    height: 60px;
 }
