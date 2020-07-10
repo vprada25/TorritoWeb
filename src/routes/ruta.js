@@ -15,8 +15,8 @@ export default class Rutas extends Component {
             <div>
                 <Router>
 
-                    <Route path="/" exact component={home} />
-                    <Route path="/Login" component={Login} />
+                    <Route path="/" exact component={Login} />
+                    <Route path="/Login" component={home} />
                     <Route path="/FormLogin" component={FormLogin} />
                 </Router>
             </div>
