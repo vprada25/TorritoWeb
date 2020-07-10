@@ -1,6 +1,12 @@
 import React from "react";
+
 import logo from "../../assets/imgs/logo4.png";
+
 import "../../Style/stylelogin.css";
+
+
+
+import {Link} from "react-router-dom";
 
 
 const LoginView = ({ user }) => (
@@ -11,7 +17,7 @@ const LoginView = ({ user }) => (
       <h1>Toorito</h1>
 
       <div className="toggle">
-        <span>Crear cuenta</span>
+        <Link to="/FormLogin">Registro</Link>
       </div>
       <h2>Iniciar Sesión</h2>
       <form action="#">

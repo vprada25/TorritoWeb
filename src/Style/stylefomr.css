@@ -10,7 +10,7 @@
 }
 
 body {
-    background: url(../assets/imgs/carnes5.jpg);
+    /* background: url(../assets/imgs/carnes5.jpg); */
     background-size      : cover;
     background-attachment: fixed;
 }
@@ -72,10 +72,11 @@ h2 {
     width           : 90px;
     height          : 28px;
     background-color: bisque;
+    margin: 5px;
 }
 
 .raizdivbtn {
-    height         : 28px;
+    
     width          : 300px;
     display        : flex;
     align-content  : center;
