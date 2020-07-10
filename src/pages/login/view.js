@@ -1,6 +1,6 @@
 import React from "react";
 
-import logo from "../../assets/imgs/logo4.png";
+import logo from "../../assets/logos/logo3.png";
 
 import "../../Style/stylelogin.css";
 
