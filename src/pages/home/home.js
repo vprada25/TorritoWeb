@@ -4,12 +4,16 @@ import logo from '../../assets/logos/logo3.png';
 
 import "../../Style/stylehome.css";
 
+import Nabvar from"../partials/navbar";
+import Footer from "../partials/footer";
+
 function Menu() {
   return (
 
 
 
     <div>
+      <Nabvar/>
       <div className="Bodycont">
 
         <div className="Bodycontitle"><h1>Bienvenidos a Carnicería el  Toorito</h1></div>
@@ -72,6 +76,8 @@ function Menu() {
           <p className="containerconctatologoLp">Instagram</p>
         </div>
       </div>
+
+      <Footer/>
     </div>
   );
 

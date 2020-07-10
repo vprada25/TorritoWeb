@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Link} from 'react-router-dom';
+import { Link} from 'react-router-dom';
 
 import "../../Style/stylenavbar.css";
 
@@ -18,7 +18,7 @@ export default function Footer() {
             <Link to={`/Home`} ><p className="styleohome">Home</p></Link>
           </li>
           <li>
-            <Link to={`/Login`} ><p className="styleohome">Login</p></Link>
+            <p className="styleohome"><Link to={"/Login"} >Login</Link></p>
           </li>
           <li>
             <Link to="/" ><p className="styleohome">Products</p></Link>
