@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../../assets/imgs/logo4.png";
-import "./estilos.css";
+import "../../Style/stylelogin.css";
 
 
 const LoginView = ({ user }) => (
