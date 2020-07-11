@@ -87,6 +87,7 @@ body {
   justify-content: center;
   justify-items: center;
   align-content: center;
+  background-color: rgba(117, 190, 190, 0.712);
 
 
   width: 100%;
@@ -116,11 +117,13 @@ p {
   font-size: 30px;
 }
 
+.divbutton{
+  text-align: center;
+}
 .buttonclas {
   border-radius: 25px;
   width: 90px;
-  height: 27px;
-  text-align: center;
+  height: 36px;
   background-color:  orange;;
   margin-top:15px ;
 }
