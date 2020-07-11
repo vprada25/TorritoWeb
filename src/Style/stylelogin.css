@@ -87,6 +87,7 @@ body {
   justify-content: center;
   justify-items: center;
   align-content: center;
+  background-color: rgba(117, 190, 190, 0.712);
 
 
   width: 100%;
@@ -99,8 +100,12 @@ h1 {
   font: oblique bold 50px cursive;
 }
 
+h2{
+  font-family: cursive;
+}
+
 .reset-pastword {
-  background-color: rgba(255, 228, 196, 0.664);
+  background-color: rgba(255, 228, 196, 0.205);
   border: 2px;
 
 }
@@ -112,12 +117,14 @@ p {
   font-size: 30px;
 }
 
+.divbutton{
+  text-align: center;
+}
 .buttonclas {
   border-radius: 25px;
   width: 90px;
-  height: 27px;
-  text-align: center;
-  background-color: bisque;
+  height: 36px;
+  background-color:  orange;;
   margin-top:15px ;
 }
 

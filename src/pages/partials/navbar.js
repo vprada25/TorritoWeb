@@ -15,16 +15,16 @@ export default function Footer() {
 
         <ul className="HeaderNavList" >
           <li>
-            <Link to={`/Home`} ><p className="styleohome">Home</p></Link>
+            <Link to={`/Home`} ><p className="styleohome">Principal</p></Link>
           </li>
           <li>
-            <p className="styleohome"><Link to={"/Login"} >Login</Link></p>
+            <p className="styleohome"><Link to={"/Login"} >Iniciar sesión</Link></p>
           </li>
           <li>
-            <Link to="/" ><p className="styleohome">Products</p></Link>
+            <Link to="/" ><p className="styleohome">Productos</p></Link>
           </li>
           <li>
-            <Link to="/" ><p className="styleohome">Contac</p></Link>
+            <Link to="/" ><p className="styleohome">Contactos</p></Link>
           </li>
         </ul>
 
