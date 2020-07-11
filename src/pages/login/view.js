@@ -6,14 +6,15 @@ import "../../Style/stylelogin.css";
 
 import { Link } from "react-router-dom";
 
-const LoginView = ({ user, login }) => {
+const LoginView = ({ user, getUser }) => {
+  console.log(user);
+  console.log(getUser);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const user_password = document.getElementById('contrasena').value;
-    const name = document.getElementById('user_name').value;
-    /* login(name, user_password); */
-    login();
+    const user_password = document.getElementById("user_password").value;
+    const name = document.getElementById("user_name").value;
+    getUser(name, user_password);
   };
 
   return (
@@ -32,7 +33,7 @@ const LoginView = ({ user, login }) => {
           <input
             type="password"
             placeholder="contraseña"
-            id="contrasena"
+            id="user_password"
             required
           />
           <div className="divbutton">
