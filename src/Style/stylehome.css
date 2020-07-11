@@ -11,41 +11,60 @@
 .Bodycontitle {
     padding: 40px;
 
-    font-family    : Impact, Charcoal, sans-serif;
+    
     font-size      : 35px;
-    color          : white;
+    color          : rgba(17, 17, 17, 0.966);
     display        : grid;
     justify-content: center;
     align-items    : center;
     text-align     : center;
+    
+}
+
+.sub{
+
+    font-family: cursive;
+    font-size      : 18px;  
 }
 
 .BodycontText {
     width          : 800px;
     margin         : 0 auto;
-    font-size      : 20px;
+    
     color          : white;
     display        : grid;
     text-align     : center;
     justify-content: center;
     align-items    : center;
     align-content  : center;
+    
+    
+}
+
+.contenido{
+    font-family: Arial;
+    font-size      : 16px;
 }
 
 .BodyButton {
-    display        : flex;
+    font-weight:bold;
+    width:1250px;
+    height:20px;
+    display        : grid;
     justify-content: center;
-    align-items    : center;
+    align-items    : center; 
+    
 }
 
 .ButtonFind {
     color        : #ffffff;
     background   : orange;
-    height       : 60px;
-    width        : 150px;
-    border-radius: 2em;
+    height       : 50px;
+    width        : 100px;
+    border-radius: 25px;
     text-shadow  : 1px 1px #fff;
 }
+
 
 .ButtonFind:hover {
 
@@ -65,14 +84,15 @@
     padding-top   : 20px;
     padding-bottom: 20px;
     text-align    : center;
-    font-family   : "Homer Simpson UI";
-    font-size     : 22px;
+    font-family: cursive;
+    font-size     : 30px;
     font-weight   : bold;
+    height: 0;
+    
 }
 
 .containeretiqueteP {
     display: flex;
-
     justify-content: center;
 
 }
@@ -83,7 +103,7 @@
     text-align : center;
     font       : condensed 120% sans-serif;
     line-height: 1.5em;
-    font-family: "Homer Simpson UI";
+    font-family: Arial;
 }
 
 .containerimagesCarnes {
@@ -113,7 +133,8 @@
     text-align : center;
     font       : condensed 120% sans-serif;
     line-height: 1.5em;
-    font-family: "Homer Simpson UI";
+    font-family: cursive;
+    font-size      : 18px;
     font-weight: bold;
 }
 
@@ -140,7 +161,8 @@
     text-align    : center;
     font          : condensed 120% sans-serif;
     line-height   : 1.5em;
-    font-family   : "Homer Simpson UI";
+    font-family: cursive;
+    font-size      : 18px;
     font-weight   : bold;
 }
 

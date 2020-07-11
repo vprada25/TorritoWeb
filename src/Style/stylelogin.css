@@ -99,8 +99,12 @@ h1 {
   font: oblique bold 50px cursive;
 }
 
+h2{
+  font-family: cursive;
+}
+
 .reset-pastword {
-  background-color: rgba(255, 228, 196, 0.664);
+  background-color: rgba(255, 228, 196, 0.205);
   border: 2px;
 
 }
@@ -117,7 +121,7 @@ p {
   width: 90px;
   height: 27px;
   text-align: center;
-  background-color: bisque;
+  background-color:  orange;;
   margin-top:15px ;
 }
 

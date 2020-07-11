@@ -6,6 +6,7 @@
 .Header {
     display              : grid;
     grid-template-columns: 50% 50%;
+ 
 }
 
 .Headertitlebos {
@@ -14,6 +15,7 @@
     align-items: center;
     font-size  : 30px;
     color      : white;
+    
 }
 
 .HeaderNavList {
@@ -23,16 +25,20 @@
     justify-content      : center;
     align-content        : center;
     justify-items        : center;
+    font-family: cursive;
     grid-template-columns: repeat(4, 1fr);
+   
 }
 
 .styleohome {
     text-decoration: none;
     color          : rgb(14, 12, 12);
+    font-family: cursive;
 }
 
 .p2 {
     margin-left: 80px;
     color      : rgb(7, 6, 6);
     font-size  : 30px;
+    font-family: cursive;
 }
