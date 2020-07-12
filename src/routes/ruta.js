@@ -9,6 +9,7 @@ import Login from '../pages/login';
 import home from '../pages/home/home'
 import info from '../pages/information'
 import ForgetPassword from '../pages/formRestoreForgetPassword/ForgetPassword.js';
+import RestorePasswor from '../pages/formRestoreForgetPassword/restorePassword.js';
 
 
 
@@ -22,6 +23,7 @@ export default class Rutas extends Component {
                     <Route path="/FormLogin" component={FormLogin} />
                     <Route path="/Info" component={info} />
                     <Route path="/ForgetPassword" component={ForgetPassword}/>
+                    <Route path="/RestorePassword" component={RestorePasswor}/>
                 </Router>
             </div>
         );

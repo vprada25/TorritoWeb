@@ -16,13 +16,17 @@ body {
 }
 
 .raiz {
-    height: 718px;
+    height         : 718px;
     display        : grid;
     justify-content: center;
     align-content  : center;
 
 }
 
+.divlog {
+    display        : flex;
+    justify-content: center;
+}
 
 .raizh1 {
     font: oblique bold 80px cursive;
@@ -41,10 +45,13 @@ h2 {
 
 .raizform {
 
-    display    : block;
-    width      : 280px;
-    
-    margin-left: 35px;
+    display: grid;
+
+    width                : 300px;
+    grid-template-columns: repeat(2, 1fr);
+    align-items          : center;
+    justify-items        : center;
+
 }
 
 .raizinput {
@@ -52,16 +59,16 @@ h2 {
     width        : 130px;
     text-align   : center;
     height       : 27px;
-    font-size: 18px;
-    margin-top: 15px;
-    margin-right: 6px;
+    font-size    : 18px;
+    margin-top   : 15px;
+   
 }
 
 .raizcard {
     display        : grid;
     justify-content: center;
     border         : 1px solid black;
-    height         : 320px;
+    height         : 340px;
     width          : 300px;
     border-radius  : 15px;
     margin-top     : 15px;
@@ -71,13 +78,14 @@ h2 {
 .raizbtn {
     border-radius   : 15px;
     width           : 90px;
-    height          : 28px;
+    height          : 38px;
     background-color: bisque;
-    margin: 5px;
+    text-align      : center;
+    margin          : 5px;
 }
 
 .raizdivbtn {
-    
+
     width          : 300px;
     display        : flex;
     align-content  : center;
@@ -87,8 +95,8 @@ h2 {
 }
 
 .raizfooter {
-    padding    : 15px 10px;
-    display: grid;
+    padding        : 15px 10px;
+    display        : grid;
     justify-content: center;
 }
 

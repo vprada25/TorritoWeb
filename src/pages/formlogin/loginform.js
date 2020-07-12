@@ -8,8 +8,10 @@ import { Link } from "react-router-dom";
 function FormLogin() {
     return (
         <div className="raiz">
-            <h1 className="raizh1">Toorito</h1>
+            <div className="divlogo">
             <img src={logo} alt="logo4" className="raizimg" />
+            </div>
+            <h1 className="raizh1">Toorito</h1>
             <div className="raizcard">
                 <h2>Formulario de registro</h2>
                 <form className="raizform">
