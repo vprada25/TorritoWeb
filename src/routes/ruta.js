@@ -6,7 +6,9 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import FormLogin from '../pages/formlogin/loginform.js';
 import Login from '../pages/login';
-import home from '../pages/home/home.js'
+import home from '../pages/home/home'
+import info from '../pages/information'
+
 
 
 export default class Rutas extends Component {
@@ -17,6 +19,7 @@ export default class Rutas extends Component {
                     <Route path="/" exact component={Login} />
                     <Route path="/Login" component={home} />
                     <Route path="/FormLogin" component={FormLogin} />
+                    <Route path="/info" component={info} />
                 </Router>
             </div>
         );

@@ -1,0 +1,60 @@
+.title {
+  font: oblique bold 30px cursive;
+  text-align: right;
+}
+
+.principal {
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.images-branchs {
+  display: flex;
+  flex: 1.3;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.image-branch {
+  width: 150px;
+  border-radius: 50px;
+}
+
+.references {
+  font: oblique bold 20px cursive;
+  text-align: left;
+  margin-right: 60px;
+}
+
+.linea {
+  display: flex;
+  background-color: gray;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.body-section {
+  display: flex;
+  padding-left: 10px;
+  padding-right: 10px;
+  justify-content: space-between;
+  padding-bottom: 100px;
+}
+
+.image-body {
+  width: 600px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
