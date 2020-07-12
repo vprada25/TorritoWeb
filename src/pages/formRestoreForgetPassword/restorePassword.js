@@ -6,7 +6,7 @@ import logo from '../../assets/logos/logo3.png';
 function restorePassword() {
     return (
         <div className="generalraiz">
-            <div className="general">
+            <div className="generalg">
                 <div className="divlogo">
                     <img src={logo} alt="Logo" className="raizimg" />
                 </div>

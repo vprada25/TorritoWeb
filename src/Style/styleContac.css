@@ -1,41 +1,99 @@
-*{
-    margin: 0px;
+
+:root{
+    --height-icons:38px;
+}
+
+
+* {
+    margin : 0px;
     padding: 0px;
 }
-.general{
-    display: grid;
+
+.general {
+    display              : grid;
     grid-template-columns: 50% 50%;
-    
+
 }
 
-.generalcontac{
- border: 1px solid black;
- height: 722px;
-}
-
-.contach1{
-    font-weight  : 12px;
-    font         : oblique bold 80px cursive;
-    font-size    : 30px;
-    text-align   : center;
-    margin: 25px;
-    
-}
-
-.contacconten{
-    height: 600px;
-    display: grid;
+.divlogo {
+    display        : grid;
     justify-content: center;
-   
-
-    
-   
- 
+    align-content  : center;
 }
 
-.conteninput{
-    margin: 12px;
+.raizimg {
+
+    margin   : 10px;
+    font-size: 30px;
+}
+
+.generalcontac {
+    border: 1px solid black;
+    height: 722px;
+}
+
+.contach1 {
+    font-weight: 12px;
+    font       : oblique bold 80px cursive;
+    font-size  : 30px;
+    text-align : center;
+    margin     : 25px;
+
+}
+
+.contacconten {
+    height         : 600px;
+    display        : grid;
+    justify-content: center;
+
+}
+
+.conteninput {
+    margin : 12px;
     padding: 20px;
-    height: 65px;
-    width: 307px;
+    height : 65px;
+    width  : 307px;
+}
+
+.contentextarea {
+    margin       : 12px;
+    width        : 307px;
+    height       : 100px;
+    padding      : 20px;
+    border-radius: 12px;
+}
+
+.contenbtn {
+    border-radius: 12px;
+    margin       : 12px;
+    width        : 307px;
+    height       : 55px;
+  
+    text-align: center;
+}
+
+.divIconos{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.iconsfacebook{
+    margin-right: 20px;
+    font-size: var(--height-icons);
+    border: 1px solid black;
+    color: blue;
+}
+.iconswhatsapp{
+    margin-right: 20px;
+    font-size: var(--height-icons);
+    border: 1px solid black;
+    color:green;
+}
+.iconsinstagram{
+    margin-right: 20px;
+    font-size: var(--height-icons);
+    border: 1px solid black;
+    color: red;
 }
