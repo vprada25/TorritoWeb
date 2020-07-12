@@ -51,7 +51,7 @@ const LoginView = ({ user, getUser }) => {
 
       <div className="reset-pastword">
         <p>
-          <a href="defrgth">Olvide mi contraseña ?</a>
+          <Link to="/ForgetPassword">Olvide mi contraseña ?</Link>
         </p>
       </div>
     </div>

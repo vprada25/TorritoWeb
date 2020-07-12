@@ -4,8 +4,9 @@ import logo from "../../assets/logos/logo3.png";
 
 import "../../Style/stylehome.css";
 
-import Nabvar from "../partials/navbar";
+import Nabvar from "../../components/navbar.js";
 import Footer from "../../components/footer";
+import { Link } from "react-router-dom";
 
 function Menu() {
   return (
@@ -28,9 +29,10 @@ function Menu() {
           </p>
         </div>
         <div className="BodyButton">
-          <button type="Default" className="ButtonFind">
+         <Link to="/info"> <button type="Default" className="ButtonFind"> 
            Empezar
           </button>
+          </Link>
         </div>
       </div>
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link} from 'react-router-dom';
 
-import "../../Style/stylenavbar.css";
+import "../Style/stylenavbar.css"
 
 export default function Footer() {
     return (
@@ -15,7 +15,7 @@ export default function Footer() {
 
         <ul className="HeaderNavList" >
           <li>
-            <Link to={`/Home`} ><p className="styleohome">Principal</p></Link>
+            <Link to={"/"} ><p className="styleohome">Principal</p></Link>
           </li>
           <li>
             <p className="styleohome"><Link to={"/Login"} >Iniciar sesión</Link></p>
