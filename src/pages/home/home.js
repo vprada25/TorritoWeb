@@ -5,7 +5,7 @@ import logo from "../../assets/logos/logo3.png";
 import "../../Style/stylehome.css";
 
 import Nabvar from "../partials/navbar";
-import Footer from "../partials/footer";
+import Footer from "../../components/footer";
 
 function Menu() {
   return (
@@ -13,7 +13,7 @@ function Menu() {
       <Nabvar />
       <div className="Bodycont">
         <div className="Bodycontitle">
-          <h1>Bienvenidos a Carnicería el Toorito</h1>
+          <h1 className="welcome">Bienvenidos a Carnicería el Toorito</h1>
         </div>
         <div className="image">
           <img src={logo} alt="°1" />

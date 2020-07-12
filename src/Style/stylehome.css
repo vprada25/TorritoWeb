@@ -1,171 +1,154 @@
-
-
-
 .Bodycont {
-    padding           : 40px;
-    display           : grid;
-    grid-template-rows: repeat(3, 1fr);
-    
+  padding: 40px;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
 }
 
 .Bodycontitle {
-    padding: 40px;
+  padding: 40px;
 
-    
-    font-size      : 35px;
-    color          : rgba(17, 17, 17, 0.966);
-    display        : grid;
-    justify-content: center;
-    align-items    : center;
-    text-align     : center;
-    
+  font-size: 35px;
+  color: rgba(17, 17, 17, 0.966);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-.sub{
-
-    font-family: cursive;
-    font-size      : 18px;  
+.sub {
+  font-family: cursive;
+  font-size: 18px;
 }
 
 .BodycontText {
-    width          : 800px;
-    margin         : 0 auto;
-    
-    color          : white;
-    display        : grid;
-    text-align     : center;
-    justify-content: center;
-    align-items    : center;
-    align-content  : center;
-    
-    
+  width: 800px;
+  margin: 0 auto;
+
+  color: white;
+  display: grid;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 
-.contenido{
-    font-family: Arial;
-    font-size      : 16px;
+.contenido {
+  font-family: Arial;
+  font-size: 16px;
 }
 
 .BodyButton {
-    font-weight:bold;
-    width:1250px;
-    height:20px;
-    display        : grid;
-    justify-content: center;
-    align-items    : center; 
-    
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
 }
 
 .ButtonFind {
-    color        : #ffffff;
-    background   : orange;
-    height       : 50px;
-    width        : 100px;
-    border-radius: 25px;
-    text-shadow  : 1px 1px #fff;
+  color: #ffffff;
+  background: orange;
+  height: 50px;
+  width: 100px;
+  border-radius: 25px;
+  text-shadow: 1px 1px #fff;
 }
 
-
 .ButtonFind:hover {
-
-    background: orange;
-    color     : #ffffff;
+  background: orange;
+  color: #ffffff;
 }
 
 .image {
-    text-align: center;
-    width     : auto;
+  text-align: center;
+  width: auto;
 
-    overflow: hidden;
+  overflow: hidden;
 }
 
-
 .containerh1 {
-    padding-top   : 20px;
-    padding-bottom: 20px;
-    text-align    : center;
-    font-family: cursive;
-    font-size     : 30px;
-    font-weight   : bold;
-    height: 0;
-    
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  font-family: cursive;
+  font-size: 30px;
+  font-weight: bold;
+  height: 0;
 }
 
 .containeretiqueteP {
-    display: flex;
-    justify-content: center;
-
+  display: flex;
+  justify-content: center;
 }
 
 .containeretiquetePp {
-    padding    : 20px;
-    width      : 750px;
-    text-align : center;
-    font       : condensed 120% sans-serif;
-    line-height: 1.5em;
-    font-family: Arial;
+  padding: 20px;
+  width: 750px;
+  text-align: center;
+  font: condensed 120% sans-serif;
+  line-height: 1.5em;
+  font-family: Arial;
 }
 
 .containerimagesCarnes {
-    max-height: 600px;
+  max-height: 600px;
 
-    display              : grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-items        : center;
-    align-items          : center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
 }
 
 .containerimagesCarnesip {
-    display: inline-grid;
+  display: inline-grid;
 }
 
 .containerimagesCarnesipimg {
-    border      : 2px solid black;
-    margin-left : auto;
-    margin-right: auto;
-    height      : 270px;
-    width       : 280px;
-
+  border: 2px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  height: 270px;
+  width: 280px;
 }
 
 .containerimagesCarnesipEp {
-    padding-top: 20px;
-    text-align : center;
-    font       : condensed 120% sans-serif;
-    line-height: 1.5em;
-    font-family: cursive;
-    font-size      : 18px;
-    font-weight: bold;
+  padding-top: 20px;
+  text-align: center;
+  font: condensed 120% sans-serif;
+  line-height: 1.5em;
+  font-family: cursive;
+  font-size: 18px;
+  font-weight: bold;
 }
 
-
-
 .containerconctato {
-    height               : 200px;
-    padding-top          : 20px;
-    display              : grid;
-    grid-template-columns: 35% 35% 35%;
-    justify-items        : center;
-    align-items          : center;
+  height: 200px;
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: 35% 35% 35%;
+  justify-items: center;
+  align-items: center;
 }
 
 .containerconctatologo {
-    display: inline-grid;
-
+  display: inline-grid;
 }
 
 .containerconctatologoLp {
-    display       : list-item;
-    padding-top   : 20px;
-    padding-bottom: 20px;
-    text-align    : center;
-    font          : condensed 120% sans-serif;
-    line-height   : 1.5em;
-    font-family: cursive;
-    font-size      : 18px;
-    font-weight   : bold;
+  display: list-item;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  font: condensed 120% sans-serif;
+  line-height: 1.5em;
+  font-family: cursive;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .containerconctatologolog {
-    height: 60px;
+  height: 60px;
+}
+
+.welcome {
+  font: oblique bold 80px cursive;
+  font-size: 60px;
 }
