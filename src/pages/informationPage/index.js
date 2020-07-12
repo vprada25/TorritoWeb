@@ -24,7 +24,7 @@ function info() {
           <em style={{ textAlign: "right", maxWidth: 340 }}>
             En carnicería el Toorito manejamos los mejores precios y la mejor
             calidad de productos con una variedad insuperables.
-          </em>
+        </em>
         </div>
       </div>
       <hr className="linea" />
@@ -35,7 +35,7 @@ function info() {
             ofrecer la mejor calidad de todos nuestros productos cárnicos y
             garantizar una perfecta trazabilidad, lo que nos ayuda a satisfacer
             las necesidades y exigencias de nuestros clientes y consumidores.
-          </em>
+        </em>
         </p>
         <div>
           <img src={sancocho} alt="°4" className="image-body" />

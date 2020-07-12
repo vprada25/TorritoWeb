@@ -1,0 +1,41 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.general{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    
+}
+
+.generalcontac{
+ border: 1px solid black;
+ height: 722px;
+}
+
+.contach1{
+    font-weight  : 12px;
+    font         : oblique bold 80px cursive;
+    font-size    : 30px;
+    text-align   : center;
+    margin: 25px;
+    
+}
+
+.contacconten{
+    height: 600px;
+    display: grid;
+    justify-content: center;
+   
+
+    
+   
+ 
+}
+
+.conteninput{
+    margin: 12px;
+    padding: 20px;
+    height: 65px;
+    width: 307px;
+}

@@ -28,11 +28,15 @@
   width: 150px;
   border-radius: 50px;
 }
+.image-body{
+    border-radius: 5%;
+}
 
 .references {
   font: oblique bold 20px cursive;
   text-align: left;
   margin-right: 60px;
+  align-self: center;
 }
 
 .linea {
@@ -51,10 +55,4 @@
 
 .image-body {
   width: 600px;
-}
-
-.footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
 }

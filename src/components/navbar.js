@@ -24,7 +24,7 @@ export default function Footer() {
             <Link to="/" ><p className="styleohome">Productos</p></Link>
           </li>
           <li>
-            <Link to="/" ><p className="styleohome">Contactos</p></Link>
+            <Link to="/Contact" ><p className="styleohome">Contactos</p></Link>
           </li>
         </ul>
 
