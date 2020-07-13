@@ -1,0 +1,61 @@
+.pro{
+    
+    text-align: center;
+    font: oblique bold 30px cursive;
+    background-color: rgb(255, 0, 0);
+    font-size: 4em;
+}
+.area{
+   
+}
+.tex{
+    font: oblique bold 20px cursive;
+    text-align: center;
+}
+
+
+.imagegroup{
+
+display: flex;
+  flex: 1.4;
+  justify-content:center;
+  align-items: center;
+
+}
+
+
+.imagegroups {
+    width:300px;
+    border-radius: 100px;
+  }
+
+
+  .contacto {
+    height: 200px;
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: 35% 35% 35%;
+    justify-items: center;
+    align-items: center;
+  }
+  
+  .contactologo {
+    display: inline-grid;
+  }
+  
+  .conlogLp {
+    display: list-item;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    font: condensed 120% sans-serif;
+    line-height: 1.5em;
+    font-family: cursive;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .conlog {
+    height: 60px;
+  }
+  
