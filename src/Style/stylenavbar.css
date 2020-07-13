@@ -5,7 +5,10 @@
 
 .Header {
     display              : grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 40% 60%;
+    height: 320px;
+    margin-bottom:15px;
+    padding: 20px;
  
 }
 
@@ -16,29 +19,75 @@
     font-size  : 30px;
     color      : white;
     
+    
 }
 
-.HeaderNavList {
-    padding: 20px;
-
-    display              : grid;
-    justify-content      : center;
-    align-content        : center;
-    justify-items        : center;
+/* .HeaderNavList {
+    margin: auto;
+    border: 1px solid black;
+    width: 500px;
     font-family: cursive;
-    grid-template-columns: repeat(4, 1fr);
-   
-}
+    
+    
+} */
 
-.styleohome {
+/* .styleohome {
     text-decoration: none;
     color          : rgb(14, 12, 12);
     font-family: cursive;
-}
+    margin: 15px;
+    
+} */
 
 .p2 {
-    margin-left: 80px;
+    margin-left: 125px;
     color      : rgb(7, 6, 6);
     font-size  : 30px;
     font-family: cursive;
+}
+
+a{
+    color          : rgb(14, 12, 12);
+    font-family: cursive;
+    margin: 5px;
+    font-weight: bold;
+    font-size  : 18px;
+}
+
+.HeaderNavList{
+    margin: auto;
+    width: 720px;
+    
+    
+}
+
+ul,ol{
+    list-style: none;
+}
+
+.unavbar li a{
+    background-color:white ;
+    color:rgba(26, 23, 23, 0.932);
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+.unavbar li a:hover{
+    background-color:rgba(236, 215, 215, 0.774) ;
+}
+
+.unavbar > li{
+    float: left;
+}
+
+.unavbar li ul{
+    display: none;
+    position: absolute;
+    min-width: 140px;
+}
+
+.unavbar li:hover >ul{
+    display: block;
+    
 }

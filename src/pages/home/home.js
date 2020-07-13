@@ -5,7 +5,7 @@ import logo from "../../assets/logos/logo3.png";
 import "../../Style/stylehome.css";
 
 import Nabvar from "../../components/navbar.js";
-import Footer from "../../components/footer";
+import Footer from "../../components/footer.js";
 import { Link } from "react-router-dom";
 
 function Menu() {

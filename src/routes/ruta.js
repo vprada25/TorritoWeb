@@ -11,7 +11,7 @@ import info from '../pages/informationPage'
 import ForgetPassword from '../pages/formRestoreForgetPassword/ForgetPassword.js';
 import RestorePasswor from '../pages/formRestoreForgetPassword/restorePassword.js';
 import Conctact from '../pages/informationPage/contact.js';
-
+import Products from '../pages/product/product.js';
 
 export default class Rutas extends Component {
     render() {
@@ -25,7 +25,9 @@ export default class Rutas extends Component {
                     <Route path="/ForgetPassword" component={ForgetPassword}/>
                     <Route path="/RestorePassword" component={RestorePasswor}/>
                     <Route path="/Contact" component={Conctact}/>
+                    <Route path="/Products" component={Products}/>
                 </Router>
+                   
             </div>
         );
     }
