@@ -1,6 +1,10 @@
 :root {
     --Style-font-famili: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
         Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+    --Backgroudn-style-color:rgba(247, 242, 242, 0.555);
+
+    
 }
 
 
@@ -9,99 +13,59 @@
     margin : 0px;
 }
 
-body {
-    /* background: url(../assets/imgs/carnes5.jpg); */
-    background-size      : cover;
-    background-attachment: fixed;
-}
-
 .raiz {
-    height         : 718px;
-    display        : grid;
-    justify-content: center;
-    align-content  : center;
-
+    width     : 100%;
+    max-height: 1200px;
+    
 }
 
-.divlog {
-    display        : flex;
-    justify-content: center;
-}
-
-.raizh1 {
-    font: oblique bold 80px cursive;
-}
-
-h2 {
-    padding-top: 15px;
-    font-family: var(--Style-font-famili);
+.raiz .raiz-h1 {
     text-align : center;
+    font-family: var(--Style-font-famili);
+    margin     : 10px;
 }
 
-.raizimg {
-
-    margin: 10px;
+.raiz .raiz-h2 {
+    text-align : left;
+    font-family: var(--Style-font-famili);
+    margin     : 30px;
 }
 
-.raizform {
-
-    display: grid;
-
-    width                : 300px;
-    grid-template-columns: repeat(2, 1fr);
-    align-items          : center;
-    justify-items        : center;
-
+.raiz .raiz-contend {
+    height: auto;
+    margin: 30px;
+    
 }
 
-.raizinput {
-    border-radius: 15px;
-    width        : 130px;
-    text-align   : center;
-    height       : 27px;
-    font-size    : 18px;
-    margin-top   : 15px;
-   
-}
-
-.raizcard {
-    display        : grid;
-    justify-content: center;
-    border         : 1px solid black;
-    height         : 340px;
-    width          : 300px;
-    border-radius  : 15px;
-    margin-top     : 15px;
-    background     : rgba(255, 255, 255, 0.2);
-}
-
-.raizbtn {
-    border-radius   : 15px;
-    width           : 90px;
-    height          : 38px;
-    background-color: bisque;
-    text-align      : center;
-    margin          : 5px;
-}
-
-.raizdivbtn {
-
-    width          : 300px;
-    display        : flex;
-    align-content  : center;
-    justify-content: center;
-
-
-}
-
-
-
-p {
-
-
-    font-size: 18px;
-    color    : black;
-
+.raiz-contend form label {
+    font-family: var(--Style-font-famili);
     font-weight: bold;
-    font-family: "Homer Simpson UI";
+}
+
+.contend-inputs {
+    border-radius     : none;
+    display           : block;
+    margin            : 20px;
+    -webkit-appearance: none;
+    width             : 300px;
+    padding: 6px;
+    font-family: var(--Style-font-famili);
+    background-color: var(--Backgroudn-style-color);
+}
+
+.raiz-contend .contend-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+    padding: 12px;
+}
+
+.contend-buttons button{
+    margin: 15px;
+    padding: 6px;
+    background-color: var(--Backgroudn-style-color);
+    text-align: center;
+    border-radius: 5px;
+    font-family: var(--Style-font-famili);
+    font-weight: bold;
 }

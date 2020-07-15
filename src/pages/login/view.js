@@ -20,21 +20,28 @@ const LoginView = ({ user, getUser }) => {
   return (
     <div className="padre">
       <div className="contenedor-form">
-        <div className="logo"></div>
-        <img src={logo} alt="logo4" />
-        <h1>Toorito</h1>
+        <div className="logo"><img src={logo} alt="logo4" /></div>
+        
+        <h1 className="form-h1">Toorito</h1>
 
         <div className="toggle">
-          <Link to="/FormLogin">Registro</Link>
+          <Link to="/FormLogin" className="link-toggle">Registro</Link>
         </div>
         <h2>Iniciar Sesión</h2>
         <form action="#" onSubmit={handleSubmit}>
-          <input type="text" placeholder="Usuario" id="user_name" required />
+          <input 
+          type="text" 
+          placeholder="Usuario" 
+          id="user_name" 
+          required 
+          className="inputlogin"
+          />
           <input
             type="password"
             placeholder="contraseña"
             id="user_password"
             required
+            className="inputlogin"
           />
           <div className="divbutton">
             <button type="submit" className="buttonclas">
@@ -50,9 +57,9 @@ const LoginView = ({ user, getUser }) => {
       )}
 
       <div className="reset-pastword">
-        <p>
-          <Link to="/ForgetPassword">Olvide mi contraseña ?</Link>
-        </p>
+        
+          <Link to="/ForgetPassword"><p className="pastword-p">Olvide mi contraseña ? </p></Link>
+       
       </div>
     </div>
   );

@@ -28,6 +28,7 @@ function Menu() {
             productos brindando una atención rápida y de calidad.
           </p>
         </div>
+        
         <div className="BodyButton">
          <Link to="/info"> <button type="Default" className="ButtonFind"> 
            Empezar
@@ -37,11 +38,11 @@ function Menu() {
       </div>
 
       <h1 className="containerh1">Productos</h1>
-      <div className="containeretiqueteP">
-        <p className="containeretiquetePp">
+      <div className="BodycontText">
+        <p className="contenido">
 
-        <strong>En nuestro catálogo de productos te ofrecemos productos frescos y con los estándares más altos de calidad, 
-          ofrecemos tres tipos de carnes.</strong> 
+        En nuestro catálogo de productos te ofrecemos productos frescos y con los estándares más altos de calidad, 
+          ofrecemos tres tipos de carnes.
           
         </p>
       </div>
@@ -74,10 +75,10 @@ function Menu() {
       </div>
 
       <h1 className="containerh1">Contactos</h1>
-      <div className="containeretiqueteP">
-        <p className="containeretiquetePp">
-        <strong>Pueden contactarnos en cualquiera de
-        nuestras redes sociales o directamente al whatsapp...</strong>
+      <div className="BodycontText">
+        <p className="contenido">
+        Pueden contactarnos en cualquiera de
+        nuestras redes sociales o directamente al whatsapp...
         </p>
       </div>
       <div className="containerconctato">
