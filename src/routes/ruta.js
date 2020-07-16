@@ -13,6 +13,8 @@ import RestorePasswor from '../pages/formRestoreForgetPassword/restorePassword.j
 import Conctact from '../pages/informationPage/contact.js';
 import Products from '../pages/product/product.js';
 
+//logueados
+import ProductsLogueado from '../PagesLogueado/views/loginproduct';
 export default class Rutas extends Component {
     render() {
         return (
@@ -26,6 +28,7 @@ export default class Rutas extends Component {
                     <Route path="/RestorePassword" component={RestorePasswor}/>
                     <Route path="/Contact" component={Conctact}/>
                     <Route path="/Products" component={Products}/>
+                    <Route path="/ProductsLogueado" component={ProductsLogueado}/>
                 </Router>
                    
             </div>

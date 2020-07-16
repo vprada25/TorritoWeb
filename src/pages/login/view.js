@@ -44,9 +44,10 @@ const LoginView = ({ user, getUser }) => {
             className="inputlogin"
           />
           <div className="divbutton">
-            <button type="submit" className="buttonclas">
+           <Link to="/ProductsLogueado"> <button type="submit" className="buttonclas">
               Ingresar
             </button>
+            </Link>
           </div>
         </form>
       </div>

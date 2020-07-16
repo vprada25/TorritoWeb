@@ -29,10 +29,7 @@ export default function Footer() {
               
             </li>
 
-            <li >
-              <a href="a" >Redes Sociales</a>
             
-            </li>
 
             <li>
               <a href="/Contact" >Contactános</a>

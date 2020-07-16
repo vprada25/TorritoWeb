@@ -18,7 +18,7 @@ function Menu() {
         </div>
         <div className="image">
           <img src={logo} alt="°1" />
-          <p className="sub"><i></i>Toorito!</p>
+          <p className="image-sub">Toorito!</p>
         </div>
 
         <div className="BodycontText">

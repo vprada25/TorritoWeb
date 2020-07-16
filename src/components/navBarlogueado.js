@@ -9,7 +9,7 @@ export default function navBar() {
         <div c>
             <div className="Header">
 
-                <div className="Headertitlebos">
+                <div className="Headertitlebost">
                     <p className="p2"> Toorito</p>
                 </div>
 
