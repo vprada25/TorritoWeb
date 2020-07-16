@@ -16,7 +16,10 @@ const Login = () => {
         nom_usuario: name,
         contrasena: password,
       },
-    }).then((res) => setUser(res.data[0]));
+    }).then((res) => {
+      console.log(res.data[0]);
+      setUser(res);
+    });
   };
 
   return <LoginView user={user} getUser={getUser} />;

@@ -1,0 +1,88 @@
+:root {
+  --style-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.up {
+  font-family: var(--style-font-family);
+  text-align: center;
+}
+.logo21 {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.log {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 5000px;
+}
+
+.imag-pro {
+  align-items: center;
+  height: 350px;
+  width: 1349px;
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 60px;
+  margin: 50px;
+}
+
+.boton {
+  height: 60px;
+  width: 80px;
+  border-radius: 8%;
+  margin: 2px;
+}
+
+.boton:hover {
+  background: rgb(158, 10, 10);
+  color: rgb(253, 253, 253);
+  font-family: var(--style-font-family);
+}
+
+.conten2 {
+  width: 300px;
+  height: 202px;
+  padding: 15px;
+  margin: 30px;
+}
+
+.chul {
+  height: 200px;
+  border: 2px solid black;
+}
+
+.sub1 {
+  text-align: left;
+  display: block;
+}
+
+.primero {
+  display: flex;
+  justify-content: center;
+  height: auto;
+  width: 1390px;
+}
+
+.segundo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* .header {
+  /* background-image: url("../../assets/imgs/productos.jpg"); */
+  /* assets\imgs\productos.jpg */
+   /* filter: grayscale(30%); 
+  background-color: #cccccc;
+} */
+
+.sub{
+  width: 1340px;
+  height: 400px;
+}
