@@ -4,14 +4,14 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 //Views 
 
 
-import FormLogin from '../pages/formlogin/loginform.js';
-import Login from '../pages/login';
-import home from '../pages/home/home'
-import info from '../pages/informationPage'
-import ForgetPassword from '../pages/formRestoreForgetPassword/ForgetPassword.js';
-import RestorePasswor from '../pages/formRestoreForgetPassword/restorePassword.js';
-import Conctact from '../pages/informationPage/contact.js';
-import Products from '../pages/product/product.js';
+import FormLogin from '../pages/auth/formlogin/loginform';
+import Login from '../pages/auth/login/index.js';
+import home from '../pages/home/principal/home.js'
+import info from '../pages/home/informationPage/index.js'
+import ForgetPassword from '../pages/auth/formRestoreForgetPassword/ForgetPassword.js';
+import RestorePasswor from '../pages/auth/formRestoreForgetPassword/restorePassword.js';
+import Conctact from '../pages/home/informationPage/contact.js';
+import Products from '../pages/home/product/product.js';
 
 //logueados
 import ProductsLogueado from '../PagesLogueado/views/loginproduct';

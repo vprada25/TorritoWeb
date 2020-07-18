@@ -1,12 +1,12 @@
 import React from 'react';
 
-import logo from '../../assets/logos/logo3.png';
+import logo from '../../../assets/logos/logo3.png';
 
 import 'antd/dist/antd.css';
 
 import {FacebookOutlined,WhatsAppOutlined,InstagramOutlined } from '@ant-design/icons';
 
-import "../../Style/styleContac.css";
+import "../../../Style/styleContac.css";
 function Contact() {
     return (
         <div>

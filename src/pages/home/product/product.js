@@ -1,10 +1,10 @@
 import React from "react";
-import branch_one from "../../assets/imgs/cerdo.jpg";
-import branch_two from "../../assets/imgs/res.jpg";
-import branch_three from "../../assets/imgs/pollo.jpg";
-import branch_four from "../../assets/imgs/pescado.jpg";
-import logo from "../../assets/logos/logo3.png";
-import "../../Style/styleProduct.css";
+import branch_one from "../../../assets/imgs/cerdo.jpg";
+import branch_two from "../../../assets/imgs/res.jpg";
+import branch_three from "../../../assets/imgs/pollo.jpg";
+import branch_four from "../../../assets/imgs/pescado.jpg";
+import logo from "../../../assets/logos/logo3.png";
+import "../../../Style/styleProduct.css";
 
 function prod() {
   return (
@@ -50,7 +50,7 @@ function prod() {
         <div className="contacto">
         <div className="contactologo">
           <img
-            src={require("../../assets/logos/facebook.png")}
+            src={require("../../../assets/logos/facebook.png")}
             alt="facebook"
             className="conlog"
           />
@@ -59,7 +59,7 @@ function prod() {
 
         <div className="contactologo">
           <img
-            src={require("../../assets/logos/whatsapp.png")}
+            src={require("../../../assets/logos/whatsapp.png")}
             alt="whatsapp"
             className="conlog"
           />
@@ -68,7 +68,7 @@ function prod() {
 
         <div className="contactologo">
           <img
-            src={require("../../assets/logos/instagram.png")}
+            src={require("../../../assets/logos/instagram.png")}
             alt="instagram"
             className="conlog"
           />

@@ -1,8 +1,8 @@
 import React from 'react';
 
-import logo from "../../assets/logos/logo3.png";
+import logo from "../../../assets/logos/logo3.png";
 
-import "../../Style/stylefomr.css";
+import "../../../Style/stylefomr.css";
 
 // import { Link } from "react-router-dom";
 class FormLogin extends React.Component {

@@ -1,12 +1,12 @@
 import React from "react";
-import logo from "../../assets/logos/logo3.png";
-import branch_one from "../../assets/imgs/cerdo.jpg";
-import branch_two from "../../assets/imgs/res.jpg";
-import branch_three from "../../assets/imgs/pollo.jpg";
-import branch_four from "../../assets/imgs/pescado.jpg";
-import sancocho from "../../assets/imgs/sancocho.jpg";
-import Footer from "../../components/footer";
-import "../../Style/styleinfo.css";
+import logo from "../../../assets/logos/logo3.png";
+import branch_one from "../../../assets/imgs/cerdo.jpg";
+import branch_two from "../../../assets/imgs/res.jpg";
+import branch_three from "../../../assets/imgs/pollo.jpg";
+import branch_four from "../../../assets/imgs/pescado.jpg";
+import sancocho from "../../../assets/imgs/sancocho.jpg";
+import Footer from "../../../components/footer";
+import "../../../Style/styleinfo.css";
 
 function info() {
   return (

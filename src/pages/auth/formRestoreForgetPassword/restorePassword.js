@@ -1,8 +1,8 @@
 import React from 'react';
 
-import "../../Style/stylerestorePassword.css"
+import "../../../Style/stylerestorePassword.css"
 
-import logo from '../../assets/logos/logo3.png';
+import logo from '../../../assets/logos/logo3.png';
 function restorePassword() {
     return (
         <div className="generalraiz">

@@ -1,11 +1,11 @@
 import React from "react";
 
-import logo from "../../assets/logos/logo3.png";
+import logo from "../../../assets/logos/logo3.png";
 
-import "../../Style/stylehome.css";
+import "../../../Style/stylehome.css";
 
-import Nabvar from "../../components/navbar.js";
-import Footer from "../../components/footer.js";
+import Nabvar from "../../../components/navbar.js";
+import Footer from "../../../components/footer.js";
 import { Link } from "react-router-dom";
 
 function Menu() {
@@ -50,7 +50,7 @@ function Menu() {
       <div className="containerimagesCarnes">
         <div className="containerimagesCarnesip">
           <img
-            src={require("../../assets/imgs/res.jpg")}
+            src={require("../../../assets/imgs/res.jpg")}
             alt="Carne"
             className="containerimagesCarnesipimg"
           />
@@ -58,7 +58,7 @@ function Menu() {
         </div>
         <div className="containerimagesCarnesip">
           <img
-            src={require("../../assets/imgs/pollo.jpg")}
+            src={require("../../../assets/imgs/pollo.jpg")}
             alt=""
             className="containerimagesCarnesipimg"
           />
@@ -66,7 +66,7 @@ function Menu() {
         </div>
         <div className="containerimagesCarnesip">
           <img
-            src={require("../../assets/imgs/pescado.jpg")}
+            src={require("../../../assets/imgs/pescado.jpg")}
             alt=""
             className="containerimagesCarnesipimg"
           />
@@ -84,7 +84,7 @@ function Menu() {
       <div className="containerconctato">
         <div className="containerconctatologo">
           <img
-            src={require("../../assets/logos/facebook.png")}
+            src={require("../../../assets/logos/facebook.png")}
             alt="facebook"
             className="containerconctatologolog"
           />
@@ -92,7 +92,7 @@ function Menu() {
         </div>
         <div className="containerconctatologo">
           <img
-            src={require("../../assets/logos/whatsapp.png")}
+            src={require("../../../assets/logos/whatsapp.png")}
             alt="whatsapp"
             className="containerconctatologolog"
           />
@@ -100,7 +100,7 @@ function Menu() {
         </div>
         <div className="containerconctatologo">
           <img
-            src={require("../../assets/logos/instagram.png")}
+            src={require("../../../assets/logos/instagram.png")}
             alt="instagram"
             className="containerconctatologolog"
           />

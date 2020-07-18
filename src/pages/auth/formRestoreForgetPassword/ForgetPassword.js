@@ -1,8 +1,8 @@
 import React from 'react';
 
-import logo from '../../assets/logos/logo3.png';
+import logo from '../../../assets/logos/logo3.png';
 
-import "../../Style/styleforgetPassword.css"
+import "../../../Style/styleforgetPassword.css"
 
 function ForgetPassword() {
 
