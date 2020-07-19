@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 //Views 
 
 
-import FormLogin from '../pages/auth/formlogin/loginform';
+import FormLogin from '../pages/auth/formlogin';
 import Login from '../pages/auth/login/index.js';
 import home from '../pages/home/principal/home.js'
 import info from '../pages/home/informationPage/index.js'

@@ -69,3 +69,18 @@
     font-family: var(--Style-font-famili);
     font-weight: bold;
 }
+
+
+.combo{ 
+    border-radius     : none;
+    display           : block;
+    margin            : 20px;
+    -webkit-appearance: none;
+    width             : 300px;
+    padding: 6px;
+    font-family: var(--Style-font-famili);
+    background-color: var(--Backgroudn-style-color);
+}
+
+
+
