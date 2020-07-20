@@ -5,18 +5,9 @@ import logo from "../../../assets/logos/logo3.png";
 import "../../../Style/stylelogin.css";
 
 import { Link } from "react-router-dom";
+import { Input } from "reactstrap";
 
 const LoginView = ({ user, getUser }) => {
-  console.log(user);
-  console.log(getUser);
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const user_password = document.getElementById("user_password").value;
-    const name = document.getElementById("user_name").value;
-    getUser(name, user_password);
-  };
-
   return (
     <div className="padre">
       <div className="contenedor-form">
@@ -28,28 +19,14 @@ const LoginView = ({ user, getUser }) => {
           <Link to="/FormLogin" className="link-toggle">Registro</Link>
         </div>
         <h2>Iniciar Sesión</h2>
-        <form action="#" onSubmit={handleSubmit}>
-          <input 
-          type="text" 
-          placeholder="Usuario" 
-          id="user_name" 
-          required 
-          className="inputlogin"
-          />
-          <input
-            type="password"
-            placeholder="contraseña"
-            id="user_password"
-            required
-            className="inputlogin"
-          />
+          <Input  type="text" name="username"  placeholder="Nombre de usuario" bsSize="lg" onChange={(e) => getUser(e.target.value)} />
+          <Input type="password" name="email"  placeholder="Contraseña" bsSize="lg" onChange={(e) => getUser(e.target.value)}/>
           <div className="divbutton">
            <Link to="/HomeLogueado"> <button type="submit" className="buttonclas">
               Ingresar
             </button>
             </Link>
           </div>
-        </form>
       </div>
       {user && (
         <label>
