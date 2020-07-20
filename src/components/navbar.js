@@ -1,41 +1,39 @@
 import React from 'react';
 
 
-import "../Style/stylenavbar.css"
+import "../Style/stylenavbarmenu.css";
 
-export default function Footer() {
+export default function HomeMenu() {
   return (
-    <div className="Header">
+    <div className="GeneralMenu">
 
-      <div className="Headertitlebos">
-        <p className="p2"> Toorito</p>
+      <div className="Menu-titlebos">
+        <p className="titlebos-p2">Toorito</p>
       </div>
 
-      <div className="HeaderNavList">
-        
-          <ul className="unavbar">
-            <li>
-              <a href="/" >Principal</a>
-            </li>
+      <div className="Menu-list">
 
-            <li>
-              <a href="/Login" >Iniciar sesión</a>
+        <ul className="list-ul">
+          <li className="ul-li">
+            <a href="/" className="li-a">Principal</a>
+          </li>
 
-            </li>
+          <li className="ul-li">
+            <a href="/Login" className="li-a">Iniciar sesión</a>
 
-            <li>
-              <a href="/Products" >Productos</a>
+          </li>
 
-              
-            </li>
+          <li className="ul-li">
+            <a href="/Products" className="li-a">Productos</a>
 
-            
 
-            <li>
-              <a href="/Contact" >Contactános</a>
-            </li>
-          </ul>
-        
+          </li>
+
+          <li className="ul-li">
+            <a href="/Contact" className="li-a">Contactános</a>
+          </li>
+        </ul>
+
       </div>
     </div>
   );

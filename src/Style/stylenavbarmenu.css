@@ -1,0 +1,75 @@
+
+:root{
+    --style-font-famyli: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --style-font-wheit: bold;
+  --style-font-size:25px;
+}
+
+
+* {
+    padding: 0;
+    margin : 0;
+}
+
+.GeneralMenu {
+    display              : grid;
+    grid-template-columns: 40% 60%;
+    height               : 320px;
+    margin-bottom        : 15px;
+    padding              : 20px;
+
+}
+
+.Menu-titlebos {
+    padding    : 20px;
+    display    : grid;
+    align-items: center;
+    font-size  : 30px;
+    
+
+
+}
+
+.titlebos-p2 {
+    margin-left: 125px;
+    color      : rgb(7, 6, 6);
+    font-size  : 90px;
+    font-weight: var(--style-font-wheit);
+    font-family: var(--style-font-famyli);
+}
+
+.Menu-list {
+    
+    display        : grid;
+    justify-content: center;
+    align-content  : center;
+
+}
+
+
+
+.ul-li {
+    background-color: white;
+    text-decoration : none;
+    padding         : 10px 15px;
+
+    font-size: 45px;
+}
+
+.Menu--lis ul {
+    list-style: none;
+}
+
+.list-ul {
+    display      : flex;
+    justify-items: center;
+    align-items  : center;
+}
+
+.li-a {
+    font-size: 29px;
+    color    : black;
+    font-weight: bold;
+    font-family: var(--style-font-famyli);
+}
