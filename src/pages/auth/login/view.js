@@ -44,7 +44,7 @@ const LoginView = ({ user, getUser }) => {
             className="inputlogin"
           />
           <div className="divbutton">
-           <Link to="/ProductsLogueado"> <button type="submit" className="buttonclas">
+           <Link to="/HomeLogueado"> <button type="submit" className="buttonclas">
               Ingresar
             </button>
             </Link>

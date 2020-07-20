@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 //Views 
 
 
-import FormLogin from '../pages/auth/formlogin/loginform';
+import FormLogin from '../pages/auth/formlogin';
 import Login from '../pages/auth/login/index.js';
 import home from '../pages/home/principal/home.js'
 import info from '../pages/home/informationPage/index.js'
@@ -13,8 +13,10 @@ import RestorePasswor from '../pages/auth/formRestoreForgetPassword/restorePassw
 import Conctact from '../pages/home/informationPage/contact.js';
 import Products from '../pages/home/product/product.js';
 
+
 //logueados
 import ProductsLogueado from '../PagesLogueado/views/loginproduct';
+import HomeLogueado from '../PagesLogueado/views/homelogueado';
 export default class Rutas extends Component {
     render() {
         return (
@@ -29,6 +31,7 @@ export default class Rutas extends Component {
                     <Route path="/Contact" component={Conctact}/>
                     <Route path="/Products" component={Products}/>
                     <Route path="/ProductsLogueado" component={ProductsLogueado}/>
+                    <Route path="/HomeLogueado" component={HomeLogueado}/>
                 </Router>
                    
             </div>
