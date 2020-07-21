@@ -57,7 +57,7 @@ a{
 .HeaderNavList{
     margin: auto;
     width: 920px;
-    border: 1px solid black;
+   
     
 }
 
@@ -67,7 +67,7 @@ ul,ol{
 
 .unavbar li a{
     background-color:white ;
-    color:rgba(26, 23, 23, 0.932);
+    color: black;
     text-decoration: none;
     padding: 10px 15px;
     display: block;
