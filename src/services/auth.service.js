@@ -1,4 +1,4 @@
-import Api from '../common/api';
+import Api from '../common1/api';
 
 const controller = 'auth';
 

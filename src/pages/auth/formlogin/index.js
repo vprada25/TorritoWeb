@@ -1,7 +1,7 @@
 
 import React from "react";
 import axios from "axios";
-import SignUPView from "./loginform.js";
+import SignUPView from "./register-form.js";
 
 function GetSingUp() {
   
