@@ -23,7 +23,7 @@ export default class Rutas extends Component {
         return (
             <div>
                 <Router>
- {/*                    <Route path="/" exact component={home} />
+                    <Route path="/" exact component={home} />
                     <Route path="/Login" component={Login} />
                     <Route path="/FormLogin" component={FormLogin} />
                     <Route path="/Info" component={info} />
@@ -32,7 +32,7 @@ export default class Rutas extends Component {
                     <Route path="/Contact" component={Conctact}/>
                     <Route path="/Products" component={Products}/>
                     <Route path="/ProductsLogueado" component={ProductsLogueado}/>
-                    <Route path="/HomeLogueado" component={HomeLogueado}/> */}
+                    <Route path="/HomeLogueado" component={HomeLogueado}/> 
                     <Route path="/Profile" component={Profile}/>
                 </Router>
                    
