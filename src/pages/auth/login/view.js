@@ -7,7 +7,8 @@ import "../../../Style/stylelogin.css";
 
 import authService from '../../../services/auth.service';
 
-import { Redirect } from 'react-router';
+import { useHistory } from 'react-router-dom';
+
 
 
 
@@ -33,29 +34,30 @@ const tailLayout = {
 
 
 
-  const LoginView = () => {
-
-   
-    const onFinish = values => {
-      console.log('Success:', values);
+const LoginView = () => {
 
 
-      authService.signIn(values).then(res => {
-        console.log("Datos que se van a enviar al backend")
+  const history = useHistory();
+  const onFinish = values => {
+    console.log('Success:', values);
 
-        console.log(res.data)
-        this.setState({login: true})
-        
-      }).catch(error => console.error(error))
-    };
 
-    
-    const onFinishFailed = errorInfo => {
-      console.log('Failed:', errorInfo);
-    };
+    authService.signIn(values).then(res => {
+      console.log("Datos que se van a enviar al backend")
 
-    
-  
+      console.log(res.data)
+      history.push("/HomeLogueado");
+
+    }).catch(error => console.error(error))
+  };
+
+
+  const onFinishFailed = errorInfo => {
+    console.log('Failed:', errorInfo);
+  };
+
+
+
   return (
     <div className="padre">
       <Form
@@ -65,7 +67,7 @@ const tailLayout = {
         onFinish={onFinish}
         onFinishFailed={onFinishFailed}
       >
-        
+
         <Form.Item
           label="Username"
           name="username"
@@ -92,7 +94,7 @@ const tailLayout = {
         </Button>
         </Form.Item>
 
-        
+
       </Form>
 
 
