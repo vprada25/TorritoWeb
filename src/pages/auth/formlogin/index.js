@@ -4,6 +4,7 @@ import axios from "axios";
 import SignUPView from "./loginform.js";
 
 function GetSingUp() {
+  
   const registerUser = async (
     name,
     lastName,
@@ -21,12 +22,12 @@ function GetSingUp() {
         "Content-Type": "application/json",
       },
       data: {
-        id_usuario: 12,
+        id_usuario: 18,
         nom_usuario: `${name} ${lastName}`,
         contrasena: pass,
         fk_id_rol: rol,
         person: {
-          id_persona: 12,
+          id_persona: 18,
           pri_nombre: 'mamamamama',
           seg_nombre:'mamamamama',
           pri_apellido:'mamamamama',

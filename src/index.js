@@ -1,14 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 //import App from './PagesLogueado/views/loginproduct';
- import App from './routes/ruta';
+import App from './routes/ruta';
 import * as serviceWorker from './serviceWorker';
+import { createBrowserHistory } from 'history'
+import { Provider } from 'react-redux';
+import initStore from './store/Store';
 import 'bootstrap/dist/css/bootstrap.css';
 
+
+ export const history = createBrowserHistory();
+export const store = initStore(history);
+
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById("root")
 );
 

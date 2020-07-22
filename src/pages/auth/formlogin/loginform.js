@@ -1,140 +1,145 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 
 import logo from "../../../assets/logos/logo3.png";
 
 import "../../../Style/stylefomr.css";
 
+import { user as userAction } from '../../../services/user/userActions';
+
+import { useSelector, useDispatch } from 'react-redux'
+
 // import { Link } from "react-router-dom";
 
-class FormLogin extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isValid: false,
-    };
-  }
 
-  handleSubmit = (event) => {
+const FormLogin = () => {
+
+  //const {user} = useSelector(state => state.userAction);
+  const dispatch = useDispatch();
+
+  const handleSubmit = (event) => {
     event.preventDefault();
-    const { getUser } = this.props;
-    const name = document.getElementById("name");
-    const lastName = document.getElementById("lastName");
-    const compayName = document.getElementById("compayName");
-    const user = document.getElementById("user");
-    const pass = document.getElementById("pass");
-    const confirmPass = document.getElementById("confirmPass");
-    const nit = document.getElementById("nit");
-    const phone = document.getElementById("phone");
-    const rol =document.getElementById("rol");
+    // const { getUser } = this.props;
+    const pri_nombre = document.getElementById("priname").value;
+    const seg_nombre = document.getElementById("segname").value;
+    const pri_apellido = document.getElementById("prilastname").value;
+    const seg_apellido = document.getElementById("seglastname").value;
+    const direccion = document.getElementById("adress").value;
+    const nom_usuario = document.getElementById("user").value;
+    const contrasena = document.getElementById("password").value;
+    const rol = document.getElementById("rol").value;
     console.log(rol.selectedIndex);
 
     const isValid =
-      name.value !== "" &&
-      lastName.value !== "" &&
-      compayName.value !== "" &&
-      user.value !== "" &&
-      pass.value !== "" &&
-      confirmPass.value !== "" &&
-      nit.value !== "" &&
-      phone.value !== "" &&
-      rol.value!=="";
+      pri_nombre.value !== "" &&
+      seg_nombre.value !== "" &&
+      pri_apellido.value!=="" &&
+      seg_apellido.value!=="" &&
+      nom_usuario.value !== "" &&
+      contrasena.value !== "" &&
+      direccion.value !== "" &&
+      rol.value !== "";
 
+    const values2 = { pri_nombre, seg_nombre, pri_apellido, seg_apellido,direccion,nom_usuario,contrasena, rol }
+
+    console.log(values2);
     if (isValid) {
-      getUser(
-        name.value,
-        lastName.value,
-        compayName.value,
-        user.value,
-        pass.value,
-        confirmPass.value,
-        nit.value,
-        phone.value,
-        rol.selectedIndex
 
-      );
+      dispatch(userAction.createUser(values2))
+
+
     }
-    this.setState({ isValid });
+
   };
 
-  render() {
-    return (
-      <div className="raiz">
-        <div className="divlogo">
-          <img src={logo} alt="logo4" className="raizimg" />
-        </div>
-        <h1 className="raiz-h1">Toorito</h1>
-        <h2 className="raiz-h2">Formulario de registro</h2>
-        <div className="raiz-contend">
-          <form onSubmit={this.handleSubmit}>
-            <label>
-              Nombre:
+
+
+  return (
+    <div className="raiz">
+      <div className="divlogo">
+        <img src={logo} alt="logo4" className="raizimg" />
+      </div>
+      <h1 className="raiz-h1">Toorito</h1>
+      <h2 className="raiz-h2">Formulario de registro</h2>
+      <div className="raiz-contend">
+        <form onSubmit={handleSubmit}>
+
+          <label>
+            Primer Nombre:
               <input
-                type="text"
-                placeholder=""
-                className="contend-inputs "
-                id="name"
-              />
-            </label>
+              type="text"
+              placeholder=""
+              className="contend-inputs "
+              id="priname"
+            />
+          </label>
 
-            <label>
-              Apellido:
-              <input type="text" className="contend-inputs " id="lastName" />
-            </label>
+          <label>
+            Segundo Nombre:
+              <input
+              type="text"
+              placeholder=""
+              className="contend-inputs "
+              id="segname"
+            />
+          </label>
 
-            <label>
-              Nombre de empresa:
+          <label>
+            Apellido:
+              <input type="text" className="contend-inputs " id="prilastname" />
+          </label>
+
+          <label>
+            Segundo Apellido:
+              <input type="text" className="contend-inputs " id="seglastname" />
+          </label>
+
+
+          <label>
+            Nombre de empresa:
               <input type="text" className="contend-inputs " id="compayName" />
-            </label>
+          </label>
 
-            <label>
-              Usuario:
+          <label>
+            Usuario:
               <input type="text" className="contend-inputs " id="user" />
-            </label>
+          </label>
 
-            <label>
-              Contraseña:
-              <input type="password" className="contend-inputs " id="pass" />
-            </label>
+          <label>
+            Contraseña:
+              <input type="password" className="contend-inputs " id="password" />
+          </label>
 
-            <label>
-              Confirmar contraseña:
-              <input
-                type="password"
-                className="contend-inputs "
-                id="confirmPass"
-              />
-            </label>
 
-            <label>
-              Nit:
+          <label>
+            Nit:
               <input type="text" className="contend-inputs " id="nit" />
-            </label>
+          </label>
 
-            <label>
-              Teléfono:
-              <input type="number" className="contend-inputs " id="phone" />
-            </label>
+          <label>
+            Direccion:
+              <input type="text" className="contend-inputs " id="adress" />
+          </label>
 
-            <label> 
-                Rol:
+          <label>
+            Rol:
             <select className="combo" id="rol" >
               <option>Elija una opcion</option>
-              <option value="Empresa" > Empresa </option>
-              <option value="Usuario" > Usuario </option>
+              <option value="1" > Empresa </option>
+              <option value="" > Usuario </option>
             </select>
-            </label>
+          </label>
 
-            <div className="contend-buttons">
-              <button type="submit" className="buttons-registrar">
-                Registrar
+          <div className="contend-buttons">
+            <button type="submit" className="buttons-registrar">
+              Registrar
               </button>
-              <button className="buttons-iniciarsesion">Inciar sesión</button>
-            </div>
-          </form>
-        </div>
+            <button className="buttons-iniciarsesion">Inciar sesión</button>
+          </div>
+        </form>
       </div>
-    );
-  }
+    </div>
+  );
 }
+
 
 export default FormLogin;

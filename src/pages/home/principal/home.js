@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 
 import logo from "../../../assets/logos/logo3.png";
 
@@ -8,7 +8,18 @@ import Nabvar from "../../../components/navbar.js";
 import Footer from "../../../components/footer.js";
 import { Link } from "react-router-dom";
 
+import { user } from '../../../services/user/userActions';
+
+import {useSelector, useDispatch} from 'react-redux'
+
 function Menu() {
+  const dispatch = useDispatch();
+  const {users} = useSelector(state => state.user);
+  useEffect(() => { 		
+    dispatch(user.getUser()) 
+    
+  }, [])
+  console.log(users);
   return (
     <div>
       <Nabvar />
