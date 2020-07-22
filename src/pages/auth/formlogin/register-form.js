@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import logo from "../../../assets/logos/logo3.png";
 import "../../../Style/stylefomr.css";
 import authService from '../../../services/auth.service';
-import { Form, Input, Button, Checkbox } from 'antd';
+import { Form, Input, Button } from 'antd';
+import { Select } from 'antd';
+const { Option } = Select;
 
 const layout = {
   labelCol: {
@@ -30,6 +32,10 @@ const FormRegister = () => {
       console.log(res)
     }).catch(error => console.error(error))
   };
+
+  function handleChange(value) {
+    console.log(`selected ${value}`);
+  }
 
   const onFinishFailed = errorInfo => {
     console.log('Failed:', errorInfo);
@@ -101,6 +107,17 @@ const FormRegister = () => {
           </Form.Item>
           <Form.Item label="Password" name="password" rules={[{ required: true, message: 'Please input your password!'}]}>
             <Input.Password />
+          </Form.Item>
+          <Form.Item label="Rol de usuario" name="fk_id_rol" rules={[{ required: true, message: 'Please seleccione su rol!'}]}>
+            <Select defaultValue="lucy" style={{ width: 120 }} onChange={handleChange}>
+              <Option value="1">Admin</Option>
+              <Option value="lucy">Lucy</Option>
+              <Option value="lddd">Otra cosa</Option>
+              <Option value="disabled" disabled>
+                Disabled
+              </Option>
+              <Option value="Yiminghe">yiminghe</Option>
+            </Select>
           </Form.Item>
 
 
