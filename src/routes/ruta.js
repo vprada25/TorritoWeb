@@ -12,12 +12,15 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
  import RestorePasswor from '../pages/auth/formRestoreForgetPassword/restorePassword.js';
  import Conctact from '../pages/home/informationPage/contact.js';
  import Products from '../pages/home/product/product.js';
-import Profile from '../pages/home/profile/profile.js';
+ import Profile from '../pages/home/profile/profile.js';
+ 
+
 
 
 //logueados
  import ProductsLogueado from '../PagesLogueado/views/loginproduct';
  import HomeLogueado from '../PagesLogueado/views/homelogueado';
+ import RegisterProducts from '../PagesLogueado/views/registerproducts';
 export default class Rutas extends Component {
     render() {
         return (
@@ -34,6 +37,8 @@ export default class Rutas extends Component {
                     <Route path="/ProductsLogueado" component={ProductsLogueado}/>
                     <Route path="/HomeLogueado" component={HomeLogueado}/> 
                     <Route path="/Profile" component={Profile}/>
+                    <Route path="/RegisterProducts" component={RegisterProducts}/>
+
                 </Router>
                    
             </div>

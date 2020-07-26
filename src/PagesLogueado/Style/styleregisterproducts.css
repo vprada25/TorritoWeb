@@ -1,0 +1,42 @@
+.titlerp 
+{justify-content: center;
+text-align: center;
+margin: 12px;}
+
+.rul1{
+    display: flex;
+    position: relative;
+    left: 280px;
+    width: 500px;  
+   
+}
+
+.rul{
+    display: flex;
+    position: relative;
+    left: 297px;
+    justify-content: center;
+    width: 300px;  }
+
+/* .rul{
+    display: flex;
+    position: relative;
+    left: 297px;
+    justify-content: center;
+    width: 300px;  
+}
+
+
+.rul2{
+    display: flex;
+    position: relative;
+    left: 257px;
+    justify-content: center;
+    width: 380px;  
+}
+
+
+.run{
+    display: ruby-text-container;
+    border: red 5px solid; 
+} */
