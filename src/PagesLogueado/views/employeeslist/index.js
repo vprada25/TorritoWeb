@@ -5,9 +5,6 @@ import { Table, Tag, Space } from 'antd';
 
 
 
-
-
-function EmployessList() {
 const columns = [
   
   {
@@ -82,11 +79,15 @@ const data = [
   },
 ];
 
+function EmployessList() {
+
+
   return (
     
     <div>
         <div className ="logoemployees"><img src={logo} alt="°1" /></div>
       <div className="titleemployees"><h1 className="titleemployees2">Listado de empleados</h1></div>
+      <Table columns={columns} dataSource={data} />
     </div>
   );
 }
