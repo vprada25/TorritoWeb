@@ -21,11 +21,13 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
  import ProductsLogueado from '../PagesLogueado/views/loginproduct';
  import HomeLogueado from '../PagesLogueado/views/homelogueado';
  import RegisterProducts from '../PagesLogueado/views/registerproducts';
+ import EmployessList from '../PagesLogueado/views/employeeslist';
 export default class Rutas extends Component {
     render() {
         return (
             <div>
                 <Router>
+                    
                     <Route path="/" exact component={home} />
                     <Route path="/Login" component={Login} />
                     <Route path="/FormLogin" component={FormLogin} />
@@ -38,6 +40,7 @@ export default class Rutas extends Component {
                     <Route path="/HomeLogueado" component={HomeLogueado}/> 
                     <Route path="/Profile" component={Profile}/>
                     <Route path="/RegisterProducts" component={RegisterProducts}/>
+                    <Route path="/EmployessList" component={EmployessList}/>
 
                 </Router>
                    

@@ -30,7 +30,7 @@ function registerPro() {
       <div>
         <div className="titlerp">
           {" "}
-          <img src={logo} alt="°1" /> <h1>Registrar productos</h1>{" "}
+          <img src={logo} alt="°1" /> <h1 className="registre">Registrar productos</h1>{" "}
         </div>
       </div>
 

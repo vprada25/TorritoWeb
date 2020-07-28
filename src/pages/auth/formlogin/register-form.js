@@ -8,15 +8,15 @@ const { Option } = Select;
 
 const layout = {
   labelCol: {
-    span: 8,
+    span: 9,
   },
   wrapperCol: {
-    span: 16,
+    span: 6,
   },
 };
 const tailLayout = {
   wrapperCol: {
-    offset: 8,
+    offset: 9,
     span: 16,
   },
 };

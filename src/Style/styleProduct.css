@@ -1,8 +1,17 @@
+:root {
+  --Style-font-famili: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  --Backgroudn-style-color:rgba(247, 242, 242, 0.555);
+
+  
+}
+
 .pro{
     
     text-align: center;
     font: oblique bold 30px cursive;
-    
+    font-family: var(--Style-font-famili);
     font-size: 4em;
 }
 

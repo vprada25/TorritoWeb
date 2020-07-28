@@ -107,13 +107,13 @@ ol {
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
-  background-color: black;
+ 
 }
 
 .conlogin {
   display: flex;
   align-self: flex-end;
-  background-color: red;
+ 
 }
 
 .logomenu {

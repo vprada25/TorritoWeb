@@ -19,6 +19,8 @@
     
 }
 
+
+
 .raiz .raiz-h1 {
     text-align : center;
     font-family: var(--Style-font-famili);
@@ -81,6 +83,7 @@
     font-family: var(--Style-font-famili);
     background-color: var(--Backgroudn-style-color);
 }
+
 
 
 
