@@ -1,93 +1,82 @@
 import React from "react";
 import logo from "../../../assets/logos/logo3.png";
 import "../../Style/styleemployeslist.css";
-import { Table, Tag, Space } from 'antd';
-
-
+import { Table, Tag, Space } from "antd";
 
 const columns = [
+  {
+    title: "ID",
+    dataIndex: "id",
+    key: "id",
+    render: (text) => <a>{text}</a>,
+  },
+  {
+    title: "Nombre Completo",
+    dataIndex: "name",
+    key: "name",
+    render: (text) => <a>{text}</a>,
+  },
+  {
+    title: "Edad",
+    dataIndex: "age",
+    key: "age",
+  },
+  {
+    title: "Empresa",
+    dataIndex: "address",
+    key: "address",
+  },
+
+  {
+    title: "Desempeño",
+    dataIndex: "comments",
+    key: "comments"
+  },
+
   
-  {
-    title: 'Name',
-    dataIndex: 'name',
-    key: 'name',
-    render: text => <a>{text}</a>,
-  },
-  {
-    title: 'Age',
-    dataIndex: 'age',
-    key: 'age',
-  },
-  {
-    title: 'Address',
-    dataIndex: 'address',
-    key: 'address',
-  },
-  {
-    title: 'Tags',
-    key: 'tags',
-    dataIndex: 'tags',
-    render: tags => (
-      <>
-        {tags.map(tag => {
-          let color = tag.length > 5 ? 'geekblue' : 'green';
-          if (tag === 'loser') {
-            color = 'volcano';
-          }
-          return (
-            <Tag color={color} key={tag}>
-              {tag.toUpperCase()}
-            </Tag>
-          );
-        })}
-      </>
-    ),
-  },
-  {
-    title: 'Action',
-    key: 'action',
-    render: (text, record) => (
-      <Space size="middle">
-        <a>Invite {record.name}</a>
-        <a>Delete</a>
-      </Space>
-    ),
-  },
 ];
 
 const data = [
-  {
-    key: '1',
-    name: 'John Brown',
+  { 
+    key: "1",
+    id:"001",
+    name: "Juan carlos urresty",
     age: 32,
-    address: 'New York No. 1 Lake Park',
-    tags: ['nice', 'developer'],
+    address: "pietram ",
+    comments:""
+   
   },
   {
-    key: '2',
-    name: 'Jim Green',
+    key: "2",
+    id:"002",
+    name: "Duvan camilo pedroza",
     age: 42,
-    address: 'London No. 1 Lake Park',
-    tags: ['loser'],
+    address: "zenú",
+     comments:""
+    
+   
   },
   {
-    key: '3',
-    name: 'Joe Black',
+    key: "3",
+    id:"003",
+    name: "ricardo perez samaniego ",
     age: 32,
-    address: 'Sidney No. 1 Lake Park',
-    tags: ['cool', 'teacher'],
+    address: "Rica",
+    comments:""
+    
   },
 ];
 
 function EmployessList() {
-
-
   return (
-    
     <div>
-        <div className ="logoemployees"><img src={logo} alt="°1" /></div>
-      <div className="titleemployees"><h1 className="titleemployees2">Listado de empleados</h1></div>
-      <Table columns={columns} dataSource={data} />
+      <div className="logoemployees">
+        <img src={logo} alt="°1" />
+      </div>
+      <div className="titleemployees">
+        <h1 className="titleemployees2">Listado de empleados</h1>
+      </div>
+      <Table className="tab" columns={columns} dataSource={data} />
     </div>
   );
 }

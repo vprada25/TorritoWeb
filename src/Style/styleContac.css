@@ -1,6 +1,11 @@
 
+
 :root{
     --height-icons:38px;
+
+    --Style-font-famili: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
 }
 
 
@@ -29,7 +34,7 @@
 
 .generalcontac {
     border: 1px solid black;
-    height: 722px;
+    height: 657px;
 }
 
 .contach1 {
@@ -42,9 +47,10 @@
 }
 
 .contacconten {
-    height         : 600px;
+    height         : 500px;
     display        : grid;
     justify-content: center;
+    
 
 }
 
@@ -96,4 +102,13 @@
     font-size: var(--height-icons);
     border: 1px solid black;
     color: red;
+}
+
+.titlecontact{
+    font-family: var(--Style-font-famili);
+    position:absolute;
+    bottom:370px;
+    right:950px;
+    
+    
 }

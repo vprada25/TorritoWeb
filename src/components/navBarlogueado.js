@@ -9,6 +9,7 @@ export default function navBar() {
       <div className="Header">
         <div className="Headertitlebost">
           <div className="conlogin">
+            <div><h1 className="titlehomelogueado">Toorito</h1> </div>
             <div className="logomenu">
               <img src={logo} alt="°1" />{" "}
             </div>
@@ -22,22 +23,22 @@ export default function navBar() {
             </li>
 
             <li>
-              <a href="/Login">Iniciar sesión</a>
+              <a href="/Login">inventario</a>
               <ul>
                 <li>
-                  <a href="s">empresario</a>
+                  <a href="RegisterProducts">productos</a>
                 </li>
 
                 <li>
-                  <a href="s">cliente</a>
+                  <a href="EmployessList">empleados</a>
                 </li>
               </ul>
             </li>
             <li>
-              <a href="/Login">Registrar</a>
+              <a href="/Login">Administrar</a>
               <ul>
                 <li>
-                  <a href="s">empresario</a>
+                  <a href="s">empleado</a>
                 </li>
 
                 <li>
@@ -47,23 +48,23 @@ export default function navBar() {
             </li>
 
             <li>
-              <a href="/Products">Productos</a>
+              <a href="/Products">Comprar Productos</a>
 
               <ul>
                 <li>
-                  <a href="s"> Res</a>
+                  <a href="ProductsLogueado"> Res</a>
                 </li>
 
                 <li>
-                  <a href="s"> cerdo</a>
+                  <a href="ProductsLogueado"> cerdo</a>
                 </li>
 
                 <li>
-                  <a href="s">Pollo</a>
+                  <a href="ProductsLogueado">Pollo</a>
                 </li>
 
                 <li>
-                  <a href="f">Pescado</a>
+                  <a href="ProductsLogueado">Pescado</a>
                 </li>
               </ul>
             </li>
@@ -89,8 +90,9 @@ export default function navBar() {
               <a href="/Contact">Contactános</a>
             </li>
             <li>
-              <a href="/about">Información</a>
+              <a href="/Info">Información</a>
             </li>
+            <div className="color"><button type="Default" className="toclose">Cerrar sesión</button></div>
           </ul>
         </div>
       </div>
