@@ -1,9 +1,8 @@
 import React from 'react';
-
-
 import "../Style/stylenavbarmenu.css";
 
 export default function HomeMenu() {
+  
   return (
     <div className="GeneralMenu">
 

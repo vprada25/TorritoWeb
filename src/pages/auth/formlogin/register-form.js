@@ -4,6 +4,7 @@ import "../../../Style/stylefomr.css";
 import authService from '../../../services/auth.service';
 import { Form, Input, Button } from 'antd';
 import { Select } from 'antd';
+import { useHistory } from "react-router-dom";
 const { Option } = Select;
 
 const layout = {
@@ -22,15 +23,16 @@ const tailLayout = {
 };
 
 const FormRegister = () => {
-
+  const history = useHistory();
   const onFinish = values => {
     console.log('Success:', values);
-    
+
     authService.signUp(values).then(res => {
       console.log("Datos que se van a enviar al backend")
-
       console.log(res.data)
+      history.push("/HomeLogueado");
     }).catch(error => console.error(error))
+
   };
 
   function handleChange(value) {
@@ -58,28 +60,29 @@ const FormRegister = () => {
           onFinish={onFinish}
           onFinishFailed={onFinishFailed}
         >
-          <Form.Item label="Primer nombre" name="pri_nombre" rules={[{ required: true,  message: 'Por favor ingrese su primer nombre'}]}>
+          <Form.Item label="Primer nombre" name="pri_nombre" rules={[{ required: true, message: 'Por favor ingrese su primer nombre' }]}>
             <Input />
           </Form.Item>
-          <Form.Item label="Segundo nombre" name="seg_nombre" rules={[{ required: true,  message: 'Por favor ingrese su segundo nombre'}]}>
+          <Form.Item label="Segundo nombre" name="seg_nombre" rules={[{ required: true, message: 'Por favor ingrese su segundo nombre' }]}>
             <Input />
           </Form.Item>
-          <Form.Item label="Primer apellido" name="pri_apellido" rules={[{ required: true,  message: 'Por favor ingrese su primer apellido'}]}>
+          <Form.Item label="Primer apellido" name="pri_apellido" rules={[{ required: true, message: 'Por favor ingrese su primer apellido' }]}>
             <Input />
           </Form.Item>
-          <Form.Item label="Segundo apellido" name="seg_apellido" rules={[{ required: true,  message: 'Por favor ingrese su segundo apellido'}]}>
+          <Form.Item label="Segundo apellido" name="seg_apellido" rules={[{ required: true, message: 'Por favor ingrese su segundo apellido' }]}>
             <Input />
           </Form.Item>
-          <Form.Item label="Direccion" name="direccion" rules={[{ required: true,  message: 'Por favor ingrese su direccion'}]}>
+          <Form.Item label="Direccion" name="direccion" rules={[{ required: true, message: 'Por favor ingrese su direccion' }]}>
             <Input />
           </Form.Item>
-          <Form.Item label="Nombre de usuario" name="nom_usuario" rules={[{ required: true,  message: 'Por favor ingrese su segundo apellido'}]}>
+          <Form.Item label="Nombre de usuario" name="nom_usuario" rules={[{ required: true, message: 'Por favor ingrese su segundo apellido' }]}>
             <Input />
           </Form.Item>
-          <Form.Item label="Password" name="contrasena" rules={[{ required: true, message: 'Please input your password!'}]}>
+          <Form.Item label="Password" name="contrasena" rules={[{ required: true, message: 'Please input your password!' }]}>
             <Input.Password />
           </Form.Item>
-          <Form.Item label="Rol de usuario" name="fk_id_rol" rules={[{ required: true, message: 'Please seleccione su rol!'}]}>
+          
+          <Form.Item label="Rol de usuario" name="fk_id_rol" rules={[{ required: true, message: 'Please seleccione su rol!' }]}>
             <Select defaultValue="lucy" style={{ width: 120 }} onChange={handleChange}>
               <Option value="1">Admin</Option>
               <Option value="lucy">Lucy</Option>
@@ -98,7 +101,7 @@ const FormRegister = () => {
         </Button>
           </Form.Item>
         </Form>
-       
+
       </div>
     </div>
   );

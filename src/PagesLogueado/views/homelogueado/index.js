@@ -1,11 +1,7 @@
 import React from 'react';
-
 import { Carousel } from 'antd';
-
 import "../../Style/stylehomeL.css";
-
 import Navbar from "../../../components/navBarlogueado";
-
 import { FacebookOutlined, WhatsAppOutlined, InstagramOutlined } from '@ant-design/icons';
 
 function home() {

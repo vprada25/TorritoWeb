@@ -1,59 +1,22 @@
-.root{
-   
-    text-align: center;
-    margin: 5px;
-    padding: 30px; 
- 
-}
 
-
-table,th,td{
-    border:1px solid black;
-    margin: 40px;
-    padding: 12px; 
-    text-align: center;
- 
-}
-.titleProfile {
-    font: oblique bold 30px small-caps;
-}
-
-.picture{
-    display: flex;
-    justify-content: center;
-    align-content: center;
+*{
+    padding: 0px;
     margin: 0px;
 }
 
-.rootbutoon{
+.root{
+    height: 722px;
+    border: 1px solid black;
     display: flex;
     justify-content: center;
     align-content: center;
-    padding: 12px; 
-
+    justify-items: center;
+    align-items: center;
+    
 }
 
-.buttons-registrar-profile {
-    padding: 10px; 
-    border-radius: 6px;
-}
-
-
-.buttons-registrar-profile:hover {
-    background: rgb(158, 10, 10);
-    color: rgb(253, 253, 253);
-    font-family: var(--style-font-family);
-  }
-
-
-  .contend-business{
-    border-radius     : none;
-    display           : block;
-    margin            : 2px;
-    -webkit-appearance: none;
-    width             : 200px;
-    padding: 6px;
-    font-family: var(--Style-font-famili);
-    background-color: var(--Backgroudn-style-color);
+.root-card{
+    width: 300;
+    text-align: center;
 }
 

@@ -1,49 +1,124 @@
-import React from "react";
+import React, { Component } from "react";
+
 import "../../../Style/StyleProfile.css";
 
-function config() {
-  return (
-    <div>
-      <div className="root">
-        <label className="titleProfile">Configuración del Perfil</label>
-      </div>
+import { Form, Input, Button, Card, InputNumber } from "antd";
 
-      <div className="picture">
-        <table >
-          <tr>
-           {/*  <th>NIT</th> */}
-            <th>NOMBRE EMPRESA</th>
-            <th>DIRECCIÓN EMPRESA</th>
-            <th>TELÉFONO</th>
-          </tr>
-          <tr>
-              
-             {/*  <td><label>
-              <input type="text" className="contend-business " id="lastName" />
-            </label></td> */}
-              <td><label>
-             
-              <input type="text" className="contend-business" id="lastName" />
-            </label></td>
-              <td><label>
-              
-              <input type="text" className="contend-business " id="lastName" />
-            </label></td>
-              <td><label>
-              
-              <input type="text" className="contend-business " id="lastName" />
-            </label></td>
-          </tr>
-        </table>
-        
-      </div>
-      <div className="rootbutoon">
-        <button type="submit" className="buttons-registrar-profile">
+import bunisess from '../../../services/bunises.service';
+/* import Auth from '../../../services/auth.service'; */
+
+
+
+const layout = {
+  labelCol: {
+    span: 8,
+  },
+  wrapperCol: {
+    span: 16,
+  },
+};
+const tailLayout = {
+  wrapperCol: {
+    offset: 8,
+    span: 16,
+  },
+};
+
+const config = () => {
+
+  const onFinish = (values) => {
+    const data = { ...values };
+    console.log("Success:", data);
+    
+    bunisess.registerbunisess(values).then(res => {
+      console.log("Datos que se van a enviar al backend")
+      console.log(res.data)
+      
+
+    }).catch(error => console.error(error))
+
+  };
+
+  const onFinishFailed = (errorInfo) => {
+    console.log("Failed:", errorInfo);
+  };
+
+  /* console.log(Auth.getMenu()); */
+
+  return (
+
+    <div className="root">
+
+
+
+      <Card title="Registrar empresa" className="root-card" bordered={false} >
+
+
+        <div>
+          <Form
+            className="subcolor"
+            {...layout}
+            name="basic"
+            initialValues={{ remember: true }}
+            onFinish={onFinish}
+            onFinishFailed={onFinishFailed}
+          >
+            <Form.Item className="form-items"
+              label="NIT"
+              name="NIT"
+              rules={[{ required: true, message: "Porfavor digite su nombre de empresa!" }]}
+            >
+              <Input className="form-input" />
+            </Form.Item>
+
+            <Form.Item className="form-items"
+              label="Nombre"
+              name="NOMBRE_EM"
+              rules={[{ required: true, message: "Porfavor digite su nombre de empresa!" }]}
+            >
+              <Input className="form-input" />
+            </Form.Item>
+
+            <Form.Item className="form-items"
+              label="Direccion"
+              name="DIRECCION"
+              rules={[{ required: true, message: "Porfavor digite su direccion!" }]}
+            >
+              <Input />
+            </Form.Item>
+
+            <Form.Item className="form-items"
+              label="Telefono"
+              name="TEL"
+              rules={[{ required: true, message: "Porfavor digite su telefono!" }]}
+            >
+              <Input />
+            </Form.Item>
+            
+            <Form.Item className="form-items"
+              label="NN"
+              name="FKID_PERSONA"
+              rules={[{ required: true, message: "Porfavor digite su telefono!" }]}
+            >
+              <Input />
+            </Form.Item>
+
+            <Form.Item {...tailLayout}>
+              <Button type="primary" htmlType="submit">
                 Registrar
-              </button>
+            </Button>
+            </Form.Item>
+
+          </Form>
+
         </div>
+      </Card>
     </div>
+
   );
 }
 
+
 export default config;
+
+
