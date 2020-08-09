@@ -1,47 +1,48 @@
 import React, { useEffect, useState } from "react";
 import logo from "../assets/logos/logo3.png";
 import "../PagesLogueado/Style/styleNavbar.css";
-import Menu from './setMenu';
 import { Route } from "react-router-dom";
 import { Navbar } from "reactstrap";
 import Auth from '../services/auth.service'
 
 const NavBarLogueado = () => {
   const [menu, setMenu] = useState([]);
-  const [menuLevelOne, setMenuLevelOne] = useState([0]);
-  const [menuLevelTwo, setMenuLevelTwo] = useState([0]);
-  const [menuLevelThree, setMenuLevelThree] = useState([0]);
   useEffect(() => {
-    let menuCalculed = [];
     Auth.getMenu().then(res => {
-      menuCalculed = res.data.filter(route => route.FKID_MENU === null);
-      console.log(res.data);
-      res.data.map(route => {
-        /* console.log(menuCalculed) */
-        if (!menuCalculed.find(i => i.ID_MENU === route.ID_MENU)) {
-          /* if (route.FKID_MENU !== null) { */
-          const father = menuCalculed.find(i => i.ID_MENU === route.FKID_MENU)
-          if (father) {
-            /* father.children ? father.children.push(route) : father.children = [route] */
-            menuCalculed = menuCalculed.map(i => {
-              if (i.ID_MENU === father.ID_MENU) {
-                if (i.children) {
-                  i.children.push(route);
-                  return i;
-                }
-                i.children = [route];
-                return i;
-              }
-              return i;
-            })
+      let menuItems = res.data;
+      let i = 0;
+      const buildMenu = (item, index) => {
+        if (item.FKID_MENU !== null) {
+          if (menuItems.filter(j => j.FKID_MENU === item.ID_MENU).length > 0) {
+            index = index + 1;
+            if (index < menuItems.length) {
+              buildMenu(menuItems[index], index);
+            } else {
+              return;
+            }
+          } else {
+            const indexFather = menuItems.findIndex(k => k.ID_MENU === item.FKID_MENU);
+            if (menuItems[indexFather].children) {
+              menuItems[indexFather].children = [...menuItems[indexFather].children, item];
+            } else {
+              menuItems[indexFather].children = [item];
+            }
+            menuItems.splice(menuItems.findIndex(g => g.ID_MENU === item.ID_MENU), 1);
+            index = 0;
+            buildMenu(menuItems[0], index);
           }
-
-          /* route.children = res.data.filter(item => item.FKID_MENU === route.ID_MENU)
-          menuCalculed.push(route); */
-          /* } */
+        } else {
+          index = index + 1;
+          if (index < menuItems.length) {
+            buildMenu(menuItems[index], index);
+          } else {
+            return;
+          }
         }
-      });
-      setMenu(menuCalculed)
+        return;
+      }
+      buildMenu(menuItems[0], i);
+      setMenu(menuItems);
     })
       .catch(err => console.error(err))
   }, []);
@@ -57,20 +58,43 @@ const NavBarLogueado = () => {
             </div>
           </div>
         </div>
-
         <div className="HeaderNavList">
           <ul className="unavbar">
             {
               menu.map(route => route.children ? (
-                <li>
-                  <a href={"/" + route.children[0].RUTA}>{route.children[0].NOMBRE}</a>
+                <li key={Math.random() * 1000}>
+                  <a href={"/" + route.RUTA ? route.RUTA : ''}>{route.NOMBRE}</a>
                   <ul>
                     {
-                      route.children.filter(item => item !== route.children[0].ID_MENU).map(rt => (
-                        <li>
-                          <a href={'/' + rt.RUTE}>{rt.NOMBRE}</a>
+                      route.children.map(rt => rt.children ? (
+                        <li key={Math.random() * 1000}>
+                          <a href={'/' + rt.RUTE ? rt.RUTE : ''}>{rt.NOMBRE}</a>
+                          <ul>
+                            {
+                              rt.children.map(ruta => ruta.children ? (
+                                <li key={Math.random() * 1000}>
+                                  <ul>
+                                    {
+                                      ruta.children.map(_ => <li key={Math.random() * 1000}>
+                                        <a href={"/" + _.RUTA ? _.RUTA : ''}>{_.NOMBRE}</a>
+                                      </li>
+                                      )
+                                    }
+                                  </ul>
+                                </li>
+                              ) :
+                                <li>
+                                  <a href={"/" + ruta.RUTA ? ruta.RUTA : ''}>{ruta.NOMBRE}</a>
+                                </li>
+                              )
+                            }
+                          </ul>
                         </li>
-                      ))
+                      ) :
+                        <li>
+                          <a href={"/" + rt.RUTA}>{rt.NOMBRE}</a>
+                        </li>
+                      )
                     }
                   </ul>
                 </li>
@@ -80,80 +104,6 @@ const NavBarLogueado = () => {
                 </li>
               )
             }
-            {/* <li>
-              <a href="/">Principal</a>
-            </li>
-
-            <li>
-              <a href="/Login">inventario</a>
-              <ul>
-                <li>
-                  <a href="RegisterProducts">productos</a>
-                </li>
-
-                <li>
-                  <a href="EmployessList">empleados</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="/Login">Administrar</a>
-              <ul>
-                <li>
-                  <a href="s">empleado</a>
-                </li>
-
-                <li>
-                  <a href="s">producto</a>
-                </li>
-              </ul>
-            </li>
-
-            <li>
-              <a href="/Products">Comprar Productos</a>
-
-              <ul>
-                <li>
-                  <a href="ProductsLogueado"> Res</a>
-                </li>
-
-                <li>
-                  <a href="ProductsLogueado"> cerdo</a>
-                </li>
-
-                <li>
-                  <a href="ProductsLogueado">Pollo</a>
-                </li>
-
-                <li>
-                  <a href="ProductsLogueado">Pescado</a>
-                </li>
-              </ul>
-            </li>
-
-            <li>
-              <a href="a">Redes Sociales</a>
-              <ul>
-                <li>
-                  <a href="a">Instagram</a>
-                </li>
-
-                <li>
-                  <a href="a">Whatsapp</a>
-                </li>
-
-                <li>
-                  <a href="a">Facebook</a>
-                </li>
-              </ul>
-            </li>
-
-            <li>
-              <a href="/Contact">Contactános</a>
-            </li>
-            <li>
-              <a href="/Info">Información</a>
-            </li> */}
             <div className="color"><button type="Default" className="toclose">Cerrar sesión</button></div>
           </ul>
         </div>

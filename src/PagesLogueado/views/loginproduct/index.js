@@ -20,7 +20,7 @@ const LoginProduct = () => {
     return (
       <div className="segundo">
         {currentData.map((pro) => (
-          <div className="conten2">
+          <div className="conten2" key={Math.random() * 1000}>
             <img src={pro.image} alt={pro.id} className="chul" />
             <p className="sub1">{pro.nombre}</p>
           </div>
