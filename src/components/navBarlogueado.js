@@ -75,9 +75,11 @@ const NavBarLogueado = () => {
                                 <li key={Math.random() * 1000}>
                                   <ul>
                                     {
-                                      ruta.children.map(_ => <li key={Math.random() * 1000}>
+                                      ruta.children.map(_ => (
+                                      <li key={Math.random() * 1000}>
                                         <a href={"/" + _.RUTA ? _.RUTA : ''}>{_.NOMBRE}</a>
                                       </li>
+                                      )
                                       )
                                     }
                                   </ul>
@@ -91,7 +93,7 @@ const NavBarLogueado = () => {
                           </ul>
                         </li>
                       ) :
-                        <li>
+                        <li key={Math.random() * 1000}>
                           <a href={"/" + rt.RUTA}>{rt.NOMBRE}</a>
                         </li>
                       )
@@ -99,7 +101,7 @@ const NavBarLogueado = () => {
                   </ul>
                 </li>
               ) :
-                <li>
+                <li key={Math.random() * 1000}>
                   <a href={"/" + route.RUTA}>{route.NOMBRE}</a>
                 </li>
               )

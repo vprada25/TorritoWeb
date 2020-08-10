@@ -39,7 +39,7 @@ export default class Rutas extends Component {
                     <Route path="/ProductsLogueado" component={ProductsLogueado}/>
                     <Route path="/HomeLogueado" component={HomeLogueado}/> 
                     <Route path="/Profile" component={Profile}/>
-                    <Route path="/RegisterProducts" component={RegisterProducts}/>
+                    <Route path="/RegisterProduct" component={RegisterProducts}/>
                     <Route path="/EmployesRegister" component={EmployessList}/>
 
                 </Router>
