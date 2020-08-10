@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../../../assets/logos/logo3.png";
-import "../../Style/styleemployeslist.css";
+import "../../Style/styleproductlist.css";
 import { Table, Tag, Space } from "antd";
 
 const columns = [
@@ -67,18 +67,18 @@ const data = [
   },
 ];
 
-function EmployessList() {
+function ProductList() {
   return (
     <div>
       <div className="logoemployees">
         <img src={logo} alt="°1" />
       </div>
       <div className="titleemployees">
-        <h1 className="titleemployees2">Listado de empleados</h1>
+        <h1 className="titleemployees2">Listado de Productos</h1>
       </div>
       <Table className="tab" columns={columns} dataSource={data} />
     </div>
   );
 }
 
-export default EmployessList;
+export default ProductList;
