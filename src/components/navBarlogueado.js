@@ -83,7 +83,7 @@ const NavBarLogueado = () => {
                                   </ul>
                                 </li>
                               ) :
-                                <li>
+                                <li key={Math.random() * 1000}>
                                   <a href={"/" + ruta.RUTA ? ruta.RUTA : ''}>{ruta.NOMBRE}</a>
                                 </li>
                               )
