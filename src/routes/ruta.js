@@ -21,9 +21,16 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
  import ProductsLogueado from '../PagesLogueado/views/loginproduct';
  import HomeLogueado from '../PagesLogueado/views/homelogueado';
  import RegisterProducts from '../PagesLogueado/views/registerproducts';
- import ProductList from '../PagesLogueado/views/productlist';
- import SalesOrder from '../PagesLogueado/views/sales/salesorder';
- import SalesStore from '../PagesLogueado/views/sales/salesstore';
+ import Productlist from '../PagesLogueado/views/productlist';
+ import RegisterEmployee from '../PagesLogueado/views/employee/registerEmployee.js';
+ import ConsultEmployees from '../PagesLogueado/views/employee/ConsultEmployees.js';
+ import UpdateEmployees from '../PagesLogueado/views/employee/updateEmployees.js'
+ import DesactivateEmployees from '../PagesLogueado/views/employee/deactivateEmployees.js';
+ import RegisterProduct from '../PagesLogueado/views/producto/RegisterProduct.js';
+ import ConsultProduct from '../PagesLogueado/views/producto/consultProduct.js';
+ import UpdateProduct from '../PagesLogueado/views/producto/UpdateProduct.js';
+ import DeactivateProduct from '../PagesLogueado/views/producto/desactivateProduc.js';
+ import SaleOrder from '../PagesLogueado/views/sale/order.js';
 export default class Rutas extends Component {
     render() {
         return (
@@ -41,11 +48,16 @@ export default class Rutas extends Component {
                     <Route path="/ProductsLogueado" component={ProductsLogueado}/>
                     <Route path="/HomeLogueado" component={HomeLogueado}/> 
                     <Route path="/Profile" component={Profile}/>
-                    <Route path="/RegisterProduct" component={RegisterProducts}/>
-                    <Route path="/ProductList" component={ProductList}/>
-                    <Route path="/SalesOrder" component={SalesOrder}/>
-                    <Route path="/SalesStore" component={SalesStore}/>
-
+                    <Route path="/ProductList" component={Productlist}/>
+                    <Route path="/RegisterEmployee" component={RegisterEmployee}/>
+                    <Route path="/ConsultEmployees" component={ConsultEmployees} />
+                    <Route path="/UpdateEmployees" component={UpdateEmployees} />
+                    <Route path="/DeactivateEmployees" component={DesactivateEmployees} />
+                    <Route path="/RegisterProduct" component={RegisterProduct}/>
+                    <Route path="/ConsultProduct" component={ConsultProduct}/>
+                    <Route path="/UpdateProduct" component={UpdateProduct}/>
+                    <Route path="/DeactivateProduct" component={DeactivateProduct}/>
+                    <Route path="/SaleOrder" component={SaleOrder}/>
                 </Router>
                    
             </div>

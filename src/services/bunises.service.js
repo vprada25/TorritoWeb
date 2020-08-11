@@ -12,17 +12,15 @@ class RegisterBunises {
   fkIdPersona() {
     console.log(this.fkipersona)
     return Api.get(`${controller}/getFkPerson`)
-    
+
   }
 
-  nameBunises(){
-    return Api.get(`${controller}/getNameBunisess`).then((res)=>{
-      console.log(res)
-    }).catch(error=>{
+  nameBunises() {
+    return Api.get(`${controller}/getNameBunisess`).then((res) => res).catch(error => {
       console.log(error)
     })
   }
-  
+
 }
 
 const bunisess = new RegisterBunises();

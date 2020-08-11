@@ -342,7 +342,8 @@ const data = [
 
 function ProductList() {
   return (
-    <div style={{ display: "flex", flexDirection: "column" }}>
+    <div>
+       <div style={{ display: "flex", flexDirection: "column" }}>
       <div className="logoproducts">
         <img src={logo} alt="°1" />
       </div>
@@ -353,6 +354,7 @@ function ProductList() {
       <button type="Default" className="trends">
         Tendencia
       </button>
+    </div>
     </div>
   );
 }
