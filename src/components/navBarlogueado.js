@@ -4,9 +4,12 @@ import "../PagesLogueado/Style/styleNavbar.css";
 import { Route } from "react-router-dom";
 import { Navbar } from "reactstrap";
 import Auth from '../services/auth.service'
+import Business from '../services/bunises.service';
+import { UserAddOutlined } from "@ant-design/icons";
 
 const NavBarLogueado = () => {
   const [menu, setMenu] = useState([]);
+  const [businessName, setBusinessName] = useState([]);
   useEffect(() => {
     Auth.getMenu().then(res => {
       let menuItems = res.data;
@@ -44,7 +47,11 @@ const NavBarLogueado = () => {
       buildMenu(menuItems[0], i);
       setMenu(menuItems);
     })
-      .catch(err => console.error(err))
+      .catch(err => console.error(err));
+
+    Business.nameBunises().then(res => res.data)
+      .then(res => setBusinessName(res))
+      .catch(err => console.log(err));
   }, []);
 
   return (
@@ -52,9 +59,9 @@ const NavBarLogueado = () => {
       <div className="Header">
         <div className="Headertitlebost">
           <div className="conlogin">
-            <div><h1 className="titlehomelogueado">Toorito</h1> </div>
+            <div><h1 className="titlehomelogueado">{businessName.length > 0 ? businessName[0].NOMBRE_EM : 'Unnamed'}</h1> </div>
             <div className="logomenu">
-              <img src={logo} alt="°1" />{" "}
+              <img src={logo} className="img-logo" alt="°1" />{" "}
             </div>
           </div>
         </div>
@@ -76,9 +83,9 @@ const NavBarLogueado = () => {
                                   <ul>
                                     {
                                       ruta.children.map(_ => (
-                                      <li key={Math.random() * 1000}>
-                                        <a href={"/" + _.RUTA ? _.RUTA : ''}>{_.NOMBRE}</a>
-                                      </li>
+                                        <li key={Math.random() * 1000}>
+                                          <a href={"/" + _.RUTA ? _.RUTA : ''}>{_.NOMBRE}</a>
+                                        </li>
                                       )
                                       )
                                     }

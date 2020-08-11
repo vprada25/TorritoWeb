@@ -28,6 +28,13 @@
 
 }
 
+.img-logo{
+  margin-top: 15px;
+    height: 200px;
+    border-radius: 15px;
+    background-color: rgb(174, 174, 177);
+}
+
 /* .HeaderNavList {
     margin: auto;
     border: 1px solid black;
@@ -147,8 +154,9 @@ ol {
 .titlehomelogueado{
   font-family: var(--Style-font-famili);
   position:absolute;
-  bottom:440px;
+  /* bottom:440px; */
   left:50px;
+  margin-top: 240px;
 }
 
 

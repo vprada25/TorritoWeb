@@ -70,13 +70,18 @@ const data = [
 function ProductList() {
   return (
     <div>
-      <div className="logoemployees">
+       <div style={{ display: "flex", flexDirection: "column" }}>
+      <div className="logoproducts">
         <img src={logo} alt="°1" />
       </div>
-      <div className="titleemployees">
-        <h1 className="titleemployees2">Listado de Productos</h1>
+      <div className="titleproducts">
+        <h1 className="titleproducts2">Listado de Productos</h1>
       </div>
       <Table className="tab" columns={columns} dataSource={data} />
+      <button type="Default" className="trends">
+        Tendencia
+      </button>
+    </div>
     </div>
   );
 }
