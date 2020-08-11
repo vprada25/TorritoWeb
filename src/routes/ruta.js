@@ -21,7 +21,9 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
  import ProductsLogueado from '../PagesLogueado/views/loginproduct';
  import HomeLogueado from '../PagesLogueado/views/homelogueado';
  import RegisterProducts from '../PagesLogueado/views/registerproducts';
- import Productlist from '../PagesLogueado/views/productlist';
+ import ProductList from '../PagesLogueado/views/productlist';
+ import SalesOrder from '../PagesLogueado/views/sales/salesorder';
+ import SalesStore from '../PagesLogueado/views/sales/salesstore';
 export default class Rutas extends Component {
     render() {
         return (
@@ -40,7 +42,9 @@ export default class Rutas extends Component {
                     <Route path="/HomeLogueado" component={HomeLogueado}/> 
                     <Route path="/Profile" component={Profile}/>
                     <Route path="/RegisterProduct" component={RegisterProducts}/>
-                    <Route path="/ProductList" component={Productlist}/>
+                    <Route path="/ProductList" component={ProductList}/>
+                    <Route path="/SalesOrder" component={SalesOrder}/>
+                    <Route path="/SalesStore" component={SalesStore}/>
 
                 </Router>
                    
