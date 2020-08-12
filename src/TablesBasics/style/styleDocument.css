@@ -1,0 +1,10 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.div-card{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
