@@ -11,59 +11,332 @@ const columns = [
     render: (text) => <a>{text}</a>,
   },
   {
-    title: "Nombre Completo",
+    title: "Nombre",
     dataIndex: "name",
     key: "name",
     render: (text) => <a>{text}</a>,
   },
   {
-    title: "Edad",
-    dataIndex: "age",
-    key: "age",
+    title: "Precio",
+    dataIndex: "price",
+    key: "price",
   },
   {
-    title: "Empresa",
-    dataIndex: "address",
-    key: "address",
+    title: "Descripción",
+    dataIndex: "description",
+    key: "description",
   },
 
   {
-    title: "Desempeño",
-    dataIndex: "comments",
-    key: "comments"
+    title: "Stock",
+    dataIndex: "stock",
+    key: "stock",
   },
 
-  
+  {
+    title: "Estado",
+    dataIndex: "state",
+    key: "state",
+  },
 ];
 
 const data = [
-  { 
+  {
     key: "1",
-    id:"001",
-    name: "Juan carlos urresty",
-    age: 32,
-    address: "pietram ",
-    comments:""
-   
+    id: "001",
+    name: "lomo ancho",
+    price: 10000,
+    description: "pietram ",
+    stock: "",
+    state: "activo",
   },
   {
     key: "2",
-    id:"002",
+    id: "002",
     name: "Duvan camilo pedroza",
-    age: 42,
-    address: "zenú",
-     comments:""
-    
-   
+    price: 20000,
+    description: "zenú",
+    stock: "",
+    state: "activo",
   },
   {
     key: "3",
-    id:"003",
+    id: "003",
     name: "ricardo perez samaniego ",
-    age: 32,
-    address: "Rica",
-    comments:""
-    
+    price: 32000,
+    description: "Rica",
+    stock: "",
+    state: "activo",
+  },
+
+  {
+    key: "1",
+    id: "001",
+    name: "lomo ancho",
+    price: 10000,
+    description: "pietram ",
+    stock: "",
+    state: "activo",
+  },
+  {
+    key: "2",
+    id: "002",
+    name: "Duvan camilo pedroza",
+    price: 20000,
+    description: "zenú",
+    stock: "",
+    state: "activo",
+  },
+  {
+    key: "3",
+    id: "003",
+    name: "ricardo perez samaniego ",
+    price: 32000,
+    description: "Rica",
+    stock: "",
+    state: "activo",
+  },
+
+  {
+    key: "1",
+    id: "001",
+    name: "lomo ancho",
+    price: 10000,
+    description: "pietram ",
+    stock: "",
+    state: "activo",
+  },
+
+  {
+    key: "1",
+    id: "001",
+    name: "lomo ancho",
+    price: 10000,
+    description: "pietram ",
+    stock: "",
+    state: "activo",
+  },
+  {
+    key: "2",
+    id: "002",
+    name: "Duvan camilo pedroza",
+    price: 20000,
+    description: "zenú",
+    stock: "",
+    state: "activo",
+  },
+  {
+    key: "3",
+    id: "003",
+    name: "ricardo perez samaniego ",
+    price: 32000,
+    description: "Rica",
+    stock: "",
+    state: "activo",
+  },
+
+  {
+    key: "1",
+    id: "001",
+    name: "lomo ancho",
+    price: 10000,
+    description: "pietram ",
+    stock: "",
+    state: "activo",
+  },
+  {
+    key: "2",
+    id: "002",
+    name: "Duvan camilo pedroza",
+    price: 20000,
+    description: "zenú",
+    stock: "",
+    state: "activo",
+  },
+  {
+    key: "3",
+    id: "003",
+    name: "ricardo perez samaniego ",
+    price: 32000,
+    description: "Rica",
+    stock: "",
+    state: "activo",
+  },
+
+  {
+    key: "1",
+    id: "001",
+    name: "lomo ancho",
+    price: 10000,
+    description: "pietram ",
+    stock: "",
+    state: "activo",
+  },
+
+  {
+    key: "3",
+    id: "003",
+    name: "ricardo perez samaniego ",
+    price: 32000,
+    description: "Rica",
+    stock: "",
+    state: "activo",
+  },
+
+  {
+    key: "1",
+    id: "001",
+    name: "lomo ancho",
+    price: 10000,
+    description: "pietram ",
+    stock: "",
+    state: "activo",
+  },
+  {
+    key: "3",
+    id: "003",
+    name: "ricardo perez samaniego ",
+    price: 32000,
+    description: "Rica",
+    stock: "",
+    state: "activo",
+  },
+
+  {
+    key: "3",
+    id: "003",
+    name: "ricardo perez samaniego ",
+    price: 32000,
+    description: "Rica",
+    stock: "",
+    state: "activo",
+  },
+
+  {
+    key: "1",
+    id: "001",
+    name: "lomo ancho",
+    price: 10000,
+    description: "pietram ",
+    stock: "",
+    state: "activo",
+  },
+
+  {
+    key: "3",
+    id: "003",
+    name: "ricardo perez samaniego ",
+    price: 32000,
+    description: "Rica",
+    stock: "",
+    state: "activo",
+  },
+
+  {
+    key: "3",
+    id: "003",
+    name: "ricardo perez samaniego ",
+    price: 32000,
+    description: "Rica",
+    stock: "",
+    state: "activo",
+  },
+
+  {
+    key: "1",
+    id: "001",
+    name: "lomo ancho",
+    price: 10000,
+    description: "pietram ",
+    stock: "",
+    state: "activo",
+  },
+  {
+    key: "3",
+    id: "003",
+    name: "ricardo perez samaniego ",
+    price: 32000,
+    description: "Rica",
+    stock: "",
+    state: "activo",
+  },
+
+  {
+    key: "3",
+    id: "003",
+    name: "ricardo perez samaniego ",
+    price: 32000,
+    description: "Rica",
+    stock: "",
+    state: "activo",
+  },
+
+  {
+    key: "1",
+    id: "001",
+    name: "lomo ancho",
+    price: 10000,
+    description: "pietram ",
+    stock: "",
+    state: "activo",
+  },
+  {
+    key: "3",
+    id: "003",
+    name: "ricardo perez samaniego ",
+    price: 32000,
+    description: "Rica",
+    stock: "",
+    state: "activo",
+  },
+
+  {
+    key: "3",
+    id: "003",
+    name: "ricardo perez samaniego ",
+    price: 32000,
+    description: "Rica",
+    stock: "",
+    state: "activo",
+  },
+
+  {
+    key: "1",
+    id: "001",
+    name: "lomo ancho",
+    price: 10000,
+    description: "pietram ",
+    stock: "",
+    state: "activo",
+  },
+  {
+    key: "3",
+    id: "003",
+    name: "ricardo perez samaniego ",
+    price: 32000,
+    description: "Rica",
+    stock: "",
+    state: "activo",
+  },
+
+  {
+    key: "3",
+    id: "003",
+    name: "ricardo perez samaniego ",
+    price: 32000,
+    description: "Rica",
+    stock: "",
+    state: "activo",
+  },
+
+  {
+    key: "1",
+    id: "001",
+    name: "lomo ancho",
+    price: 10000,
+    description: "pietram ",
+    stock: "",
+    state: "activo",
   },
 ];
 
