@@ -32,9 +32,11 @@ import UpdateProduct from '../PagesLogueado/views/producto/UpdateProduct.js';
 import DeactivateProduct from '../PagesLogueado/views/producto/desactivateProduc.js';
 import SaleOrder from '../PagesLogueado/views/sale/order.js';
 import SaleStore from '../PagesLogueado/views/sale/store.js';
+import UserHistory from '../PagesLogueado/views/userhistory/index.js';
+import ClienType from '../PagesLogueado/views/clienttype/index.js';
 
 //tablas basicas
-import TypeDocument from '../TablesBasics/views/TypeDocument/typeDocument';  
+import ModifyCompany from '../TablesBasics/views/modifyCompany/index.js';  
 export default class Rutas extends Component {
     render() {
         return (
@@ -63,8 +65,10 @@ export default class Rutas extends Component {
                     <Route path="/DeactivateProduct" component={DeactivateProduct} />
                     <Route path="/SaleOrder" component={SaleOrder} />
                     <Route path="/SaleStore" component={SaleStore} />
-                    <Route path="/TypeDocument" component={TypeDocument} />
-                </Router>
+                    <Route path="/ModifyCompany" component={ModifyCompany} />
+                    <Route path="/UserHistory" component={UserHistory}/>
+                    <Route path="/ClienType"  component={ClienType}/>
+                 </Router>
 
             </div>
         );

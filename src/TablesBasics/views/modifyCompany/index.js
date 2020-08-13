@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 
 import { Skeleton, Switch, Card, Avatar, Form, Input, Button } from 'antd';
 
-
-import "../../style/styleDocument.css";
+import "../../style/stylemodifyCompany.css";
 const { Meta } = Card;
 
 const layout = {
@@ -21,7 +20,7 @@ const tailLayout = {
   },
 };
 
-class typeDocument extends Component {
+class ModifyCompany extends Component {
   state = {
     loading: true,
   };
@@ -40,7 +39,7 @@ class typeDocument extends Component {
         <Switch checked={!loading} onChange={this.onChange} />
         <div className="div-card">
           <Card style={{ width: 300, marginTop: 16 }} loading={loading}>
-            <h1>Actualizar Informacion</h1>
+            <label className="titlecompany">Actualizar Empresa</label>
             {/* <Meta
               avatar={
                 <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
@@ -60,20 +59,48 @@ class typeDocument extends Component {
                 rules={[
                   {
                     required: true,
-                    message: 'Porfavor digite su nit',
+                    message: 'Por favor digite su nit',
                   },
                 ]}
               >
                 <Input />
               </Form.Item>
 
-              <Form.Item
-                label="Nombre Empresa"
+              <Form.Item className="companyname"
+                label="Nombre"
                 name="password"
                 rules={[
                   {
                     required: true,
-                    message: 'Porfavor digite su nombre',
+                    message: 'Por favor ingrese su nombre',
+                  },
+                ]}
+              >
+                <Input />
+              </Form.Item>
+
+              <Form.Item className="companyname"
+                label="Dirección"
+                name="direction"
+                rules={[
+                  {
+                    required: true,
+                    message: 'Por favor digite la dirección',
+                  },
+                ]}
+              >
+
+
+                <Input />
+              </Form.Item>
+
+              <Form.Item className="companyname"
+                label="Teléfono"
+                name="phone"
+                rules={[
+                  {
+                    required: true,
+                    message: 'Por favor digite el teléfono',
                   },
                 ]}
               >
@@ -96,4 +123,4 @@ class typeDocument extends Component {
   }
 }
 
-export default typeDocument;
+export default ModifyCompany;
