@@ -22,16 +22,16 @@ const tailLayout = {
 
 const columns = [
     {
-      title: 'Name',
+      title: 'Nombre',
       dataIndex: 'name',
       render: text => <a>{text}</a>,
     },
     {
-      title: 'Age',
+      title: 'cantidad',
       dataIndex: 'age',
     },
     {
-      title: 'Address',
+      title: 'Corte',
       dataIndex: 'address',
     },
   ];
@@ -192,7 +192,7 @@ const Demo = () => {
                 <Form {...layout} form={form} name="control-hooks" onFinish={onFinish}>
                     <Form.Item
                         name="note"
-                        label="Cantidad:"
+                        label="Telefono:"
                         rules={[
                             {
                                 required: true,

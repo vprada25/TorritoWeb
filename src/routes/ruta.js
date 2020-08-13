@@ -34,7 +34,8 @@ import SaleOrder from '../PagesLogueado/views/sale/order.js';
 import SaleStore from '../PagesLogueado/views/sale/store.js';
 
 //tablas basicas
-import TypeDocument from '../TablesBasics/views/TypeDocument/typeDocument';  
+import TypeDocument from '../TablesBasics/views/TypeDocument/typeDocument'; 
+import OrderAdmind from '../PagesLogueado/views/saleAdmin/orderAdmin'; 
 export default class Rutas extends Component {
     render() {
         return (
@@ -64,6 +65,7 @@ export default class Rutas extends Component {
                     <Route path="/SaleOrder" component={SaleOrder} />
                     <Route path="/SaleStore" component={SaleStore} />
                     <Route path="/TypeDocument" component={TypeDocument} />
+                    <Route path="/OrderAdmin" component={OrderAdmind}/>
                 </Router>
 
             </div>

@@ -152,6 +152,29 @@ const Demo = () => {
 
                             <Input />
                         </Form.Item>
+
+                        <Form.Item label="Documento">
+                            <Input.Group compact>
+                                <Form.Item
+                                    name={['address', 'province']}
+                                    noStyle
+                                    rules={[{ required: true, message: 'Province is required' }]}
+                                >
+                                    <Select placeholder="Select province">
+                                        <Option value="Zhejiang">C.C</Option>
+                                        <Option value="Jiangsu">C.E</Option>
+                                    </Select>
+                                </Form.Item>
+                                <Form.Item
+                                    name={['address', 'street']}
+                                    noStyle
+                                    rules={[{ required: true, message: 'Street is required' }]}
+                                >
+                                    <Input style={{ width: '50%' }} placeholder="Input street" />
+                                </Form.Item>
+                            </Input.Group>
+                        </Form.Item>
+
                         <Form.Item
                             name="gender"
                             label="Forma Pago"
