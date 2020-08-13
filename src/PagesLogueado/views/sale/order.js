@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Form, Input, Button, Select } from 'antd';
+import { Card, Form, Input, Button, Select, Tabs } from 'antd';
 import "../../Style/styleOrder.css";
 
 import avatar from "../../../assets/imgs/pedido.jpg";
@@ -18,6 +18,12 @@ const tailLayout = {
         span: 16,
     },
 };
+
+const { TabPane } = Tabs;
+
+function callback(key) {
+    console.log(key);
+}
 
 const Demo = () => {
     const [form] = Form.useForm();
@@ -70,8 +76,45 @@ const Demo = () => {
 
 
                 <div className="divcard">
+                    <div className="div-tabs">
+                        <Tabs defaultActiveKey="1" onChange={callback}>
+                            <TabPane tab="Producto" key="1">
+                                <ol>
+                                    <li className="tabs-li">Carne</li>
+                                    <li className="tabs-li">Pollo</li>
+                                    <li className="tabs-li">Res</li>
+                                </ol>
+                            </TabPane>
 
+                            <TabPane tab="Cantidad" key="2">
+                                <ol>
+                                    <li className="tabs-li">3</li>
+                                    <li className="tabs-li">5</li>
+                                    <li className="tabs-li">7</li>
+                                </ol>
+                            </TabPane>
 
+                            <TabPane tab="Corte" key="4">
+                                <ol>
+                                    <li className="tabs-li">Pierna</li>
+                                    <li className="tabs-li">Pechuga</li>
+                                    <li className="tabs-li">Salmon</li>
+                                </ol>
+                            </TabPane>
+                            <TabPane tab="Valor" key="3">
+                                <ol>
+                                    <li className="tabs-li">7000</li>
+                                    <li className="tabs-li">3000</li>
+                                    <li className="tabs-li">3000</li>
+                                </ol>
+                            </TabPane>
+
+                            <TabPane tab="Total" key="5">
+                                <p className="p-total">13000</p>
+                            </TabPane>
+
+                        </Tabs>
+                    </div>
                     <Form {...layout} form={form} name="control-hooks" onFinish={onFinish}>
                         <Form.Item
                             name="note"
@@ -163,7 +206,7 @@ const Demo = () => {
                             </Form.Item>
                         </div>
                     </Form>
-                    </div>
+                </div>
             </div>
         </div>
     );

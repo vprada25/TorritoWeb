@@ -78,3 +78,9 @@
     border-radius: 15px;
     background-color: rgb(174, 174, 177);
 }
+
+.div-table{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
