@@ -37,6 +37,8 @@ import ClienType from '../PagesLogueado/views/clienttype/index.js';
 
 //tablas basicas
 import ModifyCompany from '../TablesBasics/views/modifyCompany/index.js';  
+import TypeDocument from '../TablesBasics/views/TypeDocument/typeDocument'; 
+import OrderAdmind from '../PagesLogueado/views/saleAdmin/orderAdmin'; 
 export default class Rutas extends Component {
     render() {
         return (
@@ -69,7 +71,9 @@ export default class Rutas extends Component {
                     <Route path="/UserHistory" component={UserHistory}/>
                     <Route path="/ClienType"  component={ClienType}/>
                  </Router>
-
+                    <Route path="/TypeDocument" component={TypeDocument} />
+                    <Route path="/OrderAdmin" component={OrderAdmind}/>
+               
             </div>
         );
     }
