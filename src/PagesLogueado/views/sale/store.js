@@ -1,5 +1,5 @@
-import React from 'react';
-import { Form, Input, Button, Select } from 'antd';
+import React,{ useState }   from 'react';
+import { Form, Input, Button, Select,Table, Radio, Divider } from 'antd';
 import "../../Style/styleStore.css";
 
 import avatar from "../../../assets/imgs/Tienda.png";
@@ -20,9 +20,63 @@ const tailLayout = {
     },
 };
 
+const columns = [
+    {
+      title: 'Name',
+      dataIndex: 'name',
+      render: text => <a>{text}</a>,
+    },
+    {
+      title: 'Age',
+      dataIndex: 'age',
+    },
+    {
+      title: 'Address',
+      dataIndex: 'address',
+    },
+  ];
+  const data = [
+    {
+      key: '1',
+      name: 'Carne',
+      age: 3,
+      address: 'lomo',
+    },
+    {
+      key: '2',
+      name: 'pollo',
+      age: 5,
+      address: 'Pernil',
+    },
+    {
+      key: '3',
+      name: 'carne',
+      age: 5,
+      address: 'pierna',
+    },
+    {
+      key: '4',
+      name: 'Pescado',
+      age: 99,
+      address: 'Robalo',
+    },
+  ]; // rowSelection object indicates the need for row selection
+  
+  const rowSelection = {
+    onChange: (selectedRowKeys, selectedRows) => {
+      console.log(`selectedRowKeys: ${selectedRowKeys}`, 'selectedRows: ', selectedRows);
+    },
+    getCheckboxProps: record => ({
+      disabled: record.name === 'Disabled User',
+      // Column configuration not to be checked
+      name: record.name,
+    }),
+  };
+
+
 const Demo = () => {
     const [form] = Form.useForm();
-
+    const [selectionType, setSelectionType] = useState('checkbox');
     const onGenderChange = value => {
         switch (value) {
             case 'male':
@@ -66,97 +120,119 @@ const Demo = () => {
                 <h1 className="store-h1">Tienda</h1>
                 <img src={avatar} className="store-img" alt="Avatar" />
             </div>
-           
 
-                
-                <div className="divstore">
-                
+            <div className="div-table">
+                <Radio.Group
+                    onChange={({ target: { value } }) => {
+                        setSelectionType(value);
+                    }}
+                    value={selectionType}
+                >
+                    <Radio value="checkbox">Checkbox</Radio>
+                   
+                </Radio.Group>
+
+                <Divider />
+
+                <Table
+                    rowSelection={{
+                        type: selectionType,
+                        ...rowSelection,
+                    }}
+                    columns={columns}
+                    dataSource={data}
+                />
+            </div>
+
+
+            <div className="divstore">
+
+                <Form.Item
+                    name="gender"
+                    label="Forma Pago"
+                    rules={[
+                        {
+                            required: true,
+                        },
+                    ]}
+                >
+                    <Select
+                        placeholder="Selecione una forma de pago"
+                        onChange={onGenderChange}
+                        allowClear
+                    >
+                        <Option value="male">Carne</Option>
+                        <Option value="female">Pollo</Option>
+                        <Option value="other">Pescadp</Option>
+                    </Select>
+                </Form.Item>
+                <Form.Item
+                    noStyle
+                    shouldUpdate={(prevValues, currentValues) => prevValues.gender !== currentValues.gender}
+                >
+                    {({ getFieldValue }) =>
+                        getFieldValue('gender') === 'other' ? (
+                            <Form.Item
+                                name="customizeGender"
+                                label="Customize Gender"
+                                rules={[
+                                    {
+                                        required: true,
+                                    },
+                                ]}
+                            >
+                                <Input />
+                            </Form.Item>
+                        ) : null
+                    }
+
+                </Form.Item>
+
+
+                <Form {...layout} form={form} name="control-hooks" onFinish={onFinish}>
                     <Form.Item
-                        name="gender"
-                        label="Forma Pago"
+                        name="note"
+                        label="Cantidad:"
                         rules={[
                             {
                                 required: true,
                             },
                         ]}
                     >
-                        <Select
-                            placeholder="Selecione una forma de pago"
-                            onChange={onGenderChange}
-                            allowClear
-                        >
-                            <Option value="male">Carne</Option>
-                            <Option value="female">Pollo</Option>
-                            <Option value="other">Pescadp</Option>
-                        </Select>
+
+                        <Input />
                     </Form.Item>
                     <Form.Item
-                        noStyle
-                        shouldUpdate={(prevValues, currentValues) => prevValues.gender !== currentValues.gender}
+                        name="user"
+                        label="Valor:"
+                        rules={[
+                            {
+                                required: true,
+                            },
+                        ]}
                     >
-                        {({ getFieldValue }) =>
-                            getFieldValue('gender') === 'other' ? (
-                                <Form.Item
-                                    name="customizeGender"
-                                    label="Customize Gender"
-                                    rules={[
-                                        {
-                                            required: true,
-                                        },
-                                    ]}
-                                >
-                                    <Input />
-                                </Form.Item>
-                            ) : null
-                        }
 
+                        <Input />
                     </Form.Item>
 
-
-                    <Form {...layout} form={form} name="control-hooks" onFinish={onFinish}>
-                        <Form.Item
-                            name="note"
-                            label="Cantidad:"
-                            rules={[
-                                {
-                                    required: true,
-                                },
-                            ]}
-                        >
-
-                            <Input />
+                    <div className="div-btn">
+                        <Form.Item {...tailLayout}>
+                            <Button type="primary" htmlType="submit">
+                                Comprar
+        </Button>
+                            <Button htmlType="button" onClick={onReset}>
+                                Reset
+        </Button>
+                            <Button type="link" htmlType="button" onClick={onFill}>
+                                Ejemplo
+        </Button>
                         </Form.Item>
-                        <Form.Item
-                            name="user"
-                            label="Valor:"
-                            rules={[
-                                {
-                                    required: true,
-                                },
-                            ]}
-                        >
-
-                            <Input />
-                        </Form.Item>
-
-                        <div className="div-btn">
-                            <Form.Item {...tailLayout}>
-                                <Button type="primary" htmlType="submit">
-                                    Comprar
-        </Button>
-                                <Button htmlType="button" onClick={onReset}>
-                                    Reset
-        </Button>
-                                <Button type="link" htmlType="button" onClick={onFill}>
-                                    Ejemplo
-        </Button>
-                            </Form.Item>
-                        </div>
-                    </Form>
-                </div>
-                <Footer/>
+                    </div>
+                </Form>
             </div>
-        
+            <Footer />
+        </div>
+
     );
 };
 
