@@ -29,11 +29,11 @@ const config = () => {
   const onFinish = (values) => {
     const data = { ...values };
     console.log("Success:", data);
-    
+
     bunisess.registerbunisess(values).then(res => {
       console.log("Datos que se van a enviar al backend")
       console.log(res.data)
-      
+
 
     }).catch(error => console.error(error))
 
@@ -66,7 +66,7 @@ const config = () => {
             <Form.Item className="form-items"
               label="NIT"
               name="NIT"
-              rules={[{ required: true, message: "Porfavor digite su nombre de empresa!" }]}
+              rules={[{ required: true, message: "Porfavor digite su nit de empresa!" }]}
             >
               <Input className="form-input" />
             </Form.Item>
@@ -90,14 +90,6 @@ const config = () => {
             <Form.Item className="form-items"
               label="Telefono"
               name="TEL"
-              rules={[{ required: true, message: "Porfavor digite su telefono!" }]}
-            >
-              <Input />
-            </Form.Item>
-            
-            <Form.Item className="form-items"
-              label="NN"
-              name="FKID_PERSONA"
               rules={[{ required: true, message: "Porfavor digite su telefono!" }]}
             >
               <Input />
