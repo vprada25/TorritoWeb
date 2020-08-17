@@ -179,11 +179,13 @@ const Demo = () => {
                         </Form.Item>
                     </Form>
                 </div>
+                <div className="contend-btn">
                 <Form.Item {...tailLayout}>
                     <Button type="primary" htmlType="submit">
-                        Submit
+                        Generar
           </Button>
                 </Form.Item>
+                </div>
             </div>
         </div>
     );
