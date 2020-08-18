@@ -15,7 +15,7 @@
     padding: 20px;
     background: #f8f0f000;
    
-    height: 720px;
+    height: 620px;
     
     
   }
@@ -31,7 +31,7 @@
    
 }
 
-.div-btn-product{
+.div-btn-desactivateemployees{
  
     margin-top:-20px;   
  
@@ -45,7 +45,7 @@
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.card-h1product{
+.card-h1-desactivateemployees{
     display: flex;
     
     
@@ -58,7 +58,7 @@
     
 }
 
-.div-h1-product{
+.div-h1-desactivateemployees{
     
     width: 100%;
     display: grid;

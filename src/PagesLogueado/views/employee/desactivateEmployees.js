@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, Form, Input, Button, Select } from "antd";
-import "../../Style/styleConsultproducts.css";
-import avatar from "../../../assets/imgs/consultarroduct.png";
+import "../../Style/styleDesactivateemployees.css";
+import avatar from "../../../assets/imgs/avatardesactivate.png";
 const { Option } = Select;
 const layout = {
   labelCol: {
@@ -53,22 +53,22 @@ const Demo = () => {
   const onFill = () => {
     form.setFieldsValue({
       note: "01",
-      user: "Torso",
-      gender: "res",
+      user: "Ramos",
+      gender: "JAAO",
     });
   };
 
   return (
     <div className="site-card-border-less-wrapper">
-      <div className="div-h1-consul">
-        <h1 className="card-h1-consul">Consultar Producto</h1>
+      <div className="div-h1-desactivateemployees">
+        <h1 className="card-h1-desactivateemployees">Desactivar empleados</h1>
         <img src={avatar} alt="Avatar" />
       </div>
 
       <Card
-        title="Consultar"
+        title="Desactivar"
         bordered={false}
-        style={({ width: 350 }, { height: 365 })}
+        style={({ width: 350 }, { height: 380 })}
         className="card"
       >
         <Form {...layout} form={form} name="control-hooks" onFinish={onFinish}>
@@ -97,7 +97,7 @@ const Demo = () => {
 
           <Form.Item
             name="gender"
-            label="Precio:"
+            label="Usuario:"
             rules={[
               {
                 required: true,
@@ -107,64 +107,23 @@ const Demo = () => {
             <Input />
           </Form.Item>
 
-          <Form.Item
-            name="gender"
-            label="Categoría"
-            rules={[
-              {
-                required: true,
-              },
-            ]}
-          >
-            <Select
-              placeholder="Selecione un tipo"
-              onChange={onGenderChange}
-              allowClear
-            >
-              <Option value="male">Res</Option>
-              <Option value="female">Cerdo</Option>
-              <Option value="other">Pollo</Option>
-              <Option value="other">Pescado</Option>
-            </Select>
-          </Form.Item>
-          <Form.Item
-            noStyle
-            shouldUpdate={(prevValues, currentValues) =>
-              prevValues.gender !== currentValues.gender
-            }
-          >
-            {({ getFieldValue }) =>
-              getFieldValue("gender") === "other" ? (
-                <Form.Item
-                  name="customizeGender"
-                  label="Customize Gender"
-                  rules={[
-                    {
-                      required: true,
-                    },
-                  ]}
-                >
-                  <Input />
-                </Form.Item>
-              ) : null
-            }
+          <Form.Item name={["user", "introduction"]} label="Motivo">
+            <Input.TextArea />
           </Form.Item>
 
-          <div className="div-btn-productconsul ">
+          <div className="div-btn-desactivateemployees">
             <Form.Item {...tailLayout}>
               <Button type="primary" htmlType="submit">
-                Consultar
+                Desactivar
               </Button>
               <Button htmlType="button" onClick={onReset}>
                 Reset
               </Button>
-              <Button htmlType="button" onClick={onReset}>
-               
-              </Button>
 
-              <Button htmlType="button" onClick={onReset}>
+              <Button htmlType="button" onClick={onReset}></Button>
+              <Button htmlType="button" onClick={onReset}></Button>
+              <Button htmlType="button" onClick={onReset}></Button>
               
-              </Button>
             </Form.Item>
           </div>
         </Form>

@@ -223,9 +223,7 @@ const Demo = () => {
                                 <Button htmlType="button" onClick={onReset}>
                                     Reset
         </Button>
-                                <Button type="link" htmlType="button" onClick={onFill}>
-                                    Ejemplo
-        </Button>
+
                             </Form.Item>
                         </div>
                     </Form>

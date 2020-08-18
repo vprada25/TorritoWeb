@@ -6,13 +6,13 @@
 .ant-btn {
     text-align: end;
     margin: 8px;
-    border-radius: 7px;
+    border-radius: 16px;
   }
 
-  .site-card-border-less-wrapper {
+  .site-card-border-less-wrapper-product {
     
    display: grid;
-    padding: 30px;
+    padding: 20px;
     background: #f8f0f000;
    
     height: 720px;
@@ -31,9 +31,10 @@
    
 }
 
-.div-btn{
-   
-    margin-top: 12px;
+.div-btn-updateproduct{
+ 
+    margin-top:-30px;   
+ 
 }
 
 .ant-card-head-title{
@@ -44,10 +45,11 @@
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.card-h1{
+.card-h1-updateproduct{
     display: flex;
     
-    font-size: 28px;
+    
+    font-size: 28pt;
    
    text-align:center;
     font-weight: 20px;
@@ -65,9 +67,10 @@
     justify-content: center;
     align-items: center;
     align-content: center;
+    margin: 12px;
 }
 
-img{
+.img{
     margin-top: 15px;
     height: 93px;
     border-radius: 15px;

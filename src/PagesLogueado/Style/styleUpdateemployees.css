@@ -9,13 +9,13 @@
     border-radius: 16px;
   }
 
-  .site-card-border-less-wrapper-product {
+  .site-card-border-less-wrapper-updateemployess {
     
    display: grid;
-    padding: 20px;
+    padding: 10px;
     background: #f8f0f000;
    
-    height: 720px;
+    height: 620px;
     
     
   }
@@ -31,7 +31,7 @@
    
 }
 
-.div-btn-product{
+.div-btn-updateemployess{
  
     margin-top:-20px;   
  
@@ -45,7 +45,7 @@
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.card-h1product{
+.card-h1-updateemployess{
     display: flex;
     
     
@@ -58,7 +58,7 @@
     
 }
 
-.div-h1-product{
+.div-h1-updateemployess{
     
     width: 100%;
     display: grid;
@@ -70,9 +70,13 @@
     margin: 12px;
 }
 
-.img{
+.logoupdateemployees{
+    height: 100pt;
+}
+
+/* .img{
     margin-top: 15px;
-    height: 93px;
+    height: 3px;
     border-radius: 15px;
     background-color: rgb(174, 174, 177);
-}
+} */

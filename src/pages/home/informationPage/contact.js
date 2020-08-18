@@ -12,7 +12,7 @@ function Contact() {
         <div>
             <div className="general">
                 <div className="divlogo">
-                    <div ><h1 className="titlecontact">Toorito</h1></div>
+                   
                     <img src={logo} alt="logo" className="raizimg" />
                 </div>
                 <div className="generalcontac">

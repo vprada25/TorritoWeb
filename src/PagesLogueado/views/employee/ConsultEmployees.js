@@ -1,6 +1,6 @@
 import React from "react";
-import { Card, Form, Input, Button, Select } from 'antd';
-import "../../Style/styleRegisterEmployee.css";
+import { Card, Form, Input, Button, Select } from "antd";
+import "../../Style/styleConsultemployees.css";
 import avatar from "../../../assets/imgs/avatarbus.png";
 const { Option } = Select;
 const layout = {
@@ -21,28 +21,28 @@ const tailLayout = {
 const Demo = () => {
   const [form] = Form.useForm();
 
-  const onGenderChange = value => {
+  const onGenderChange = (value) => {
     switch (value) {
-      case 'male':
+      case "male":
         form.setFieldsValue({
-          note: 'Hi, man!',
+          note: "Hi, man!",
         });
         return;
 
-      case 'female':
+      case "female":
         form.setFieldsValue({
-          note: 'Hi, lady!',
+          note: "Hi, lady!",
         });
         return;
 
-      case 'other':
+      case "other":
         form.setFieldsValue({
-          note: 'Hi there!',
+          note: "Hi there!",
         });
     }
   };
 
-  const onFinish = values => {
+  const onFinish = (values) => {
     console.log(values);
   };
 
@@ -52,34 +52,35 @@ const Demo = () => {
 
   const onFill = () => {
     form.setFieldsValue({
-      note: '01',
-      user: 'Ramos',
-      gender: 'JAAO',
+      note: "01",
+      user: "Ramos",
+      gender: "JAAO",
     });
   };
 
   return (
-
-    <div className="site-card-border-less-wrapper">
-      <div className="div-h1">
-        <h1 className="card-h1">Consultar empleados</h1>
+    <div className="site-card-border-less-wrapper-consultemployees">
+      <div className="div-h1-consultemployees">
+        <h1 className="card-h1-consultemployees">Consultar empleados</h1>
         <img src={avatar} alt="Avatar" />
       </div>
 
-      <Card title="Consult" bordered={false} style={{ width: 350 }, { height: 395 }} className="card">
-
-
+      <Card
+        title="Consultar"
+        bordered={false}
+        style={({ width: 350 }, { height: 300 })}
+        className="card"
+      >
         <Form {...layout} form={form} name="control-hooks" onFinish={onFinish}>
           <Form.Item
             name="note"
-            label="°Ide"
+            label="ID"
             rules={[
               {
                 required: true,
               },
             ]}
           >
-
             <Input />
           </Form.Item>
           <Form.Item
@@ -91,7 +92,6 @@ const Demo = () => {
               },
             ]}
           >
-
             <Input />
           </Form.Item>
 
@@ -104,24 +104,26 @@ const Demo = () => {
               },
             ]}
           >
-
             <Input />
           </Form.Item>
 
-
-
-
-          <div className="div-btn">
+          <div className="div-btn-consultemployees">
             <Form.Item {...tailLayout}>
               <Button type="primary" htmlType="submit">
-                Consult
-        </Button>
+                Consultar
+              </Button>
               <Button htmlType="button" onClick={onReset}>
                 Reset
-        </Button>
-              <Button type="link" htmlType="button" onClick={onFill}>
-                Ejemplo
-        </Button>
+              </Button>
+
+              <Button htmlType="button" onClick={onReset}>
+                
+              </Button>
+
+              <Button htmlType="button" onClick={onReset}>
+                
+              </Button>
+
             </Form.Item>
           </div>
         </Form>
@@ -131,6 +133,3 @@ const Demo = () => {
 };
 
 export default Demo;
-
-
-

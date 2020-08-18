@@ -20,14 +20,19 @@
   
   .logoproducts {
     position: absolute;
-    bottom: 500px;
-    right: 900px;
+    bottom: 520px;
+    right: 1100px;
+  
+  }
+
+  .logoProductlist{
+    margin: -90pt;
   }
   
   .tab {
-      margin-top: 180px;
-      margin-left: 20px;
-      margin-right: 20px;
+      margin-top: 250px;
+      margin-left: 100px;
+      margin-right: 100px;
   }
   
   .trends {

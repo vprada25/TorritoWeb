@@ -9,13 +9,13 @@
     border-radius: 16px;
   }
 
-  .site-card-border-less-wrapper-product {
+  .site-card-border-less-wrapper-consultemployees {
     
    display: grid;
     padding: 20px;
     background: #f8f0f000;
    
-    height: 720px;
+    height: 620px;
     
     
   }
@@ -31,10 +31,9 @@
    
 }
 
-.div-btn-product{
- 
-    margin-top:-20px;   
- 
+.div-btn-consultemployees{
+   
+    margin-top: -20px;
 }
 
 .ant-card-head-title{
@@ -45,9 +44,8 @@
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.card-h1product{
+.card-h1-consultemployees{
     display: flex;
-    
     
     font-size: 28pt;
    
@@ -58,7 +56,7 @@
     
 }
 
-.div-h1-product{
+.div-h1-consultemployees{
     
     width: 100%;
     display: grid;
@@ -67,10 +65,9 @@
     justify-content: center;
     align-items: center;
     align-content: center;
-    margin: 12px;
 }
 
-.img{
+img{
     margin-top: 15px;
     height: 93px;
     border-radius: 15px;

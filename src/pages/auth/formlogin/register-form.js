@@ -63,13 +63,13 @@ const FormRegister = () => {
           <Form.Item label="Primer nombre" name="pri_nombre" rules={[{ required: true, message: 'Por favor ingrese su primer nombre' }]}>
             <Input />
           </Form.Item>
-          <Form.Item label="Segundo nombre" name="seg_nombre" rules={[{ required: true, message: 'Por favor ingrese su segundo nombre' }]}>
+          <Form.Item label="Segundo nombre" name="seg_nombre" rules={[{ required: false, message: 'Por favor ingrese su segundo nombre' }]}>
             <Input />
           </Form.Item>
           <Form.Item label="Primer apellido" name="pri_apellido" rules={[{ required: true, message: 'Por favor ingrese su primer apellido' }]}>
             <Input />
           </Form.Item>
-          <Form.Item label="Segundo apellido" name="seg_apellido" rules={[{ required: true, message: 'Por favor ingrese su segundo apellido' }]}>
+          <Form.Item label="Segundo apellido" name="seg_apellido" rules={[{ required: false, message: 'Por favor ingrese su segundo apellido' }]}>
             <Input />
           </Form.Item>
           <Form.Item label="Direccion" name="direccion" rules={[{ required: true, message: 'Por favor ingrese su direccion' }]}>
@@ -78,19 +78,16 @@ const FormRegister = () => {
           <Form.Item label="Nombre de usuario" name="nom_usuario" rules={[{ required: true, message: 'Por favor ingrese su segundo apellido' }]}>
             <Input />
           </Form.Item>
-          <Form.Item label="Password" name="contrasena" rules={[{ required: true, message: 'Please input your password!' }]}>
+          <Form.Item label="contraseña" name="contrasena" rules={[{ required: true, message: 'Please input your password!' }]}>
             <Input.Password />
           </Form.Item>
           
           <Form.Item label="Rol de usuario" name="fk_id_rol" rules={[{ required: true, message: 'Please seleccione su rol!' }]}>
-            <Select defaultValue="lucy" style={{ width: 120 }} onChange={handleChange}>
-              <Option value="1">Admin</Option>
-              <Option value="lucy">Lucy</Option>
-              <Option value="lddd">Otra cosa</Option>
-              <Option value="disabled" disabled>
-                Disabled
-              </Option>
-              <Option value="Yiminghe">yiminghe</Option>
+            <Select defaultValue="" style={{ width: 120 }} onChange={handleChange}>
+              <Option value="1">Administrador</Option>
+              <Option value="2">Empleado</Option>
+              <Option value="3">Cliente</Option>
+              <Option value="disabled" disabled>Disabled</Option>
             </Select>
           </Form.Item>
 

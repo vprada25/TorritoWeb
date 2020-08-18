@@ -1,0 +1,59 @@
+:root {
+    --Style-font-famili: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  
+    --Backgroudn-style-color: rgba(247, 242, 242, 0.555);
+  }
+  
+  .titleclient{
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .titleclient2 {
+    font-family: var(--Style-font-famili);
+    justify-content: center;
+    position: absolute;
+    bottom: 520px;
+    right: 500px;
+  }
+  
+  .logoclient {
+    position: flex;
+    bottom: 500px;
+    right: 900px;
+    height: 100pt;;
+  }
+  
+  .tabclient{
+      margin-top: 20px;
+      margin-left: 140px;
+      margin-right: 140px;
+  }
+
+  .return2 {
+    font-weight    : bold;
+    display        : flex;
+    justify-content: center;
+  
+  }
+  
+  .returnfind2 {
+    color        : black;
+    background   : rgba(235, 233, 229, 0.753);
+    height       : 50px;
+    width        : 100px;
+    border-radius: 25px;
+    text-shadow  : 1px 1px #fff;
+    font-family  : var(--style-font-famyli);
+    font-size: 15px;
+  }
+
+  .returnfind2:hover {
+    background: orange;
+    color     : #ffffff;
+  }
+  .imagetypeclient{
+    padding: -10pt;
+  }
+  

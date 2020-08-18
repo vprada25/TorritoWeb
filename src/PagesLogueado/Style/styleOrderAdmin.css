@@ -32,3 +32,18 @@
     align-content  : center;
 
 }
+
+.titleorder{
+    text-align: center;
+    font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    padding: pt;
+    margin: 0px;
+}
+
+.boton-pedidos{
+    display: flex;
+    margin: 0pt;
+    justify-content:center;
+    
+}

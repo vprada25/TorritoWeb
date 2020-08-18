@@ -4,11 +4,18 @@ import logo from "../../../assets/logos/logo3.png";
 import productos from "../../../assets/imgs/productos.jpg";
 import "../../Style/styleLoginProduct.css";
 
+import { useHistory } from 'react-router-dom';
+
 import { data } from "./data";
+
+
 
 const LoginProduct = () => {
   const [option, setOption] = useState("Todos");
   const [currentData, setCurrentData] = useState([...data.cerdo, ...data.res,...data.pollo,...data.pescado]);
+
+  const history = useHistory();
+  const handleClick = () => history.push('/UserHistory');
 
   const handlerChooseOption = (choosed) => {
     const response = chooseRender(choosed);
@@ -21,7 +28,7 @@ const LoginProduct = () => {
       <div className="segundo">
         {currentData.map((pro) => (
           <div className="conten2" key={Math.random() * 1000}>
-            <img src={pro.image} alt={pro.id} className="chul" />
+            <img src={pro.image} alt={pro.id} className="chul" onClick={handleClick} />
             <p className="sub1">{pro.nombre}</p>
           </div>
         ))}
