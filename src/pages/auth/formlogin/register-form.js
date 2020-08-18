@@ -81,16 +81,55 @@ const FormRegister = () => {
           <Form.Item label="contraseña" name="contrasena" rules={[{ required: true, message: 'Please input your password!' }]}>
             <Input.Password />
           </Form.Item>
-          
+
+          <Form.Item label="Tipo de documento" name="fkid_tipo_docu" rules={[{ required: true, message: 'Please seleccione su tipo de documento!' }]}>
+            <Select defaultValue=".." style={{ width: 120 }} onChange={handleChange}>
+              <Option value="1">C.C</Option>
+              <Option value="2">C.E</Option>
+              <Option value="3">Otro</Option>
+              <Option value="disabled" disabled>
+                Disabled
+              </Option>
+              <Option value="Yiminghe">yiminghe</Option>
+            </Select>
+          </Form.Item>
+
+          <Form.Item label="Documento" name="documento" rules={[{ required: true, message: 'Por favor ingrese su documento' }]}>
+            <Input />
+          </Form.Item>
+
+
           <Form.Item label="Rol de usuario" name="fk_id_rol" rules={[{ required: true, message: 'Please seleccione su rol!' }]}>
+<<<<<<< HEAD
             <Select defaultValue="" style={{ width: 120 }} onChange={handleChange}>
               <Option value="1">Administrador</Option>
               <Option value="2">Empleado</Option>
               <Option value="3">Cliente</Option>
               <Option value="disabled" disabled>Disabled</Option>
+=======
+            <Select defaultValue=".." style={{ width: 120 }} onChange={handleChange}>
+              <Option value="1">Admin</Option>
+              <Option value="2">Empleado</Option>
+              <Option value="3.">Cliente</Option>
+              <Option value="disabled" disabled>
+                Disabled
+              </Option>
+              <Option value="Yiminghe">yiminghe</Option>
+>>>>>>> 02afb9e95863d6467e803d95d2af32df8be75ccd
             </Select>
           </Form.Item>
 
+          <Form.Item label="Tipo Cliente" name="fkid_tipo_cliente" rules={[{ required: true, message: 'Please seleccione su tipo de cliente!' }]}>
+            <Select defaultValue=".." style={{ width: 120 }} onChange={handleChange}>
+              <Option value="1">Estrella</Option>
+              <Option value="2">Promedio</Option>
+              <Option value="3">base</Option>
+              <Option value="disabled" disabled>
+                Disabled
+              </Option>
+              <Option value="Yiminghe">yiminghe</Option>
+            </Select>
+          </Form.Item>
 
           <Form.Item {...tailLayout}>
             <Button type="primary" htmlType="submit">

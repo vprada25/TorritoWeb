@@ -98,6 +98,7 @@ const Demo = () => {
           </Form>
         </div>
 
+<<<<<<< HEAD
         <div className="cotend-div2">
           <Form
             {...layout}
@@ -180,6 +181,30 @@ const Demo = () => {
         </Form.Item>
             </Form.Item>
           </Form>
+=======
+                        <Form.Item
+                            label="total"
+                            name="password"
+                            rules={[
+                                {
+                                    required: true,
+                                    message: 'Please input your password!',
+                                },
+                            ]}
+                        >
+                            <Input />
+                        </Form.Item>
+                    </Form>
+                </div>
+                <div className="contend-btn">
+                <Form.Item {...tailLayout}>
+                    <Button type="primary" htmlType="submit">
+                        Generar
+          </Button>
+                </Form.Item>
+                </div>
+            </div>
+>>>>>>> 02afb9e95863d6467e803d95d2af32df8be75ccd
         </div>
       </div>
     </div>
