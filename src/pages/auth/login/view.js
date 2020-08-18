@@ -36,6 +36,7 @@ const LoginView = () => {
         console.log("Datos que se van a enviar al backend");
 
         console.log(res.data);
+        localStorage.setItem('token', JSON.stringify(res.data.accessTocken))
         history.push("/HomeLogueado");
       })
       .catch((error) => console.error(error));
