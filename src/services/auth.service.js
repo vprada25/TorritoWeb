@@ -14,6 +14,8 @@ class AuthService {
   async getMenu() {
     return await Api.get(userController)
   }
+ 
+
 }
 
 const auth = new AuthService();

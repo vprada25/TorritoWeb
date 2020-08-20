@@ -1,6 +1,6 @@
-import Api from '../common/api';
+import Api from '../common1/api';
 
-const controller = 'products';
+const controller = 'product';
 
 class ProductService{
 
@@ -8,8 +8,8 @@ class ProductService{
     return Api.get(controller)
   }
 
-  createProduct(data){
-    return Api.post(controller, data)
+  createdProducts(data){
+    return Api.post(`${controller}/register`, data)
   }
 
   createProduct(data){

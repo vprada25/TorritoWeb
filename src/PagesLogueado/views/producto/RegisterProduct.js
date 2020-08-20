@@ -4,6 +4,8 @@ import { Card, Form, Input, Button, Select } from 'antd';
 import "../../Style/styleRegisterEmployee.css";
 
 import avatar from "../../../assets/imgs/regisproduct.jpg";
+
+import ProductService from "../../../services/product.service";
 const { Option } = Select;
 const layout = {
     labelCol: {
@@ -19,6 +21,17 @@ const tailLayout = {
         span: 16,
     },
 };
+const createdProducts = async (values) => {
+    console.log("Envia la peticion al backen");
+    const product = await ProductService.createdProducts(values)
+    console.log("Datos obtenidos por el backen", values);
+    if (product.data.statusCode === 201) {
+        alert("Producto creado correctamente");
+    } else {
+        alert("Error al crear producto");
+    }
+}
+
 
 const Demo = () => {
     const [form] = Form.useForm();
@@ -46,6 +59,11 @@ const Demo = () => {
 
     const onFinish = values => {
         console.log(values);
+        ProductService.createdProducts(values).then(res => {
+            console.log(res.data);
+            console.log("Datos que se envian al backend");
+        }).catch(error => console.log( error.response.request._response ),alert("error no se creo el producto"))
+
     };
 
     const onReset = () => {
@@ -61,19 +79,21 @@ const Demo = () => {
     };
 
     return (
-        
+
         <div className="site-card-border-less-wrapper">
-            <div className="div-h1"> 
-            <h1 className="card-h1">Registrar Producto</h1>
-            <img src={avatar} alt="Avatar"/>
+            <div className="div-h1">
+                <h1 className="card-h1">Registrar Producto</h1>
+                <img src={avatar} alt="Avatar" />
             </div>
-           
+
             <Card title="Register" bordered={false} style={{ width: 350 }, { height: 395 }} className="card">
 
 
                 <Form {...layout} form={form} name="control-hooks" onFinish={onFinish}>
+
+
                     <Form.Item
-                        name="note"
+                        name="NOM_PRODUCTO"
                         label="Nombre:"
                         rules={[
                             {
@@ -85,7 +105,7 @@ const Demo = () => {
                         <Input />
                     </Form.Item>
                     <Form.Item
-                        name="user"
+                        name="PRECIO"
                         label="Precio:"
                         rules={[
                             {
@@ -96,8 +116,23 @@ const Demo = () => {
 
                         <Input />
                     </Form.Item>
+
+
                     <Form.Item
-                        name="gender"
+                        name="CORTE"
+                        label="Corte:"
+                        rules={[
+                            {
+                                required: true,
+                            },
+                        ]}
+                    >
+
+                        <Input />
+                    </Form.Item>
+
+                    <Form.Item
+                        name="FKID_     CATEGORIA"
                         label="Categoria"
                         rules={[
                             {
@@ -110,12 +145,93 @@ const Demo = () => {
                             onChange={onGenderChange}
                             allowClear
                         >
-                            <Option value="male">Carne</Option>
-                            <Option value="female">Res</Option>
-                            <Option value="other">Cerdo</Option>
-                            
+                            <Option value="1">Res</Option>
+                            <Option value="2">Cerdo</Option>
+                            <Option value="3">Pescado</Option>
+
                         </Select>
                     </Form.Item>
+
+
+                    <Form.Item
+                        name="STOCK"
+                        label="Stock:"
+                        rules={[
+                            {
+                                required: true,
+                            },
+                        ]}
+                    >
+                        <Input />
+                    </Form.Item>
+
+
+                    <Form.Item
+                        name="ESTADO"
+                        label="Estado"
+                        rules={[
+                            {
+                                required: true,
+                            },
+                        ]}
+                    >
+                        <Select
+                            placeholder="Selecione un estado"
+                            onChange={onGenderChange}
+                            allowClear
+                        >
+                            <Option value="ACTIVO">activo</Option>
+                            <Option value="inactivo">inactivo</Option>
+
+
+                        </Select>
+                    </Form.Item>
+
+
+                    <Form.Item
+                        name="FKID_UNIDADES"
+                        label="unidades:"
+                        rules={[
+                            {
+                                required: true,
+                            },
+                        ]}
+                    >
+                        <Select
+                            placeholder="Selecione un estado"
+                            onChange={onGenderChange}
+                            allowClear
+                        >
+                            <Option value="1">kilo</Option>
+                            <Option value="2">libras</Option>
+
+
+                        </Select>
+                    </Form.Item>
+
+                    <Form.Item
+                        name="FKID_EMPRESA"
+                        label="Empresa:"
+                        rules={[
+                            {
+                                required: true,
+                            },
+                        ]}
+                    >
+
+                        <Input />
+                    </Form.Item>
+
+                    <Form.Item name="DESCRIPCION"
+                        label="Descripción"
+                        rules={[
+                            {
+                                required: true,
+                            },
+                        ]}>
+                        <Input.TextArea />
+                    </Form.Item>
+
                     <Form.Item
                         noStyle
                         shouldUpdate={(prevValues, currentValues) => prevValues.gender !== currentValues.gender}
