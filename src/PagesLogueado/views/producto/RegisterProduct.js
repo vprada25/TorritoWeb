@@ -132,7 +132,7 @@ const Demo = () => {
                     </Form.Item>
 
                     <Form.Item
-                        name="FKID_     CATEGORIA"
+                        name="FKID_CATEGORIA"
                         label="Categoria"
                         rules={[
                             {
