@@ -5,9 +5,11 @@ import "../../../Style/StyleProfile.css";
 import { Form, Input, Button, Card, InputNumber } from "antd";
 
 import bunisess from '../../../services/bunises.service';
+
+import userservice from '../../../services/user.service';
 /* import Auth from '../../../services/auth.service'; */
 
-
+import jwt_decode from 'jwt-decode';
 
 const layout = {
   labelCol: {
@@ -24,20 +26,27 @@ const tailLayout = {
   },
 };
 
+const createdCompany = async (values) => {
+  let ID_PERSONA = null;
+  var user = userservice.getUserInStorage()
+  const resuser = await userservice.getUserByUsername(user.username)
+  ID_PERSONA = resuser.data.Idpersona;
+  Object.assign(values, {ID_PERSONA})
+  const rescompany = await bunisess.registerbunisess(values)
+  if(rescompany.data.statusCode && rescompany.data.statusCode === 201){
+    alert("Has registrado tu compania correctamente")
+  }
+}
+
+
+
 const config = () => {
 
-  const onFinish = (values) => {
-    const data = { ...values };
-    console.log("Success:", data);
-
-    bunisess.registerbunisess(values).then(res => {
-      console.log("Datos que se van a enviar al backend")
-      console.log(res.data)
+  const  onFinish = async (values) => {
+   await createdCompany(values);
 
 
-    }).catch(error => console.error(error))
-
-  };
+  }
 
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
