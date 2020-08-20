@@ -1,0 +1,41 @@
+.div-titlesale {
+  display: flex;
+  justify-content: center;
+}
+
+.titlesale {
+  font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.imageGeneratesale {
+  display: flex;
+  justify-content: center;
+  margin: -20pt;
+}
+
+.imagsale {
+  height: 120pt;
+  width: 120pt;
+}
+
+/*    --        --             --          --*/
+
+[data-theme="compact"] .ant-advanced-search-form,
+.ant-advanced-search-form {
+  padding: 24px;
+  background: #fbfbfb;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+}
+
+[data-theme="compact"] .ant-advanced-search-form .ant-form-item,
+.ant-advanced-search-form .ant-form-item {
+  display: flex;
+}
+
+[data-theme="compact"] .ant-advanced-search-form .ant-form-item-control-wrapper,
+.ant-advanced-search-form .ant-form-item-control-wrapper {
+  flex: 1;
+}
+/*    --        --             --          --*/

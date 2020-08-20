@@ -100,22 +100,11 @@ const FormRegister = () => {
 
 
           <Form.Item label="Rol de usuario" name="fk_id_rol" rules={[{ required: true, message: 'Please seleccione su rol!' }]}>
-<<<<<<< HEAD
             <Select defaultValue="" style={{ width: 120 }} onChange={handleChange}>
               <Option value="1">Administrador</Option>
               <Option value="2">Empleado</Option>
               <Option value="3">Cliente</Option>
               <Option value="disabled" disabled>Disabled</Option>
-=======
-            <Select defaultValue=".." style={{ width: 120 }} onChange={handleChange}>
-              <Option value="1">Admin</Option>
-              <Option value="2">Empleado</Option>
-              <Option value="3.">Cliente</Option>
-              <Option value="disabled" disabled>
-                Disabled
-              </Option>
-              <Option value="Yiminghe">yiminghe</Option>
->>>>>>> 02afb9e95863d6467e803d95d2af32df8be75ccd
             </Select>
           </Form.Item>
 

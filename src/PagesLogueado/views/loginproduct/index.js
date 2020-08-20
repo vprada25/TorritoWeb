@@ -15,7 +15,7 @@ const LoginProduct = () => {
   const [currentData, setCurrentData] = useState([...data.cerdo, ...data.res,...data.pollo,...data.pescado]);
 
   const history = useHistory();
-  const handleClick = () => history.push('/UserHistory');
+  const handleClick = () => history.push('/GenerateSale');
 
   const handlerChooseOption = (choosed) => {
     const response = chooseRender(choosed);

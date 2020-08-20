@@ -33,6 +33,7 @@ import SaleOrder from '../PagesLogueado/views/sale/order.js';
 import SaleStore from '../PagesLogueado/views/sale/store.js';
 import UserHistory from '../PagesLogueado/views/userhistory/index.js';
 import ClienType from '../PagesLogueado/views/clienttype/index.js';
+import GenerateSale from '../PagesLogueado/views/generateVenta/index.js';
 
 //tablas basicas
 import ModifyCompany from '../TablesBasics/views/modifyCompany/index.js';  
@@ -69,6 +70,7 @@ export default class Rutas extends Component {
                     <Route path="/ModifyCompany" component={ModifyCompany} />
                     <Route path="/UserHistory" component={UserHistory}/>
                     <Route path="/ClienType"  component={ClienType}/>
+                    <Route path="/GenerateSale"  component={GenerateSale}/>
                     {/* <Route path="/TypeDocument" component={TypeDocument}/> */}
                     <Route path="/OrderAdmin" component={OrderAdmind}/>
                  </Router>
