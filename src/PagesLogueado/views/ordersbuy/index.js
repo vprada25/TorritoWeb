@@ -5,7 +5,7 @@ import sale from "../../../assets/imgs/Generateventa.png";
 import { Form, Row, Col, Input, Button } from "antd";
 import { DownOutlined, UpOutlined } from "@ant-design/icons";
 
-function GenerateSale() {
+function    Ordersbuy() {
   const shoppingCar = useSelector(
     (store) => store.shoppingCar.shoppingCar,
     shallowEqual
@@ -108,7 +108,7 @@ function GenerateSale() {
   return (
     <div>
       <div className="div-titlesale">
-        <h1 className="titlesale">venta</h1>
+        <h1 className="titlesale">Listado Productos</h1>
       </div>
       <div className="imageGeneratesale">
         <img src={sale} className="imagsale" alt="sale" />
@@ -158,4 +158,4 @@ function GenerateSale() {
   );
 }
 
-export default GenerateSale;
+export default  Ordersbuy;

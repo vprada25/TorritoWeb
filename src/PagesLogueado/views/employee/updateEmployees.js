@@ -14,8 +14,8 @@ const layout = {
 };
 const tailLayout = {
   wrapperCol: {
-    offset: 8,
-    span: 16,
+    offset: 12,
+    span: 12,
   },
 };
 
@@ -122,21 +122,14 @@ const Demo = () => {
 
           <div className="div-btn-updateemployess">
             <Form.Item {...tailLayout}>
+            <div style={{ display: "flex", flexDirection: "row" }}>
               <Button type="primary" htmlType="submit">
                 Actualizar
               </Button>
               <Button htmlType="button" onClick={onReset}>
                 Reset
               </Button>
-
-              <Button htmlType="button" onClick={onReset}>
-                
-              </Button>
-              
-              <Button htmlType="button" onClick={onReset}>
-                
-              </Button>
-
+              </div>
             </Form.Item>
           </div>
         </Form>

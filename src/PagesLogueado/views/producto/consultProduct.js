@@ -59,12 +59,12 @@ const Demo = () => {
   };
 
   return (
-    <div className="site-card-border-less-wrapper">
+    <div className="site-card-border-less-wrapper-consultproduct">
       <div className="div-h1-consul">
         <h1 className="card-h1-consul">Consultar Producto</h1>
-        <img src={avatar} alt="Avatar" />
+        <img src={avatar} className="logoconsultProduct" alt="Avatar" />
       </div>
-
+      
       <Card
         title="Consultar"
         bordered={false}
@@ -157,13 +157,6 @@ const Demo = () => {
               </Button>
               <Button htmlType="button" onClick={onReset}>
                 Reset
-              </Button>
-              <Button htmlType="button" onClick={onReset}>
-               
-              </Button>
-
-              <Button htmlType="button" onClick={onReset}>
-              
               </Button>
             </Form.Item>
           </div>

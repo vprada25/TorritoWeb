@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-
+import React, { useEffect } from "react";
 import logo from "../../../assets/logos/logo3.png";
 
 import "../../../Style/stylehome.css";
@@ -8,18 +7,16 @@ import Nabvar from "../../../components/navbar.js";
 import Footer from "../../../components/footer.js";
 import { Link } from "react-router-dom";
 
-import { user } from '../../../services/user/userActions';
+import { user } from "../../../services/user/userActions";
 
-import {useSelector, useDispatch} from 'react-redux'
+import { useSelector, useDispatch } from "react-redux";
 
 function Menu() {
   const dispatch = useDispatch();
-  const {users} = useSelector(state => state.user);
-  useEffect(() => { 		
-    dispatch(user.getUser()) 
-    
-  }, [])
-  console.log(users);
+  const { users } = useSelector((state) => state.user);
+  useEffect(() => {
+    dispatch(user.getUser());
+  }, []);
   return (
     <div>
       <Nabvar />
@@ -35,15 +32,17 @@ function Menu() {
         <div className="BodycontText">
           <p className="contenido">
             En nuestra carnicería disponemos de personal altamente cualificado y
-            especializado, que le podrán informar lo mejor posible de nuestros 
+            especializado, que le podrán informar lo mejor posible de nuestros
             productos brindando una atención rápida y de calidad.
           </p>
         </div>
-        
+
         <div className="BodyButton">
-         <Link to="/info"> <button type="Default" className="ButtonFind"> 
-           Empezar
-          </button>
+          <Link to="/info">
+            {" "}
+            <button type="Default" className="ButtonFind">
+              Empezar
+            </button>
           </Link>
         </div>
       </div>
@@ -51,10 +50,8 @@ function Menu() {
       <h1 className="containerh1">Productos</h1>
       <div className="BodycontText">
         <p className="contenido">
-
-        En nuestro catálogo de productos te ofrecemos productos frescos y con los estándares más altos de calidad, 
-          ofrecemos tres tipos de carnes.
-          
+          En nuestro catálogo de productos te ofrecemos productos frescos y con
+          los estándares más altos de calidad, ofrecemos tres tipos de carnes.
         </p>
       </div>
 
@@ -88,8 +85,8 @@ function Menu() {
       <h1 className="containerh1">Contactos</h1>
       <div className="BodycontText">
         <p className="contenido">
-        Pueden contactarnos en cualquiera de
-        nuestras redes sociales o directamente al whatsapp...
+          Pueden contactarnos en cualquiera de nuestras redes sociales o
+          directamente al whatsapp...
         </p>
       </div>
       <div className="containerconctato">

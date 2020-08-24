@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../../../assets/logos/logo3.png";
-import "../../Style/styleproductlist.css";
+import "../../Style/styleemployeesList.css";
 import { Table, Tag, Space } from "antd";
 
 const columns = [
@@ -17,22 +17,10 @@ const columns = [
     render: (text) => <a>{text}</a>,
   },
   {
-    title: "Precio",
-    dataIndex: "price",
+    title: "Documento",
+    dataIndex: "document",
     key: "price",
   },
-  {
-    title: "Descripción",
-    dataIndex: "description",
-    key: "description",
-  },
-
-  {
-    title: "Stock",
-    dataIndex: "stock",
-    key: "stock",
-  },
-
   {
     title: "Estado",
     dataIndex: "state",
@@ -45,49 +33,41 @@ const data = [
     key: "1",
     id: "001",
     name: "lomo ancho",
-    price: 10000,
-    description: "pietram ",
-    stock: "",
+    document: 10000,
+
     state: "activo",
   },
   {
     key: "2",
     id: "002",
     name: "chuleta de cerdo ",
-    price: 20000,
-    description: "zenú",
-    stock: "",
+    document: 20000,
     state: "activo",
   },
   {
     key: "3",
     id: "003",
     name: "Ibericos ",
-    price: 32000,
-    description: "Rica",
-    stock: "",
+    document: 32000,
     state: "activo",
   },
-
 ];
 
-function ProductList() {
-  return (
-    <div>
-       <div style={{ display: "flex", flexDirection: "column" }}>
+const EmployeesList = () => (
+  <div>
+    <div style={{ display: "flex", flexDirection: "column" }}>
       <div className="logoproducts">
         <img src={logo} className="logoProductlist" alt="2" />
       </div>
       <div className="titleproducts">
-        <h1 className="titleproducts2">Listado de Productos</h1>
+        <h1 className="titleproducts2">Empleados</h1>
       </div>
       <Table className="tab" columns={columns} dataSource={data} />
       <button type="Default" className="trends">
         Tendencia
       </button>
     </div>
-    </div>
-  );
-}
+  </div>
+);
 
-export default ProductList;
+export default EmployeesList;
