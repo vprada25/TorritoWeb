@@ -13,7 +13,7 @@ const layout = {
 };
 const tailLayout = {
   wrapperCol: {
-    offset: 8,
+    offset: 10,
     span: 16,
   },
 };
@@ -59,7 +59,7 @@ const Demo = () => {
   };
 
   return (
-    <div className="site-card-border-less-wrapper">
+    <div className="site-card-border-less-wrapper-desactivateemployees">
       <div className="div-h1-desactivateemployees">
         <h1 className="card-h1-desactivateemployees">Desactivar empleados</h1>
         <img src={avatar} alt="Avatar" />
@@ -119,11 +119,6 @@ const Demo = () => {
               <Button htmlType="button" onClick={onReset}>
                 Reset
               </Button>
-
-              <Button htmlType="button" onClick={onReset}></Button>
-              <Button htmlType="button" onClick={onReset}></Button>
-              <Button htmlType="button" onClick={onReset}></Button>
-              
             </Form.Item>
           </div>
         </Form>

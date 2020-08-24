@@ -14,7 +14,7 @@
    display: grid;
     padding: 10px;
     background: #f8f0f000;
-   
+    justify-content: center;
     height: 620px;
     
     

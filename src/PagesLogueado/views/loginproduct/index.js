@@ -1,21 +1,33 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { ADD_PRODUCT_TO_SHOPPING_CAR } from "../../../services/shoppingCar/types";
 import { Header, NavBar } from "../../../components";
 import logo from "../../../assets/logos/logo3.png";
 import productos from "../../../assets/imgs/productos.jpg";
 import "../../Style/styleLoginProduct.css";
 
-import { useHistory } from 'react-router-dom';
+import { useHistory } from "react-router-dom";
 
 import { data } from "./data";
 
-
-
 const LoginProduct = () => {
+  const dispatch = useDispatch();
   const [option, setOption] = useState("Todos");
-  const [currentData, setCurrentData] = useState([...data.cerdo, ...data.res,...data.pollo,...data.pescado]);
+  const [currentData, setCurrentData] = useState([
+    ...data.cerdo,
+    ...data.res,
+    ...data.pollo,
+    ...data.pescado,
+  ]);
 
   const history = useHistory();
-  const handleClick = () => history.push('/GenerateSale');
+  const handleClick = (product) => {
+    dispatch({
+      type: ADD_PRODUCT_TO_SHOPPING_CAR,
+      payload: { product },
+    });
+    history.push("/OrdersBuy");
+  };
 
   const handlerChooseOption = (choosed) => {
     const response = chooseRender(choosed);
@@ -28,7 +40,12 @@ const LoginProduct = () => {
       <div className="segundo">
         {currentData.map((pro) => (
           <div className="conten2" key={Math.random() * 1000}>
-            <img src={pro.image} alt={pro.id} className="chul" onClick={handleClick} />
+            <img
+              src={pro.image}
+              alt={pro.id}
+              className="chul"
+              onClick={() => handleClick(pro)}
+            />
             <p className="sub1">{pro.nombre}</p>
           </div>
         ))}
@@ -39,7 +56,7 @@ const LoginProduct = () => {
   const chooseRender = () => {
     switch (option) {
       case "Todos":
-        return [...data.cerdo, ...data.res,...data.pollo,...data.pescado];
+        return [...data.cerdo, ...data.res, ...data.pollo, ...data.pescado];
       case "Cerdo":
         return data.cerdo;
       case "Res":
@@ -49,7 +66,7 @@ const LoginProduct = () => {
       case "Pescado":
         return data.pescado;
       default:
-        return [...data.cerdo, ...data.res,...data.pollo,...data.pescado];
+        return [...data.cerdo, ...data.res, ...data.pollo, ...data.pescado];
     }
   };
 
@@ -57,15 +74,14 @@ const LoginProduct = () => {
     <div>
       <div className="header">
         <NavBar />
-        <div><img src ={productos} alt="°2" className="sub"/> 
-        <div className="logo21">
-          <img src={logo} alt="°1" className="log" />
+        <div>
+          <img src={productos} alt="°2" className="sub" />
+          <div className="logo21">
+            <img src={logo} alt="°1" className="log" />
           </div>
         </div>
         <div>
-          <h2 class="up">Productos</h2>
-          
-         
+          <h2 className="up">Productos</h2>
         </div>
       </div>
       <Header onSelect={handlerChooseOption} />

@@ -1,19 +1,23 @@
 import React from "react";
 import { Card, Form, Input, Button, Select } from "antd";
-import "../../Style/styleUpdateproducts.css";
-import avatar from "../../../assets/imgs/actualizarproduct.png";
+import "../../Style/stylebuySupplier.css";
+
+
+import avatarbuy from "../../../assets/imgs/compraProveedor.png";
+
+
 const { Option } = Select;
 const layout = {
   labelCol: {
-    span: 8,
+    span: 11,
   },
   wrapperCol: {
-    span: 16,
+    span: 4,
   },
 };
 const tailLayout = {
   wrapperCol: {
-    offset: 8,
+    offset: 12,
     span: 16,
   },
 };
@@ -50,32 +54,42 @@ const Demo = () => {
     form.resetFields();
   };
 
-  const onFill = () => {
+/*   const onFill = () => {
     form.setFieldsValue({
-      note: "01",
-      user: "Pierna",
-      gender: "carne",
+      note: "Jorge",
+      user: "carnico",
+      gender: "male",
     });
-  };
+  }; */
 
   return (
-    <div className="site-card-border-less-wrapper-updateemployess">
-      <div className="div-h1">
-        <h1 className="card-h1-updateproduct">Actualizar Producto</h1>
-        <img src={avatar} alt="Avatar"/>
+    <div className="site-card-border-less-wrapper-buy">
+      <div className="div-h1-buy">
+        <h1 className="card-h1-buy">Compra Proveedor</h1>
+        <img src={avatarbuy} className="buy" alt="Avatarbuy"/>
       </div>
 
       <Card
-        title="Actualizar"
-        bordered={false}
-        style={({ width: 350 }, { height: 420 })}
-        className="card"
+        title="Datos"
+        bordered={true} 
+        style={({ width: 400 }, { height: 430 })}
+        
       >
         <Form {...layout} form={form} name="control-hooks" onFinish={onFinish}>
-
           <Form.Item
-            name="note"
-            label="ID"
+            name="ID_COM"
+            label="ID Compra:"
+            rules={[
+              {
+                required: true,
+              },
+            ]}
+          >
+            <Input />
+          </Form.Item>
+          <Form.Item
+            name="NOMBRE_PROVEEDOR"
+            label="Nombre Proveedor:"
             rules={[
               {
                 required: true,
@@ -86,8 +100,8 @@ const Demo = () => {
           </Form.Item>
 
           <Form.Item
-            name="user"
-            label="Nombre:"
+            name="STOCK"
+            label="Stock:"
             rules={[
               {
                 required: true,
@@ -98,8 +112,8 @@ const Demo = () => {
           </Form.Item>
 
           <Form.Item
-            name="gender"
-            label="Precio:"
+            name="TOTAL"
+            label="Total:"
             rules={[
               {
                 required: true,
@@ -110,29 +124,8 @@ const Demo = () => {
           </Form.Item>
 
           <Form.Item
-            name="Category"
-            label="Categoría"
-            rules={[
-              {
-                required: true,
-              },
-            ]}
-          >
-            <Select
-              placeholder="Selecione un tipo"
-              onChange={onGenderChange}
-              allowClear
-            >
-              <Option value="male">Res</Option>
-              <Option value="female">Cerdo</Option>
-              <Option value="other">Pollo</Option>
-              <Option value="other">Pescado</Option>
-            </Select>
-          </Form.Item>
-
-          <Form.Item
-            name="units"
-            label="Unidades:"
+            name="TELEFONO"
+            label="Teléfono:"
             rules={[
               {
                 required: true,
@@ -142,14 +135,23 @@ const Demo = () => {
             <Input />
           </Form.Item>
 
-          <div className="div-btn-updateproduct">
+          <div className="div-btn-buy">
             <Form.Item {...tailLayout}>
               <Button type="primary" htmlType="submit">
-                Actualizar
+                Acentar
               </Button>
               <Button htmlType="button" onClick={onReset}>
                 Reset
               </Button>
+
+              <Button htmlType="button" onClick={onReset}>
+                
+              </Button>
+              
+              <Button htmlType="button" onClick={onReset}>
+                
+              </Button>
+
             </Form.Item>
           </div>
         </Form>
@@ -159,3 +161,9 @@ const Demo = () => {
 };
 
 export default Demo;
+
+
+
+
+
+

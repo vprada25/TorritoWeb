@@ -59,8 +59,8 @@ const Demo = () => {
   };
 
   return (
-    <div className="site-card-border-less-wrapper">
-      <div className="div-h1">
+    <div className="site-card-border-less-wrapper-desactivateproduct">
+      <div className="div-h1-desactiveproduct">
         <h1 className="card-h1-descativeproduct">Desactivar Producto</h1>
         <img src={avatar} alt="Avatar" />
       </div>
