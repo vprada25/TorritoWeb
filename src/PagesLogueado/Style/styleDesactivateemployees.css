@@ -9,12 +9,12 @@
     border-radius: 16px;
   }
 
-  .site-card-border-less-wrapper-product {
+  .site-card-border-less-wrapper-desactivateemployees {
     
-   display: grid;
+    display: grid;
     padding: 20px;
     background: #f8f0f000;
-   
+    justify-content: center;
     height: 620px;
     
     

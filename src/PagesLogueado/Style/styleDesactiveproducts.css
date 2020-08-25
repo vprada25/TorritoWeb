@@ -9,13 +9,13 @@
     border-radius: 16px;
   }
 
-  .site-card-border-less-wrapper-product {
+  .site-card-border-less-wrapper-desactivateproduct {
     
    display: grid;
     padding: 20px;
     background: #f8f0f000;
-   
-    height: 720px;
+    justify-content: center;
+    height: 20px;
     
     
   }
@@ -58,7 +58,7 @@
     
 }
 
-.div-h1-product{
+.div-h1-desactiveproduct{
     
     width: 100%;
     display: grid;

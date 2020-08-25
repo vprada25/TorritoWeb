@@ -9,12 +9,12 @@
     border-radius: 16px;
   }
 
-  .site-card-border-less-wrapper {
+  .site-card-border-less-wrapper-consultproduct {
     
    display: grid;
     padding: 30px;
     background: #f8f0f000;
-   
+   justify-content: center;
     height: 720px;
     
     
@@ -25,9 +25,10 @@
 
 .card{
     
+    display: flex;
     text-align: center;
     font-size: 30px;
-    margin: auto auto;
+    width: 300pt;
    
 }
 
@@ -72,4 +73,8 @@ img{
     height: 93px;
     border-radius: 15px;
     background-color: rgb(174, 174, 177);
+}
+
+.logoconsultProduct{
+    height: 100pt;
 }

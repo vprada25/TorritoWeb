@@ -14,7 +14,7 @@ const layout = {
 };
 const tailLayout = {
   wrapperCol: {
-    offset: 8,
+    offset: 10,
     span: 16,
   },
 };
@@ -159,13 +159,6 @@ const Demo = () => {
               <Button htmlType="button" onClick={onReset}>
                 Reset
               </Button>
-              <Button type="link" htmlType="button" onClick={onFill}>
-               
-              </Button>
-
-              <Button type="link" htmlType="button" onClick={onFill}>
-               
-               </Button>
             </Form.Item>
           </div>
         </Form>
