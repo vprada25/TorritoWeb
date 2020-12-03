@@ -9,6 +9,7 @@ class AuthService {
 
   signIn(data) {
     return Api.post(`${controller + '/signin'}`, data)
+    
   }
 
   async getMenu() {

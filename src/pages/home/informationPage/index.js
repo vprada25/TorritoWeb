@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../../assets/logos/logo3.png";
+import logo from "../../../assets/logos/Logo.png";
 import branch_one from "../../../assets/imgs/cerdo.jpg";
 import branch_two from "../../../assets/imgs/res.jpg";
 import branch_three from "../../../assets/imgs/pollo.jpg";

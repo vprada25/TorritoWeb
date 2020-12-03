@@ -1,15 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 //import App from './PagesLogueado/views/loginproduct';
-import App from './routes/ruta';
-import * as serviceWorker from './serviceWorker';
-import { createBrowserHistory } from 'history'
-import { Provider } from 'react-redux';
-import initStore from './store/Store';
-import 'bootstrap/dist/css/bootstrap.css';
+import App from "./routes/ruta";
+import * as serviceWorker from "./serviceWorker";
+import { createBrowserHistory } from "history";
+import { Provider } from "react-redux";
+import initStore from "./store/Store";
 
 
- export const history = createBrowserHistory();
+
+export const history = createBrowserHistory();
 export const store = initStore(history);
 
 ReactDOM.render(

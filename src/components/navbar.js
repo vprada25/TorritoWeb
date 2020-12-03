@@ -1,39 +1,43 @@
-import React from 'react';
+import React from "react";
 import "../Style/stylenavbarmenu.css";
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
+import logo from "../assets/logos/LogoToorito.png";
 
 export default function HomeMenu() {
-  
   return (
     <div className="GeneralMenu">
+      <Navbar
+        collapseOnSelect
+        expand="lg"
+        variant="dark"
+        className="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top"
+      >
+        <div className="container">
+          {/* Un comentario JSX 
 
-      <div className="Menu-titlebos">
-        <p className="titlebos-p2">Toorito</p>
-      </div>
-
-      <div className="Menu-list">
-
-        <ul className="list-ul">
-          <li className="ul-li">
-            <a href="/" className="li-a">Principal</a>
-          </li>
-
-          <li className="ul-li">
-            <a href="/Login" className="li-a">Iniciar sesión</a>
-
-          </li>
-
-          <li className="ul-li">
-            <a href="/Products" className="li-a">Productos</a>
-
-
-          </li>
-
-          <li className="ul-li">
-            <a href="/Contact" className="li-a">Contactános</a>
-          </li>
-        </ul>
-
-      </div>
+          <Navbar.Brand href="#home" ><img className="logo" src={logo}></img></Navbar.Brand>*/}
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="Navbar mr-auto">
+              <Nav.Link href="#features" className="somos">
+                Quienes Somos
+              </Nav.Link>
+              <Nav.Link href="#pricing" className="somos">
+                Contactanos
+              </Nav.Link>
+              <Nav.Link href="#pricing" className="somos">
+                Nuestros Productos
+              </Nav.Link>
+            </Nav>
+            <Nav>
+              <Nav.Link href="/login" className="somos">
+                Iniciar Sesion
+              </Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </div>
+      </Navbar>
     </div>
   );
 }

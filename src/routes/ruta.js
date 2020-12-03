@@ -40,6 +40,7 @@ import EmployeesList from "../PagesLogueado/views/employeesList/index.js";
 import ModifyCompany from "../TablesBasics/views/modifyCompany/index.js";
 //import TypeDocument from '../TablesBasics/views/TypeDocument/typeDocument';
 import OrderAdmind from "../PagesLogueado/views/saleAdmin/orderAdmin";
+import "bootstrap/dist/css/bootstrap.min.css";
 export default class Rutas extends Component {
   render() {
     return (
@@ -60,7 +61,10 @@ export default class Rutas extends Component {
           <Route path="/RegisterEmployees" component={RegisterEmployee} />
           <Route path="/ConsultEmployees" component={ConsultEmployees} />
           <Route path="/UpdateEmployees" component={UpdateEmployees} />
-          <Route path="/DesactivateEmployees"component={DesactivateEmployees}/>
+          <Route
+            path="/DesactivateEmployees"
+            component={DesactivateEmployees}
+          />
           <Route path="/RegisterProduct" component={RegisterProduct} />
           <Route path="/ConsultProduct" component={ConsultProduct} />
           <Route path="/UpdateProduct" component={UpdateProduct} />

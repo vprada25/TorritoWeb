@@ -39,7 +39,7 @@ const LoginView = () => {
         localStorage.setItem('token', JSON.stringify(res.data.accessTocken))
         history.push("/HomeLogueado");
       })
-      .catch((error) => console.error(error));
+      .catch((error) => console.error(error),alert("e:"));
   };
 
   const onFinishFailed = (errorInfo) => {

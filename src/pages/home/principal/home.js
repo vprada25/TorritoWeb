@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import logo from "../../../assets/logos/logo3.png";
+import logo from "../../../assets/logos/Logo.png";
 
 import "../../../Style/stylehome.css";
 
@@ -11,113 +11,80 @@ import { user } from "../../../services/user/userActions";
 
 import { useSelector, useDispatch } from "react-redux";
 
+const items = [
+  {
+    name: "Carne de Res",
+    description: "En el Toorito tenemos el privilegio de cuidar nuestro producto desde su origen, obteniendo una carne saludable con un magnifico sabor, marmoreo y terneza. Nuestro portafolio abarca desde los potentes Ojos de Bife y Tomahawk Steaks para parrillar hasta los mas suaves y magros Lomitos y Cuadriles para preparar en la casa.",
+    price: 5,
+    photo: "https://www.recetas.com/files/ingredient/thumb/c/carne-de-res_gj04y"
+  },
+  {
+    name: "Carne de Cerdo",
+    description: "Hamburguesa rica y saludable",
+    price: 15,
+    photo: "https://www.mercadodechamartin.es/madrid/wp-content/uploads/2018/01/Carne-de-cerdo.jpeg"
+  },
+  {
+    name: "Pollo",
+    description: "Agua de un charco del Himalaya",
+    price: 5,
+    photo: "https://i.blogs.es/8ceb02/pollo_entero/450_1000.jpg"
+  },
+];
+
+function Catalogue() {
+  return(
+    <section>
+    {items.map(items => <div>
+      
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-5">
+              <img class="img-fluid rounded-circle" src={items.photo} alt="" />
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-5">
+              <h2 class="display-4">{items.name}  </h2>
+              <p>
+                {items.description}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>)}
+    </section>
+    
+  )
+}
+
 function Menu() {
   const dispatch = useDispatch();
   const { users } = useSelector((state) => state.user);
   useEffect(() => {
     dispatch(user.getUser());
   }, []);
+
   return (
     <div>
       <Nabvar />
-      <div className="Bodycont">
-        <div className="Bodycontitle">
-          <h1 className="welcome">Bienvenidos a Carnicería el Toorito</h1>
-        </div>
-        <div className="image">
-          <img src={logo} alt="°1" />
-          <p className="image-sub">Toorito!</p>
-        </div>
 
-        <div className="BodycontText">
-          <p className="contenido">
-            En nuestra carnicería disponemos de personal altamente cualificado y
-            especializado, que le podrán informar lo mejor posible de nuestros
-            productos brindando una atención rápida y de calidad.
-          </p>
+      <header class="masthead text-center text-white">
+        <div class="masthead-content">
+          <div class="container">
+            <h1 class="masthead-heading mb-0">El Toorito</h1>
+            <h2 class="masthead-subheading mb-0">
+              LAS MEJORES CARNES EN LA PUERTA DE SU CASA
+            </h2>
+          </div>
         </div>
-
-        <div className="BodyButton">
-          <Link to="/info">
-            {" "}
-            <button type="Default" className="ButtonFind">
-              Empezar
-            </button>
-          </Link>
-        </div>
-      </div>
-
-      <h1 className="containerh1">Productos</h1>
-      <div className="BodycontText">
-        <p className="contenido">
-          En nuestro catálogo de productos te ofrecemos productos frescos y con
-          los estándares más altos de calidad, ofrecemos tres tipos de carnes.
-        </p>
-      </div>
-
-      <div className="containerimagesCarnes">
-        <div className="containerimagesCarnesip">
-          <img
-            src={require("../../../assets/imgs/res.jpg")}
-            alt="Carne"
-            className="containerimagesCarnesipimg"
-          />
-          <p className="containerimagesCarnesipEp">Res</p>
-        </div>
-        <div className="containerimagesCarnesip">
-          <img
-            src={require("../../../assets/imgs/pollo.jpg")}
-            alt=""
-            className="containerimagesCarnesipimg"
-          />
-          <p className="containerimagesCarnesipEp">Pollo</p>
-        </div>
-        <div className="containerimagesCarnesip">
-          <img
-            src={require("../../../assets/imgs/pescado.jpg")}
-            alt=""
-            className="containerimagesCarnesipimg"
-          />
-          <p className="containerimagesCarnesipEp">Pescado </p>
-        </div>
-      </div>
-
-      <h1 className="containerh1">Contactos</h1>
-      <div className="BodycontText">
-        <p className="contenido">
-          Pueden contactarnos en cualquiera de nuestras redes sociales o
-          directamente al whatsapp...
-        </p>
-      </div>
-      <div className="containerconctato">
-        <div className="containerconctatologo">
-          <img
-            src={require("../../../assets/logos/facebook.png")}
-            alt="facebook"
-            className="containerconctatologolog"
-          />
-          <p className="containerconctatologoLp">Facebook</p>
-        </div>
-        <div className="containerconctatologo">
-          <img
-            src={require("../../../assets/logos/whatsapp.png")}
-            alt="whatsapp"
-            className="containerconctatologolog"
-          />
-          <p className="containerconctatologoLp">Whatsapp</p>
-        </div>
-        <div className="containerconctatologo">
-          <img
-            src={require("../../../assets/logos/instagram.png")}
-            alt="instagram"
-            className="containerconctatologolog"
-          />
-          <p className="containerconctatologoLp">Instagram</p>
-        </div>
-      </div>
-
+      </header>
+      <Catalogue></Catalogue>
       <Footer />
     </div>
   );
 }
+
 export default Menu;
