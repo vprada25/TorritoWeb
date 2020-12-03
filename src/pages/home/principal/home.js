@@ -5,6 +5,7 @@ import "../../../Style/stylehome.css";
 
 import Nabvar from "../../../components/navbar.js";
 import Footer from "../../../components/footer.js";
+import Slider from "../../../components/slider";
 import { Link } from "react-router-dom";
 
 import { user } from "../../../services/user/userActions";
@@ -20,13 +21,13 @@ const items = [
   },
   {
     name: "Carne de Cerdo",
-    description: "Hamburguesa rica y saludable",
+    description: "aqui va la descripcion",
     price: 15,
     photo: "https://www.mercadodechamartin.es/madrid/wp-content/uploads/2018/01/Carne-de-cerdo.jpeg"
   },
   {
     name: "Pollo",
-    description: "Agua de un charco del Himalaya",
+    description: "descripcion del producto",
     price: 5,
     photo: "https://i.blogs.es/8ceb02/pollo_entero/450_1000.jpg"
   },
@@ -81,6 +82,7 @@ function Menu() {
           </div>
         </div>
       </header>
+      <Slider></Slider>
       <Catalogue></Catalogue>
       <Footer />
     </div>

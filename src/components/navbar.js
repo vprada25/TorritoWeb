@@ -20,13 +20,13 @@ export default function HomeMenu() {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="Navbar mr-auto">
-              <Nav.Link href="#features" className="somos">
+              <Nav.Link href="/" className="somos">
                 Quienes Somos
               </Nav.Link>
-              <Nav.Link href="#pricing" className="somos">
+              <Nav.Link href="/" className="somos">
                 Contactanos
               </Nav.Link>
-              <Nav.Link href="#pricing" className="somos">
+              <Nav.Link href="/" className="somos">
                 Nuestros Productos
               </Nav.Link>
             </Nav>
