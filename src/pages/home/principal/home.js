@@ -1,12 +1,10 @@
 import React, { useEffect } from "react";
-import logo from "../../../assets/logos/Logo.png";
 
 import "../../../Style/stylehome.css";
 
 import Nabvar from "../../../components/navbar.js";
 import Footer from "../../../components/footer.js";
 import Slider from "../../../components/slider";
-import { Link } from "react-router-dom";
 
 import { user } from "../../../services/user/userActions";
 
