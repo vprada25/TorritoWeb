@@ -2,13 +2,13 @@
 @import "~slick-carousel/slick/slick-theme.css";
 
 .App {
-  width: 50%;
-  margin: 10rem auto;
-  height: 570px;
+  width: 90%;
+  margin: 3rem auto;
+  height: 573px;
 }
 
 .slide img {
-  width: 25rem;
+  width: 40rem;
   height: 570px;
   margin: 0 auto;
 }
@@ -48,3 +48,6 @@
   left: 0%;
   top: 50%;
 }
+
+
+

@@ -1,11 +1,15 @@
-import "../Style/styleSlider.css"
+import "../Style/styleSlider.css";
 import React from "react";
 import { useState } from "react";
 import Slider from "react-slick";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
+import carne1 from "../assets/img/carne1.jpg";
+import carne2 from "../assets/img/carne2.jpg";
+import carne3 from "../assets/img/carne3.jpg";
+import carne4 from "../assets/img/carne4.jpg";
+import carne5 from "../assets/img/carne5.jpg";
 
-
-const images = [1, 2, 3, 4];
+const images = [carne1, carne2, carne3, carne4, carne5];
 
 function App() {
   const NextArrow = ({ onClick }) => {
@@ -29,13 +33,15 @@ function App() {
   const settings = {
     infinite: true,
     lazyLoad: true,
-    speed: 300,
     slidesToShow: 3,
     centerMode: true,
     centerPadding: 0,
     focusOnSelect: true,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
+    autoplay: true,
+    speed: 3000,
+    autoplaySpeed: 10,
     beforeChange: (current, next) => setImageIndex(next),
   };
 
