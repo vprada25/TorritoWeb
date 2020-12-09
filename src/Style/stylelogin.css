@@ -1,17 +1,34 @@
 /* poner margenes */
 
-:root{
-  --style-font:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-  Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;;
+:root {
+  --style-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  ;
 }
 
 * {
-  margin: 0;
+  margin : 0;
   padding: 0;
 
   box-sizing: border-box;
   box-sizing: border-box;
   box-sizing: border-box;
+}
+
+
+.principal-padre{
+  
+  background-image     : url("../assets/imgs/fondo.jpg");
+  background-repeat    : no-repeat;
+   background-position  : center center;
+  background-attachment: fixed;
+  background-size      : cover; 
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  position:absolute;
+  text-align: center;
+  
 }
 
 body {
@@ -20,19 +37,19 @@ body {
 
   /* controlar el tamaño de la imagen */
 
-  background-size: initial;
-  background-size: cover;
+  background-size      : initial;
+  background-size      : cover;
   background-attachment: fixed;
-  font-family: var(--style-font);
+  font-family          : var(--style-font);
 }
 
 .contenedor-form {
   /* position: relative;*/
 
   background: rgba(255, 255, 255, 0.2);
-  width: 100%;
-  max-width: 600px;
-  margin: 5px auto;
+  width     : 100%;
+  max-width : 600px;
+  margin    : 5px auto;
 
   border-radius: 5px;
 
@@ -41,25 +58,25 @@ body {
 }
 
 .contenedor-form .toggle {
-  position: absolute;
-  top: 7px;
-  right: 7px;
-  width: 100px;
-  height: 30px;
-  font-size: 12px;
-  color: ivory;
-  line-height: 25px;
-  text-align: center;
-  border-top: 2px solid #dddada;
+  position     : absolute;
+  top          : 7px;
+  right        : 7px;
+  width        : 100px;
+  height       : 30px;
+  font-size    : 12px;
+  color        : ivory;
+  line-height  : 25px;
+  text-align   : center;
+  border-top   : 2px solid #dddada;
   border-bottom: 2px solid #dddbda;
-  transition: all 0.5s ease;
-  cursor: pointer;
+  transition   : all 0.5s ease;
+  cursor       : pointer;
 }
 
-.link-toggle{
-  color: black;
+.link-toggle {
+  color      : black;
   font-family: var(--style-font);
-  list-style: none;
+  list-style : none;
   font-weight: bolder;
 }
 
@@ -83,28 +100,37 @@ body {
 .contenedor-form input[type="text"],
 .contenedor-form input[type="password"],
 .contenedor-form input[type="email"] {
-  outline: none;
+  outline   : none;
   background: rgba(245, 237, 237, 0.973);
-  display: block;
-  width: 290px;
-  padding: 10px 15px;
-  color: rgb(85, 75, 75);
-  border: none;
+  display   : block;
+  width     : 290px;
+  padding   : 10px 15px;
+  color     : rgb(85, 75, 75);
+  border    : none;
   margin-top: 20px
 }
 
 .padre {
-  display: grid;
-  justify-content: center;
-  justify-items: center;
-  align-content: center;
-  width: 100%;
-  height: 650px;
+  display              : grid;
+  justify-content      : center;
+  justify-items        : center;
+  align-content        : center;
+  max-width            : 450;
+  height               : 750px;
+  text-align: center;
+  
+
+
 }
 
+.padre-Items{
+  border-radius: 17px !important;
+  margin-left: 15px !important;
+}
 
-.subcolor{
-  padding: 400px;
+.subcolor {
+  display: grid;
+  grid-template-columns: repeat(30px,30px);
   
 }
 
@@ -114,48 +140,50 @@ h1 {
   font: oblique bold 50px cursive;
 }
 
-h2{
+h2 {
   font-family: cursive;
 }
 
 .reset-pastword {
   background-color: rgba(255, 228, 196, 0);
-  border: 2px;
-  
+  border          : 2px;
+
 }
 
 .logo {
-  display: flex;
+  display        : flex;
   justify-content: center;
-  font-size: 30px;
+  font-size      : 30px;
 }
 
-.divbutton{
+.divbutton {
   text-align: center;
 }
+
 .buttonclas {
-  border-radius: 25px;
-  width: 90px;
-  height: 36px;
-  background-color:  orange;;
-  margin-top:15px ;
+  border-radius   : 25px;
+  width           : 90px;
+  height          : 36px;
+  background-color: orange;
+  ;
+  margin-top: 15px;
 }
 
 .inputlogin {
   color: black;
 
   border-radius: 20px;
-  margin-top: 20px;
+  margin-top   : 20px;
 }
 
-.pastword-p{
+.pastword-p {
   font-family: var(--style-font);
   font-weight: bolder;
-  color:black;
+  color      : black;
 }
 
-.form-h1{
-  text-align: center;
+.form-h1 {
+  text-align : center;
   font-family: var(--style-font);
 }
 
@@ -167,10 +195,16 @@ h2{
 
 } */
 
-.logologin{
-  position:absolute;
-  bottom:480px;
-  right:570px;
+.logologin {
+  position: absolute;
+  bottom  : 480px;
+  right   : 570px;
 
 }
+
+.ant-form-item-label > label{
+  font-size: 19px !important;
+}
+
+
 

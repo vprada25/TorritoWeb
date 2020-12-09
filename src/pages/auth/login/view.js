@@ -47,43 +47,46 @@ const LoginView = () => {
   };
 
   return (
-    <div>
-      <div className ="logologin"><img src={logo} alt="°1" /></div>
-      <div className="padre">
-        <Form 
-          className="subcolor"
-          {...layout}
-          name="basic"
-          initialValues={{ remember: true }}
-          onFinish={onFinish}
-          onFinishFailed={onFinishFailed}
-        >
-          <Form.Item
-            label="Usuario"
-            name="username"
-            rules={[{ required: true, message: "Porfavor digite su usuario!" }]}
+    <div className="nodo-principal">
+    <div className="principal-padre">
+        {/* <div className ="logologin"><p></p></div> */}
+        <div className="padre">
+          <Form
+            className="subcolor"
+            {...layout}
+            name="basic"
+            initialValues={{ remember: true }}
+            onFinish={onFinish}
+            onFinishFailed={onFinishFailed}
           >
-            <Input />
-          </Form.Item>
+            <Form.Item
+              label="Usuario"
+              name="username"
+              rules={[{ required: true, message: "Porfavor digite su usuario!" }]}
+              >
+              <Input className="padre-Items" />
+            
+            </Form.Item>
 
-          <Form.Item
-            label="Contraseña"
-            name="password"
-            rules={[{ required: true, message: "Please input your password!" }]}
-          >
-            <Input.Password />
-          </Form.Item>
+            <Form.Item
+              label="Contraseña"
+              name="password"
+              rules={[{ required: true, message: "Please input your password!" }]}
+            >
+              <Input.Password className="padre-Items" />
+            </Form.Item>
 
-          <Form.Item {...tailLayout} name="remember" valuePropName="checked">
-            <Checkbox>Remember me</Checkbox>
-          </Form.Item>
+            <Form.Item {...tailLayout} name="remember" valuePropName="checked">
+              <Checkbox>Remember me</Checkbox>
+            </Form.Item>
 
-          <Form.Item {...tailLayout}>
-            <Button type="primary" htmlType="submit">
-              Iniciar sesión
+            <Form.Item {...tailLayout}>
+              <Button type="primary" htmlType="submit">
+                Iniciar sesión
             </Button>
-          </Form.Item>
-        </Form>
+            </Form.Item>
+          </Form>
+        </div>
       </div>
     </div>
   );
