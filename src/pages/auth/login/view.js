@@ -1,13 +1,8 @@
 import React from "react";
-
 import { Form, Input, Button, Checkbox } from "antd";
-
 import "../../../Style/stylelogin.css";
-
 import logo from "../../../assets/logos/logo3.png";
-
 import authService from "../../../services/auth.service";
-
 import { useHistory } from "react-router-dom";
 
 const layout = {
